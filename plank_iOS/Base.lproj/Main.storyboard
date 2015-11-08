@@ -18,32 +18,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="221" y="279" width="157.5" height="41.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lqp-Bs-kaj" customClass="CircularProgressView" customModule="plank_iOS" customModuleProvider="target">
+                                <rect key="frame" x="150" y="80" width="300" height="300"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="203" y="329" width="194.5" height="17"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="ATo-xD-yfm"/>
+                                    <constraint firstAttribute="width" constant="300" id="kma-Oe-5wW"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68S-R7-I1W">
+                                <rect key="frame" x="285" y="496" width="30" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="startButtonClick:" destination="9pv-A4-QxB" eventType="touchUpInside" id="9ss-zS-TAQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="lqp-Bs-kaj" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="80" id="7CG-BA-koE"/>
+                            <constraint firstItem="68S-R7-I1W" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="bjz-qn-EFC"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="68S-R7-I1W" secondAttribute="bottom" constant="25" id="gXF-1f-jTO"/>
+                            <constraint firstItem="lqp-Bs-kaj" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="xiE-gV-6AT"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="首页" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="circularProgressView" destination="lqp-Bs-kaj" id="q8Q-G1-RVD"/>
+                        <outlet property="startButton" destination="68S-R7-I1W" id="Hwd-zy-sOg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>

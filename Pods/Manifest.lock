@@ -1,10 +1,22 @@
 PODS:
+  - GradientCircularProgress (2.0.0)
   - PagingMenuController (0.7.5)
 
 DEPENDENCIES:
+  - GradientCircularProgress (from `https://github.com/keygx/GradientCircularProgress`)
   - PagingMenuController
 
+EXTERNAL SOURCES:
+  GradientCircularProgress:
+    :git: https://github.com/keygx/GradientCircularProgress
+
+CHECKOUT OPTIONS:
+  GradientCircularProgress:
+    :commit: 1f13491d721178093b9452bc28115f9c735f6a66
+    :git: https://github.com/keygx/GradientCircularProgress
+
 SPEC CHECKSUMS:
+  GradientCircularProgress: 2d2f474f68661c109717371244ad0728b5044ed6
   PagingMenuController: cc71ac898b688a8523d9c1d98396767fe236e0a1
 
 COCOAPODS: 0.39.0

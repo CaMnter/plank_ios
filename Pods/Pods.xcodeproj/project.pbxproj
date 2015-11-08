@@ -7,26 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0ED914E84CCCFE26327F747A5F39C6D1 /* Pods-plank_iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F5CD5BB268FBD70AD9E645DF3A2E4B0F /* Pods-plank_iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		20C6CB1587F7A2351F902864274C99D0 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019FB24903F018C657BB7F6A1E211DB5 /* MenuItemView.swift */; };
-		5A5A81AB6DF264064358612DF69729A0 /* Pods-plank_iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE21C8F5E447AB8EC6AA69D61CAFA17 /* Pods-plank_iOS-dummy.m */; };
-		60E773DBB5E91045BCAE4B19F50C1B6C /* PagingMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505A5C65A2FC050FE31BE90EC8114F66 /* PagingMenuController.swift */; };
-		6F9684490CB76143ABD45DE0F6EE19ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		9B1631A2032AF8391AB8264202C5B035 /* PagingMenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D9C13D99AB41C4905A4C022F1E087 /* PagingMenuOptions.swift */; };
-		BBDF246593E5AD067ACAB166708D75A0 /* PagingMenuController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B66782C82B15C7B8E9DCD0BBD12E51 /* PagingMenuController-dummy.m */; };
-		C779B773B21334576B01B03BBE7902B9 /* PagingMenuController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9E390B28BA7E11016553DE180FD4E8C2 /* PagingMenuController.bundle */; };
+		0768FBE4151259C1E079327F404B6373 /* IndicatorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598406F048C535E03984F176E33833DD /* IndicatorStyle.swift */; };
+		076B05AAA0B4015831EA1333529181C7 /* GradientArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421F2D407F9172DB623EF969706BD077 /* GradientArcView.swift */; };
+		0FEE8D40AB1D79B5F280A2994E92404E /* ProgressAtRatioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFB24325767BA342EE87444776D6DC4 /* ProgressAtRatioView.swift */; };
+		16A21C1E471E8B221F3876D66A1BD864 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5339E4272FB1981B259D96FA63FC18C4 /* CircularProgressView.swift */; };
+		20C6CB1587F7A2351F902864274C99D0 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FBB7FCCC6CF1E5B2A01C93E91E499B /* MenuItemView.swift */; };
+		212586F0E36191C817A086968FEAE2B9 /* BlueDarkStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC543B1CF54E23418C51EE35F8CBE556 /* BlueDarkStyle.swift */; };
+		220AF1D448D0DD3CBA18A68C5CC7F77E /* Pods-plank_iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F5CD5BB268FBD70AD9E645DF3A2E4B0F /* Pods-plank_iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C2E0494320492C199A4BE92C08D94CB /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB3859BF4CAD18374E449FA54DF183A /* Style.swift */; };
+		47FAC584125D05F944028CE32EFFE14A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		4EACA6E13852BE5D88E711A5D0A21438 /* GradientCircularProgress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F7AFF5761AE4D7B856FCEEC05B02394 /* GradientCircularProgress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54412C12F399B4E943673CAC89580B65 /* GradientCircularProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FE15EA0DFED44DCF299710EB21FA27 /* GradientCircularProgress-dummy.m */; };
+		55813B2023DD286EC59BF6A43AE22F17 /* Pods-plank_iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE21C8F5E447AB8EC6AA69D61CAFA17 /* Pods-plank_iOS-dummy.m */; };
+		574F3AF97D6FA6CBCDA88F248302895A /* BaseWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E7B1F836F6F6BF8CBDF11F58E4112F /* BaseWindow.swift */; };
+		60E773DBB5E91045BCAE4B19F50C1B6C /* PagingMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD77021C678125D767FE4CDA06B3AC4 /* PagingMenuController.swift */; };
+		6491D312C2542480DD8E50D9152D4280 /* GradientCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EBA69377FEE87DCCC950E6507E956 /* GradientCircularProgress.swift */; };
+		70FAC3407FA2111AD7F62D74F4237A2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		7B877A5192DEB97123E9621B1D8B1DC7 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBD9E4713E1FF249590C2CFD3DB84A0 /* Property.swift */; };
+		7D30E50F226FA7708F92134FFB2972B5 /* BlueIndicatorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7278628BFADFD8DECCF99D4AA1497F5 /* BlueIndicatorStyle.swift */; };
+		865FAAF33F25A1498728754641A4AE39 /* OrangeDarkStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347DD1ABA31D37863006712E77175B /* OrangeDarkStyle.swift */; };
+		9B1631A2032AF8391AB8264202C5B035 /* PagingMenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E56926C5CBE44A71B239DCE28EF6F0C /* PagingMenuOptions.swift */; };
+		AC9D56626EEE71037A2D30A84AEAAA28 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B049C8C3E1BB189CFAA47B2526048 /* ProgressViewController.swift */; };
+		BBDF246593E5AD067ACAB166708D75A0 /* PagingMenuController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB2CBF0F64F892C5DA4EC07093214BE /* PagingMenuController-dummy.m */; };
+		BDE809F8F1E918EAB0FB020E333167A4 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718B2F2D08199A0BB100C6CB8AC56DF7 /* ArcView.swift */; };
+		C779B773B21334576B01B03BBE7902B9 /* PagingMenuController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4448F920BBBBAEC00C443F621EF015A9 /* PagingMenuController.bundle */; };
 		CD2E7269D798C4EF73A0D92BBF39BB06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		D16570BED975400112EDC8BF0B3A2A6C /* PagingMenuController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D1B04441B351D008280B6144392C8D5 /* PagingMenuController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FDDE4BC1014DBA6902550ED25248164C /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219ED07DF406DE9961E92906CD98C66C /* MenuView.swift */; };
+		D16570BED975400112EDC8BF0B3A2A6C /* PagingMenuController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 925FA4BBA41CDEF4317117EF77D8C3D1 /* PagingMenuController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D985D1A5F91E84EB81813D8A806DB098 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455B5AA56BCAB48240D50B1D610E9B5 /* Background.swift */; };
+		FDDE4BC1014DBA6902550ED25248164C /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258132F916B015C67C5EB3C56CAAE11F /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		303F9DF0D08BDF8214A7759E6DF3855B /* PBXContainerItemProxy */ = {
+		362220EF9906F02340B909AA3F78EDC5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5BBB34170986C897E8931C1768FD6EE3;
 			remoteInfo = PagingMenuController;
+		};
+		A7CAADC67D92BE5E58D73173854EABCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB0B370BA6DC8D7CABD26736BF1A84EC;
+			remoteInfo = GradientCircularProgress;
 		};
 		CA01C61090C872868348E3ADEB605877 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -38,34 +62,71 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		019FB24903F018C657BB7F6A1E211DB5 /* MenuItemView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MenuItemView.swift; path = Pod/Classes/MenuItemView.swift; sourceTree = "<group>"; };
+		031B049C8C3E1BB189CFAA47B2526048 /* ProgressViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressViewController.swift; path = Source/ProgressViewController.swift; sourceTree = "<group>"; };
+		0CB2CBF0F64F892C5DA4EC07093214BE /* PagingMenuController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PagingMenuController-dummy.m"; sourceTree = "<group>"; };
 		198D94E65EE14EE81307AD84D27A8995 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A0FC98CA52913373D4330875C170174 /* Pods-plank_iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-plank_iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		219ED07DF406DE9961E92906CD98C66C /* MenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MenuView.swift; path = Pod/Classes/MenuView.swift; sourceTree = "<group>"; };
-		2F7D9C13D99AB41C4905A4C022F1E087 /* PagingMenuOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingMenuOptions.swift; path = Pod/Classes/PagingMenuOptions.swift; sourceTree = "<group>"; };
+		258132F916B015C67C5EB3C56CAAE11F /* MenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MenuView.swift; path = Pod/Classes/MenuView.swift; sourceTree = "<group>"; };
+		2C812FE3B1CAC4ED154ADBC209546B8F /* PagingMenuController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PagingMenuController.xcconfig; sourceTree = "<group>"; };
+		2E1EBA69377FEE87DCCC950E6507E956 /* GradientCircularProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientCircularProgress.swift; path = Source/GradientCircularProgress.swift; sourceTree = "<group>"; };
+		2E56926C5CBE44A71B239DCE28EF6F0C /* PagingMenuOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingMenuOptions.swift; path = Pod/Classes/PagingMenuOptions.swift; sourceTree = "<group>"; };
+		2F7AFF5761AE4D7B856FCEEC05B02394 /* GradientCircularProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GradientCircularProgress-umbrella.h"; sourceTree = "<group>"; };
+		3001240F1BCD7B737AF5AD8473F063D2 /* PagingMenuController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PagingMenuController.modulemap; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4CC26AD087C48156D267EE7252CF6960 /* PagingMenuController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PagingMenuController-prefix.pch"; sourceTree = "<group>"; };
-		4D1B04441B351D008280B6144392C8D5 /* PagingMenuController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PagingMenuController-umbrella.h"; sourceTree = "<group>"; };
-		505A5C65A2FC050FE31BE90EC8114F66 /* PagingMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingMenuController.swift; path = Pod/Classes/PagingMenuController.swift; sourceTree = "<group>"; };
-		5885DD8369C8C2DDE0B802D70F737CE3 /* PagingMenuController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PagingMenuController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D3DBBCE2C75A8DF50A30F247B98987A /* Pods_plank_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_plank_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41F50B243B68780ACAACB545CB1EF353 /* PagingMenuController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PagingMenuController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		421F2D407F9172DB623EF969706BD077 /* GradientArcView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientArcView.swift; path = Source/GradientArcView.swift; sourceTree = "<group>"; };
+		4448F920BBBBAEC00C443F621EF015A9 /* PagingMenuController.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PagingMenuController.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AB3859BF4CAD18374E449FA54DF183A /* Style.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Style.swift; path = Source/Style.swift; sourceTree = "<group>"; };
+		4EBD9E4713E1FF249590C2CFD3DB84A0 /* Property.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Property.swift; path = Source/Property.swift; sourceTree = "<group>"; };
+		5339E4272FB1981B259D96FA63FC18C4 /* CircularProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircularProgressView.swift; path = Source/CircularProgressView.swift; sourceTree = "<group>"; };
+		598406F048C535E03984F176E33833DD /* IndicatorStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndicatorStyle.swift; path = Source/IndicatorStyle.swift; sourceTree = "<group>"; };
+		5BB482BF393721524555EA6DE9D13069 /* GradientCircularProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GradientCircularProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		622602A4B66C9655850BFB056D84E2C9 /* PagingMenuController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PagingMenuController-prefix.pch"; sourceTree = "<group>"; };
+		65E7B1F836F6F6BF8CBDF11F58E4112F /* BaseWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseWindow.swift; path = Source/BaseWindow.swift; sourceTree = "<group>"; };
+		6AFB24325767BA342EE87444776D6DC4 /* ProgressAtRatioView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressAtRatioView.swift; path = Source/ProgressAtRatioView.swift; sourceTree = "<group>"; };
+		6FD77021C678125D767FE4CDA06B3AC4 /* PagingMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingMenuController.swift; path = Pod/Classes/PagingMenuController.swift; sourceTree = "<group>"; };
+		718B2F2D08199A0BB100C6CB8AC56DF7 /* ArcView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArcView.swift; path = Source/ArcView.swift; sourceTree = "<group>"; };
+		71FE15EA0DFED44DCF299710EB21FA27 /* GradientCircularProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GradientCircularProgress-dummy.m"; sourceTree = "<group>"; };
 		7DEF0E6297C79F5BAD249F1683FEBE8A /* Pods-plank_iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-plank_iOS-frameworks.sh"; sourceTree = "<group>"; };
-		82151678485D67FB762E278E039AE181 /* PagingMenuController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PagingMenuController.modulemap; sourceTree = "<group>"; };
-		9E390B28BA7E11016553DE180FD4E8C2 /* PagingMenuController.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PagingMenuController.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		925FA4BBA41CDEF4317117EF77D8C3D1 /* PagingMenuController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PagingMenuController-umbrella.h"; sourceTree = "<group>"; };
+		9EB43ABE0EFC877B8809DF34FD6115ED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8F065E2CB4D2310CFA6FFFBB542C409 /* Pods-plank_iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-plank_iOS-resources.sh"; sourceTree = "<group>"; };
 		B83D9FA1E379E9B740E19D1666C578E6 /* Pods-plank_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-plank_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C0FBB7FCCC6CF1E5B2A01C93E91E499B /* MenuItemView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MenuItemView.swift; path = Pod/Classes/MenuItemView.swift; sourceTree = "<group>"; };
 		C243ADC333CC1D0595EADFE276B5794D /* Pods-plank_iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-plank_iOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		CABB0F5436ACF0150C57E5C499ADEED2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C38CC3AE4F11DBE206330CFD61C59891 /* GradientCircularProgress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = GradientCircularProgress.modulemap; sourceTree = "<group>"; };
+		C455B5AA56BCAB48240D50B1D610E9B5 /* Background.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Background.swift; path = Source/Background.swift; sourceTree = "<group>"; };
 		D15C9B497FE21F6E9915A3A955EB193B /* Pods-plank_iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-plank_iOS.modulemap"; sourceTree = "<group>"; };
+		D2BC304CB52D22FCA70D4380F1B42E2D /* GradientCircularProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GradientCircularProgress.xcconfig; sourceTree = "<group>"; };
+		D4347DD1ABA31D37863006712E77175B /* OrangeDarkStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OrangeDarkStyle.swift; path = Source/OrangeDarkStyle.swift; sourceTree = "<group>"; };
+		D7278628BFADFD8DECCF99D4AA1497F5 /* BlueIndicatorStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlueIndicatorStyle.swift; path = Source/BlueIndicatorStyle.swift; sourceTree = "<group>"; };
+		DC543B1CF54E23418C51EE35F8CBE556 /* BlueDarkStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlueDarkStyle.swift; path = Source/BlueDarkStyle.swift; sourceTree = "<group>"; };
+		E0FF617FA46B97F9EA824AF6E6BE3B55 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2F5DFC6AF1305575E40072867F8F05B /* Pods-plank_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-plank_iOS.release.xcconfig"; sourceTree = "<group>"; };
-		E9B66782C82B15C7B8E9DCD0BBD12E51 /* PagingMenuController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PagingMenuController-dummy.m"; sourceTree = "<group>"; };
 		EFE21C8F5E447AB8EC6AA69D61CAFA17 /* Pods-plank_iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-plank_iOS-dummy.m"; sourceTree = "<group>"; };
-		F33F7D67DB605A3B97A0D7119A9D867E /* PagingMenuController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PagingMenuController.xcconfig; sourceTree = "<group>"; };
+		F37AD4C90F4612BEE85131E32ABB27F2 /* GradientCircularProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GradientCircularProgress-prefix.pch"; sourceTree = "<group>"; };
 		F5CD5BB268FBD70AD9E645DF3A2E4B0F /* Pods-plank_iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-plank_iOS-umbrella.h"; sourceTree = "<group>"; };
+		FB2E1283ED0588E90636144111D2014C /* Pods_plank_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_plank_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		04B7CDDB1CD0B27403B2B78EE57052B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47FAC584125D05F944028CE32EFFE14A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48DE6DA0387D3A37803F10FA51DEF519 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70FAC3407FA2111AD7F62D74F4237A2A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5CEA3F1901009F5A4FFD7D0E9549C3BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,39 +142,54 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		812B5D0C870EEAD67238AE5A6C872A89 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6F9684490CB76143ABD45DE0F6EE19ED /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0985B54722585EBDF9B4998D4AF2C0DF /* Support Files */ = {
+		0C418D2632ACDB4C32E18BE257399973 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CABB0F5436ACF0150C57E5C499ADEED2 /* Info.plist */,
-				82151678485D67FB762E278E039AE181 /* PagingMenuController.modulemap */,
-				F33F7D67DB605A3B97A0D7119A9D867E /* PagingMenuController.xcconfig */,
-				E9B66782C82B15C7B8E9DCD0BBD12E51 /* PagingMenuController-dummy.m */,
-				4CC26AD087C48156D267EE7252CF6960 /* PagingMenuController-prefix.pch */,
-				4D1B04441B351D008280B6144392C8D5 /* PagingMenuController-umbrella.h */,
+				C38CC3AE4F11DBE206330CFD61C59891 /* GradientCircularProgress.modulemap */,
+				D2BC304CB52D22FCA70D4380F1B42E2D /* GradientCircularProgress.xcconfig */,
+				71FE15EA0DFED44DCF299710EB21FA27 /* GradientCircularProgress-dummy.m */,
+				F37AD4C90F4612BEE85131E32ABB27F2 /* GradientCircularProgress-prefix.pch */,
+				2F7AFF5761AE4D7B856FCEEC05B02394 /* GradientCircularProgress-umbrella.h */,
+				E0FF617FA46B97F9EA824AF6E6BE3B55 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/PagingMenuController";
+			path = "../Target Support Files/GradientCircularProgress";
 			sourceTree = "<group>";
 		};
-		46E85DCE8FFB6D4A03D89801F8F88276 /* Products */ = {
+		22D9E6DF336496F956DF21930FABC9D6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9E390B28BA7E11016553DE180FD4E8C2 /* PagingMenuController.bundle */,
-				5885DD8369C8C2DDE0B802D70F737CE3 /* PagingMenuController.framework */,
-				5D3DBBCE2C75A8DF50A30F247B98987A /* Pods_plank_iOS.framework */,
+				5BB482BF393721524555EA6DE9D13069 /* GradientCircularProgress.framework */,
+				4448F920BBBBAEC00C443F621EF015A9 /* PagingMenuController.bundle */,
+				41F50B243B68780ACAACB545CB1EF353 /* PagingMenuController.framework */,
+				FB2E1283ED0588E90636144111D2014C /* Pods_plank_iOS.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		709558256B9A8355F67535FBE4591FDE /* GradientCircularProgress */ = {
+			isa = PBXGroup;
+			children = (
+				718B2F2D08199A0BB100C6CB8AC56DF7 /* ArcView.swift */,
+				C455B5AA56BCAB48240D50B1D610E9B5 /* Background.swift */,
+				65E7B1F836F6F6BF8CBDF11F58E4112F /* BaseWindow.swift */,
+				DC543B1CF54E23418C51EE35F8CBE556 /* BlueDarkStyle.swift */,
+				D7278628BFADFD8DECCF99D4AA1497F5 /* BlueIndicatorStyle.swift */,
+				5339E4272FB1981B259D96FA63FC18C4 /* CircularProgressView.swift */,
+				421F2D407F9172DB623EF969706BD077 /* GradientArcView.swift */,
+				2E1EBA69377FEE87DCCC950E6507E956 /* GradientCircularProgress.swift */,
+				598406F048C535E03984F176E33833DD /* IndicatorStyle.swift */,
+				D4347DD1ABA31D37863006712E77175B /* OrangeDarkStyle.swift */,
+				6AFB24325767BA342EE87444776D6DC4 /* ProgressAtRatioView.swift */,
+				031B049C8C3E1BB189CFAA47B2526048 /* ProgressViewController.swift */,
+				4EBD9E4713E1FF249590C2CFD3DB84A0 /* Property.swift */,
+				4AB3859BF4CAD18374E449FA54DF183A /* Style.swift */,
+				0C418D2632ACDB4C32E18BE257399973 /* Support Files */,
+			);
+			path = GradientCircularProgress;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -121,10 +197,36 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				E7044848197ECA889D0444F2866FA83B /* Pods */,
-				46E85DCE8FFB6D4A03D89801F8F88276 /* Products */,
+				D07FEC881662C268383411772CA0614F /* Pods */,
+				22D9E6DF336496F956DF21930FABC9D6 /* Products */,
 				A54AD07D3A8BD2BC02B24CCB632C13CA /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		908EAE762F2A3770DECF6E0464541AFA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9EB43ABE0EFC877B8809DF34FD6115ED /* Info.plist */,
+				3001240F1BCD7B737AF5AD8473F063D2 /* PagingMenuController.modulemap */,
+				2C812FE3B1CAC4ED154ADBC209546B8F /* PagingMenuController.xcconfig */,
+				0CB2CBF0F64F892C5DA4EC07093214BE /* PagingMenuController-dummy.m */,
+				622602A4B66C9655850BFB056D84E2C9 /* PagingMenuController-prefix.pch */,
+				925FA4BBA41CDEF4317117EF77D8C3D1 /* PagingMenuController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PagingMenuController";
+			sourceTree = "<group>";
+		};
+		9BBB2DCC962BB81E6BF04EF9F4DCA200 /* PagingMenuController */ = {
+			isa = PBXGroup;
+			children = (
+				C0FBB7FCCC6CF1E5B2A01C93E91E499B /* MenuItemView.swift */,
+				258132F916B015C67C5EB3C56CAAE11F /* MenuView.swift */,
+				6FD77021C678125D767FE4CDA06B3AC4 /* PagingMenuController.swift */,
+				2E56926C5CBE44A71B239DCE28EF6F0C /* PagingMenuOptions.swift */,
+				908EAE762F2A3770DECF6E0464541AFA /* Support Files */,
+			);
+			path = PagingMenuController;
 			sourceTree = "<group>";
 		};
 		A54AD07D3A8BD2BC02B24CCB632C13CA /* Targets Support Files */ = {
@@ -151,18 +253,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		C736E8F06A18233D486D9DADAB6720EC /* PagingMenuController */ = {
-			isa = PBXGroup;
-			children = (
-				019FB24903F018C657BB7F6A1E211DB5 /* MenuItemView.swift */,
-				219ED07DF406DE9961E92906CD98C66C /* MenuView.swift */,
-				505A5C65A2FC050FE31BE90EC8114F66 /* PagingMenuController.swift */,
-				2F7D9C13D99AB41C4905A4C022F1E087 /* PagingMenuOptions.swift */,
-				0985B54722585EBDF9B4998D4AF2C0DF /* Support Files */,
-			);
-			path = PagingMenuController;
-			sourceTree = "<group>";
-		};
 		C8EF33E15D6FA8020E8A9FBF11823532 /* Pods-plank_iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,10 +271,11 @@
 			path = "Target Support Files/Pods-plank_iOS";
 			sourceTree = "<group>";
 		};
-		E7044848197ECA889D0444F2866FA83B /* Pods */ = {
+		D07FEC881662C268383411772CA0614F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C736E8F06A18233D486D9DADAB6720EC /* PagingMenuController */,
+				709558256B9A8355F67535FBE4591FDE /* GradientCircularProgress */,
+				9BBB2DCC962BB81E6BF04EF9F4DCA200 /* PagingMenuController */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -200,11 +291,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B7DC3A3B9D3F14DDD88703EA3034631 /* Headers */ = {
+		7DA2B781FD668F93128F17FABE05E86B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ED914E84CCCFE26327F747A5F39C6D1 /* Pods-plank_iOS-umbrella.h in Headers */,
+				4EACA6E13852BE5D88E711A5D0A21438 /* GradientCircularProgress-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9CF308F2544F5FFA9AF16CC3F72CF53 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				220AF1D448D0DD3CBA18A68C5CC7F77E /* Pods-plank_iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,8 +324,27 @@
 			);
 			name = "PagingMenuController-PagingMenuController";
 			productName = "PagingMenuController-PagingMenuController";
-			productReference = 9E390B28BA7E11016553DE180FD4E8C2 /* PagingMenuController.bundle */;
+			productReference = 4448F920BBBBAEC00C443F621EF015A9 /* PagingMenuController.bundle */;
 			productType = "com.apple.product-type.bundle";
+		};
+		4847B722106E77B227765A7D8F2067D4 /* Pods-plank_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A0B27BA998A4EF23849D044AF0730A8 /* Build configuration list for PBXNativeTarget "Pods-plank_iOS" */;
+			buildPhases = (
+				AB6185D73CACF2B1A7BFD771A5AC8F8E /* Sources */,
+				48DE6DA0387D3A37803F10FA51DEF519 /* Frameworks */,
+				D9CF308F2544F5FFA9AF16CC3F72CF53 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				98543B110788FFC19D1547F65BCCC442 /* PBXTargetDependency */,
+				CF0A2A4E5B4E595425BC1C3F76B75E2A /* PBXTargetDependency */,
+			);
+			name = "Pods-plank_iOS";
+			productName = "Pods-plank_iOS";
+			productReference = FB2E1283ED0588E90636144111D2014C /* Pods_plank_iOS.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		5BBB34170986C897E8931C1768FD6EE3 /* PagingMenuController */ = {
 			isa = PBXNativeTarget;
@@ -244,25 +362,24 @@
 			);
 			name = PagingMenuController;
 			productName = PagingMenuController;
-			productReference = 5885DD8369C8C2DDE0B802D70F737CE3 /* PagingMenuController.framework */;
+			productReference = 41F50B243B68780ACAACB545CB1EF353 /* PagingMenuController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F2361374366B37E923136B4A01DD2191 /* Pods-plank_iOS */ = {
+		BB0B370BA6DC8D7CABD26736BF1A84EC /* GradientCircularProgress */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A159C91A5602B205BD92AB6EEA22A638 /* Build configuration list for PBXNativeTarget "Pods-plank_iOS" */;
+			buildConfigurationList = 1D1111842263BCA41A96EED40562655C /* Build configuration list for PBXNativeTarget "GradientCircularProgress" */;
 			buildPhases = (
-				23AE2752FD6B8A9144F16E4396CEA320 /* Sources */,
-				812B5D0C870EEAD67238AE5A6C872A89 /* Frameworks */,
-				9B7DC3A3B9D3F14DDD88703EA3034631 /* Headers */,
+				B2BBB4F42B2FA9A664BCFDC700FA0281 /* Sources */,
+				04B7CDDB1CD0B27403B2B78EE57052B6 /* Frameworks */,
+				7DA2B781FD668F93128F17FABE05E86B /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C441C0F2CAA49547781D94C5B3076DE0 /* PBXTargetDependency */,
 			);
-			name = "Pods-plank_iOS";
-			productName = "Pods-plank_iOS";
-			productReference = 5D3DBBCE2C75A8DF50A30F247B98987A /* Pods_plank_iOS.framework */;
+			name = GradientCircularProgress;
+			productName = GradientCircularProgress;
+			productReference = 5BB482BF393721524555EA6DE9D13069 /* GradientCircularProgress.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -282,13 +399,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 46E85DCE8FFB6D4A03D89801F8F88276 /* Products */;
+			productRefGroup = 22D9E6DF336496F956DF21930FABC9D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				BB0B370BA6DC8D7CABD26736BF1A84EC /* GradientCircularProgress */,
 				5BBB34170986C897E8931C1768FD6EE3 /* PagingMenuController */,
 				23D4B5C9CC657B68134305BFEB076270 /* PagingMenuController-PagingMenuController */,
-				F2361374366B37E923136B4A01DD2191 /* Pods-plank_iOS */,
+				4847B722106E77B227765A7D8F2067D4 /* Pods-plank_iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -324,11 +442,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		23AE2752FD6B8A9144F16E4396CEA320 /* Sources */ = {
+		AB6185D73CACF2B1A7BFD771A5AC8F8E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A5A81AB6DF264064358612DF69729A0 /* Pods-plank_iOS-dummy.m in Sources */,
+				55813B2023DD286EC59BF6A43AE22F17 /* Pods-plank_iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2BBB4F42B2FA9A664BCFDC700FA0281 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE809F8F1E918EAB0FB020E333167A4 /* ArcView.swift in Sources */,
+				D985D1A5F91E84EB81813D8A806DB098 /* Background.swift in Sources */,
+				574F3AF97D6FA6CBCDA88F248302895A /* BaseWindow.swift in Sources */,
+				212586F0E36191C817A086968FEAE2B9 /* BlueDarkStyle.swift in Sources */,
+				7D30E50F226FA7708F92134FFB2972B5 /* BlueIndicatorStyle.swift in Sources */,
+				16A21C1E471E8B221F3876D66A1BD864 /* CircularProgressView.swift in Sources */,
+				076B05AAA0B4015831EA1333529181C7 /* GradientArcView.swift in Sources */,
+				54412C12F399B4E943673CAC89580B65 /* GradientCircularProgress-dummy.m in Sources */,
+				6491D312C2542480DD8E50D9152D4280 /* GradientCircularProgress.swift in Sources */,
+				0768FBE4151259C1E079327F404B6373 /* IndicatorStyle.swift in Sources */,
+				865FAAF33F25A1498728754641A4AE39 /* OrangeDarkStyle.swift in Sources */,
+				0FEE8D40AB1D79B5F280A2994E92404E /* ProgressAtRatioView.swift in Sources */,
+				AC9D56626EEE71037A2D30A84AEAAA28 /* ProgressViewController.swift in Sources */,
+				7B877A5192DEB97123E9621B1D8B1DC7 /* Property.swift in Sources */,
+				2C2E0494320492C199A4BE92C08D94CB /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,18 +488,82 @@
 			target = 23D4B5C9CC657B68134305BFEB076270 /* PagingMenuController-PagingMenuController */;
 			targetProxy = CA01C61090C872868348E3ADEB605877 /* PBXContainerItemProxy */;
 		};
-		C441C0F2CAA49547781D94C5B3076DE0 /* PBXTargetDependency */ = {
+		98543B110788FFC19D1547F65BCCC442 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GradientCircularProgress;
+			target = BB0B370BA6DC8D7CABD26736BF1A84EC /* GradientCircularProgress */;
+			targetProxy = A7CAADC67D92BE5E58D73173854EABCE /* PBXContainerItemProxy */;
+		};
+		CF0A2A4E5B4E595425BC1C3F76B75E2A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PagingMenuController;
 			target = 5BBB34170986C897E8931C1768FD6EE3 /* PagingMenuController */;
-			targetProxy = 303F9DF0D08BDF8214A7759E6DF3855B /* PBXContainerItemProxy */;
+			targetProxy = 362220EF9906F02340B909AA3F78EDC5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		14222968DCF7CB1FCC0A482C7D33D3D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B83D9FA1E379E9B740E19D1666C578E6 /* Pods-plank_iOS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-plank_iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-plank_iOS/Pods-plank_iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_plank_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2419DF2D98160D7CD5B6AB4C93285F08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2BC304CB52D22FCA70D4380F1B42E2D /* GradientCircularProgress.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GradientCircularProgress/GradientCircularProgress-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GradientCircularProgress/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GradientCircularProgress/GradientCircularProgress.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GradientCircularProgress;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		2F4EE13330D4DC99BA3A98EF41D02D22 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F33F7D67DB605A3B97A0D7119A9D867E /* PagingMenuController.xcconfig */;
+			baseConfigurationReference = 2C812FE3B1CAC4ED154ADBC209546B8F /* PagingMenuController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -387,7 +591,7 @@
 		};
 		5BC5A300DCB881E1457C05DE1556531C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F33F7D67DB605A3B97A0D7119A9D867E /* PagingMenuController.xcconfig */;
+			baseConfigurationReference = 2C812FE3B1CAC4ED154ADBC209546B8F /* PagingMenuController.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				PRODUCT_NAME = PagingMenuController;
@@ -397,39 +601,9 @@
 			};
 			name = Debug;
 		};
-		5C2D26074020C7CDD062EC7284DF79DF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2F5DFC6AF1305575E40072867F8F05B /* Pods-plank_iOS.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-plank_iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-plank_iOS/Pods-plank_iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_plank_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		7E6B0024B7BCA48866859E82882769A5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F33F7D67DB605A3B97A0D7119A9D867E /* PagingMenuController.xcconfig */;
+			baseConfigurationReference = 2C812FE3B1CAC4ED154ADBC209546B8F /* PagingMenuController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -453,6 +627,34 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		A3FCC3787253CC2B4F213B2AD6E7B895 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2BC304CB52D22FCA70D4380F1B42E2D /* GradientCircularProgress.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GradientCircularProgress/GradientCircularProgress-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GradientCircularProgress/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GradientCircularProgress/GradientCircularProgress.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GradientCircularProgress;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -493,21 +695,9 @@
 			};
 			name = Debug;
 		};
-		D0C64231C76761BDC356074639F30A82 /* Release */ = {
+		CE94F7C091D9ECAAAF15EB54EDAC3545 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F33F7D67DB605A3B97A0D7119A9D867E /* PagingMenuController.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = PagingMenuController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		E2FDF296A91FD4FE7DCDF5FC724978A8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B83D9FA1E379E9B740E19D1666C578E6 /* Pods-plank_iOS.debug.xcconfig */;
+			baseConfigurationReference = E2F5DFC6AF1305575E40072867F8F05B /* Pods-plank_iOS.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -522,19 +712,30 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-plank_iOS/Pods-plank_iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = Pods_plank_iOS;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
+		};
+		D0C64231C76761BDC356074639F30A82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C812FE3B1CAC4ED154ADBC209546B8F /* PagingMenuController.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = PagingMenuController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
 		};
 		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -573,6 +774,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1D1111842263BCA41A96EED40562655C /* Build configuration list for PBXNativeTarget "GradientCircularProgress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3FCC3787253CC2B4F213B2AD6E7B895 /* Debug */,
+				2419DF2D98160D7CD5B6AB4C93285F08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -582,11 +792,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A159C91A5602B205BD92AB6EEA22A638 /* Build configuration list for PBXNativeTarget "Pods-plank_iOS" */ = {
+		6A0B27BA998A4EF23849D044AF0730A8 /* Build configuration list for PBXNativeTarget "Pods-plank_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E2FDF296A91FD4FE7DCDF5FC724978A8 /* Debug */,
-				5C2D26074020C7CDD062EC7284DF79DF /* Release */,
+				14222968DCF7CB1FCC0A482C7D33D3D8 /* Debug */,
+				CE94F7C091D9ECAAAF15EB54EDAC3545 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

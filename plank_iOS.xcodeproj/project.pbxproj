@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AD78130EF8A30A0D6897A63 /* Pods_plank_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EB53F00442C3C625C985F5 /* Pods_plank_iOS.framework */; };
+		506559041BEF6ED500B3D707 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506559031BEF6ED500B3D707 /* CircularProgressView.swift */; };
 		50D871CF1BEF3692003BE1F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871CE1BEF3692003BE1F3 /* AppDelegate.swift */; };
 		50D871D11BEF3692003BE1F3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871D01BEF3692003BE1F3 /* FirstViewController.swift */; };
 		50D871D31BEF3692003BE1F3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871D21BEF3692003BE1F3 /* SecondViewController.swift */; };
@@ -17,6 +18,7 @@
 		50D871E61BEF3692003BE1F3 /* plank_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871E51BEF3692003BE1F3 /* plank_iOSTests.swift */; };
 		50D871F11BEF3692003BE1F3 /* plank_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871F01BEF3692003BE1F3 /* plank_iOSUITests.swift */; };
 		50D871FF1BEF4668003BE1F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871FE1BEF4668003BE1F3 /* ViewController.swift */; };
+		50D872011BEF6ADD003BE1F3 /* MyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D872001BEF6ADD003BE1F3 /* MyStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		309665D23EEE75C41240276C /* Pods-plank_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plank_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-plank_iOS/Pods-plank_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		506559031BEF6ED500B3D707 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		50D871CB1BEF3692003BE1F3 /* plank_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plank_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D871CE1BEF3692003BE1F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50D871D01BEF3692003BE1F3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		50D871F01BEF3692003BE1F3 /* plank_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plank_iOSUITests.swift; sourceTree = "<group>"; };
 		50D871F21BEF3692003BE1F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50D871FE1BEF4668003BE1F3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		50D872001BEF6ADD003BE1F3 /* MyStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStyle.swift; sourceTree = "<group>"; };
 		A7EB53F00442C3C625C985F5 /* Pods_plank_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_plank_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB12125A8CA749DD2FAF9D27 /* Pods-plank_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plank_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-plank_iOS/Pods-plank_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +137,8 @@
 				50D871D91BEF3692003BE1F3 /* LaunchScreen.storyboard */,
 				50D871DC1BEF3692003BE1F3 /* Info.plist */,
 				50D871FE1BEF4668003BE1F3 /* ViewController.swift */,
+				50D872001BEF6ADD003BE1F3 /* MyStyle.swift */,
+				506559031BEF6ED500B3D707 /* CircularProgressView.swift */,
 			);
 			path = plank_iOS;
 			sourceTree = "<group>";
@@ -337,9 +343,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50D872011BEF6ADD003BE1F3 /* MyStyle.swift in Sources */,
 				50D871D31BEF3692003BE1F3 /* SecondViewController.swift in Sources */,
 				50D871CF1BEF3692003BE1F3 /* AppDelegate.swift in Sources */,
 				50D871FF1BEF4668003BE1F3 /* ViewController.swift in Sources */,
+				506559041BEF6ED500B3D707 /* CircularProgressView.swift in Sources */,
 				50D871D11BEF3692003BE1F3 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
