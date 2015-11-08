@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--首页-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewController" id="9pv-A4-QxB" customClass="FirstViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -51,7 +52,7 @@
         <!--发现-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="8rJ-Kc-sve" customClass="SecondViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -94,7 +95,7 @@
         <!--我-->
         <scene sceneID="ekJ-3I-7Nr">
             <objects>
-                <viewController id="o16-eJ-8Of" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="o16-eJ-8Of" customClass="ViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UCa-Or-UGS"/>
                         <viewControllerLayoutGuide type="bottom" id="WXA-1z-azp"/>
@@ -103,22 +104,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eab-mz-wQX">
-                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6A5-vp-h4s">
+                                <rect key="frame" x="20" y="20" width="560" height="531"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <connections>
+                                    <segue destination="KzT-YW-7hu" kind="embed" id="mG7-KW-C6E"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6A5-vp-h4s" firstAttribute="top" secondItem="UCa-Or-UGS" secondAttribute="bottom" id="M6v-fx-5U0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6A5-vp-h4s" secondAttribute="trailing" id="hFF-7g-2Th"/>
+                            <constraint firstItem="WXA-1z-azp" firstAttribute="top" secondItem="6A5-vp-h4s" secondAttribute="bottom" id="xUb-29-I39"/>
+                            <constraint firstItem="6A5-vp-h4s" firstAttribute="leading" secondItem="jhv-Ws-xZ0" secondAttribute="leadingMargin" id="ykI-mt-HvX"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="我" image="second" id="ZHF-xn-Rou"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpP-Ok-cwC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="605" y="1056"/>
+        </scene>
+        <!--Paging Menu Controller-->
+        <scene sceneID="kJL-Lm-pHk">
+            <objects>
+                <viewController id="KzT-YW-7hu" customClass="PagingMenuController" customModule="PagingMenuController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MF2-VG-OU6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hoa-tw-lFr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i3k-XQ-dnb">
+                        <rect key="frame" x="0.0" y="0.0" width="560" height="531"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVZ-9H-xaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="1858.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

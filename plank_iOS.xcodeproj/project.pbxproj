@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AD78130EF8A30A0D6897A63 /* Pods_plank_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EB53F00442C3C625C985F5 /* Pods_plank_iOS.framework */; };
 		50D871CF1BEF3692003BE1F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871CE1BEF3692003BE1F3 /* AppDelegate.swift */; };
 		50D871D11BEF3692003BE1F3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871D01BEF3692003BE1F3 /* FirstViewController.swift */; };
 		50D871D31BEF3692003BE1F3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871D21BEF3692003BE1F3 /* SecondViewController.swift */; };
@@ -15,6 +16,7 @@
 		50D871DB1BEF3692003BE1F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D871D91BEF3692003BE1F3 /* LaunchScreen.storyboard */; };
 		50D871E61BEF3692003BE1F3 /* plank_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871E51BEF3692003BE1F3 /* plank_iOSTests.swift */; };
 		50D871F11BEF3692003BE1F3 /* plank_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871F01BEF3692003BE1F3 /* plank_iOSUITests.swift */; };
+		50D871FF1BEF4668003BE1F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871FE1BEF4668003BE1F3 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		309665D23EEE75C41240276C /* Pods-plank_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plank_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-plank_iOS/Pods-plank_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		50D871CB1BEF3692003BE1F3 /* plank_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plank_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D871CE1BEF3692003BE1F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50D871D01BEF3692003BE1F3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		50D871EC1BEF3692003BE1F3 /* plank_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = plank_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D871F01BEF3692003BE1F3 /* plank_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plank_iOSUITests.swift; sourceTree = "<group>"; };
 		50D871F21BEF3692003BE1F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50D871FE1BEF4668003BE1F3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A7EB53F00442C3C625C985F5 /* Pods_plank_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_plank_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB12125A8CA749DD2FAF9D27 /* Pods-plank_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plank_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-plank_iOS/Pods-plank_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AD78130EF8A30A0D6897A63 /* Pods_plank_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FA05B0F83F7C2117E43E249 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7EB53F00442C3C625C985F5 /* Pods_plank_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		285A6BD4626B755DD360D6BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB12125A8CA749DD2FAF9D27 /* Pods-plank_iOS.debug.xcconfig */,
+				309665D23EEE75C41240276C /* Pods-plank_iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		50D871C21BEF3692003BE1F3 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +107,8 @@
 				50D871E41BEF3692003BE1F3 /* plank_iOSTests */,
 				50D871EF1BEF3692003BE1F3 /* plank_iOSUITests */,
 				50D871CC1BEF3692003BE1F3 /* Products */,
+				285A6BD4626B755DD360D6BC /* Pods */,
+				0FA05B0F83F7C2117E43E249 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +132,7 @@
 				50D871D71BEF3692003BE1F3 /* Assets.xcassets */,
 				50D871D91BEF3692003BE1F3 /* LaunchScreen.storyboard */,
 				50D871DC1BEF3692003BE1F3 /* Info.plist */,
+				50D871FE1BEF4668003BE1F3 /* ViewController.swift */,
 			);
 			path = plank_iOS;
 			sourceTree = "<group>";
@@ -135,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50D871F51BEF3692003BE1F3 /* Build configuration list for PBXNativeTarget "plank_iOS" */;
 			buildPhases = (
+				AEAE5BC851B072AAA7FC8166 /* Check Pods Manifest.lock */,
 				50D871C71BEF3692003BE1F3 /* Sources */,
 				50D871C81BEF3692003BE1F3 /* Frameworks */,
 				50D871C91BEF3692003BE1F3 /* Resources */,
+				03C00E7430E346102C299CA5 /* Embed Pods Frameworks */,
+				236BDDAFD3F7CCA8FA5284C3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,6 +284,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03C00E7430E346102C299CA5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-plank_iOS/Pods-plank_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		236BDDAFD3F7CCA8FA5284C3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-plank_iOS/Pods-plank_iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEAE5BC851B072AAA7FC8166 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		50D871C71BEF3692003BE1F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -261,6 +339,7 @@
 			files = (
 				50D871D31BEF3692003BE1F3 /* SecondViewController.swift in Sources */,
 				50D871CF1BEF3692003BE1F3 /* AppDelegate.swift in Sources */,
+				50D871FF1BEF4668003BE1F3 /* ViewController.swift in Sources */,
 				50D871D11BEF3692003BE1F3 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +478,7 @@
 		};
 		50D871F61BEF3692003BE1F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB12125A8CA749DD2FAF9D27 /* Pods-plank_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = plank_iOS/Info.plist;
@@ -410,6 +490,7 @@
 		};
 		50D871F71BEF3692003BE1F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 309665D23EEE75C41240276C /* Pods-plank_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = plank_iOS/Info.plist;
@@ -486,6 +567,7 @@
 				50D871F71BEF3692003BE1F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50D871F81BEF3692003BE1F3 /* Build configuration list for PBXNativeTarget "plank_iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +576,7 @@
 				50D871FA1BEF3692003BE1F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50D871FB1BEF3692003BE1F3 /* Build configuration list for PBXNativeTarget "plank_iOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +585,7 @@
 				50D871FD1BEF3692003BE1F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
