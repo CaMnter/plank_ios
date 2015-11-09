@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0AD78130EF8A30A0D6897A63 /* Pods_plank_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EB53F00442C3C625C985F5 /* Pods_plank_iOS.framework */; };
+		50519EF31BF0DAE80068FBAB /* FitnessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519EF21BF0DAE80068FBAB /* FitnessTableViewCell.swift */; };
+		50519EF51BF0DFEA0068FBAB /* FitnessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519EF41BF0DFEA0068FBAB /* FitnessTableViewController.swift */; };
+		50519EF71BF0E2D20068FBAB /* Fitness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519EF61BF0E2D20068FBAB /* Fitness.swift */; };
 		506559041BEF6ED500B3D707 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506559031BEF6ED500B3D707 /* CircularProgressView.swift */; };
 		50D871CF1BEF3692003BE1F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871CE1BEF3692003BE1F3 /* AppDelegate.swift */; };
 		50D871D11BEF3692003BE1F3 /* TrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871D01BEF3692003BE1F3 /* TrainViewController.swift */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		309665D23EEE75C41240276C /* Pods-plank_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plank_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-plank_iOS/Pods-plank_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		50519EF21BF0DAE80068FBAB /* FitnessTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTableViewCell.swift; sourceTree = "<group>"; };
+		50519EF41BF0DFEA0068FBAB /* FitnessTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTableViewController.swift; sourceTree = "<group>"; };
+		50519EF61BF0E2D20068FBAB /* Fitness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fitness.swift; sourceTree = "<group>"; };
 		506559031BEF6ED500B3D707 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		50D871CB1BEF3692003BE1F3 /* plank_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plank_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D871CE1BEF3692003BE1F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +145,9 @@
 				50D871FE1BEF4668003BE1F3 /* MainViewController.swift */,
 				50D872001BEF6ADD003BE1F3 /* MyStyle.swift */,
 				506559031BEF6ED500B3D707 /* CircularProgressView.swift */,
+				50519EF21BF0DAE80068FBAB /* FitnessTableViewCell.swift */,
+				50519EF41BF0DFEA0068FBAB /* FitnessTableViewController.swift */,
+				50519EF61BF0E2D20068FBAB /* Fitness.swift */,
 			);
 			path = plank_iOS;
 			sourceTree = "<group>";
@@ -347,6 +356,9 @@
 				50D871D31BEF3692003BE1F3 /* SecondViewController.swift in Sources */,
 				50D871CF1BEF3692003BE1F3 /* AppDelegate.swift in Sources */,
 				50D871FF1BEF4668003BE1F3 /* MainViewController.swift in Sources */,
+				50519EF51BF0DFEA0068FBAB /* FitnessTableViewController.swift in Sources */,
+				50519EF31BF0DAE80068FBAB /* FitnessTableViewCell.swift in Sources */,
+				50519EF71BF0E2D20068FBAB /* Fitness.swift in Sources */,
 				506559041BEF6ED500B3D707 /* CircularProgressView.swift in Sources */,
 				50D871D11BEF3692003BE1F3 /* TrainViewController.swift in Sources */,
 			);
