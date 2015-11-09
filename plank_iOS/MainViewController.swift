@@ -15,17 +15,20 @@ class MainViewController: UIViewController, PagingMenuControllerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let usersViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TrainViewController") as! TrainViewController
-        let repositoriesViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TrainViewController") as! TrainViewController
-        let gistsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SecondViewController") as! SecondViewController
-        let organizationsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TrainViewController") as! TrainViewController
+        let trainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TrainViewController") as! TrainViewController
+        trainViewController.title = "训练"
+        let challengeViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TrainViewController") as! TrainViewController
+        challengeViewController.title = "挑战"
+        let recordViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SecondViewController") as! SecondViewController
+        recordViewController.title = "记录"
         
-        let viewControllers = [usersViewController, repositoriesViewController, gistsViewController, organizationsViewController]
+        let viewControllers = [trainViewController, challengeViewController, recordViewController]
         
         let options = PagingMenuOptions()
         options.menuHeight = 50
-        options.menuDisplayMode = .Standard(widthMode: .Flexible, centerItem: false, scrollingMode: .ScrollEnabledAndBouces)
-        
+        //options.menuDisplayMode = .Standard(widthMode: .Flexible, centerItem: true, scrollingMode: .ScrollEnabledAndBouces)
+        options.menuDisplayMode = .SegmentedControl
+       
         let pagingMenuController = self.childViewControllers.first as! PagingMenuController
         pagingMenuController.delegate = self
         pagingMenuController.setup(viewControllers: viewControllers, options: options)

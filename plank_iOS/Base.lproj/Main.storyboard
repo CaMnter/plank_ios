@@ -191,8 +191,8 @@
                                     <constraint firstAttribute="height" constant="300" id="jbn-ai-dH1"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9a-DO-42W">
-                                <rect key="frame" x="176" y="460" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9a-DO-42W">
+                                <rect key="frame" x="173" y="587" width="30" height="30"/>
                                 <animations/>
                                 <state key="normal" title="开始"/>
                                 <connections>
@@ -205,6 +205,8 @@
                         <constraints>
                             <constraint firstItem="86g-Du-6aE" firstAttribute="top" secondItem="DIh-Qk-bO5" secondAttribute="topMargin" constant="20" id="3MR-NL-oXJ"/>
                             <constraint firstItem="86g-Du-6aE" firstAttribute="centerX" secondItem="DIh-Qk-bO5" secondAttribute="centerX" id="4wP-uZ-0td"/>
+                            <constraint firstItem="l9a-DO-42W" firstAttribute="centerX" secondItem="DIh-Qk-bO5" secondAttribute="centerX" id="Bfs-dX-XcP"/>
+                            <constraint firstItem="hjp-cg-4Gn" firstAttribute="top" secondItem="l9a-DO-42W" secondAttribute="bottom" constant="50" id="kUg-9g-CCC"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
