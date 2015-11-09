@@ -7,5 +7,4 @@ target 'plank_iOS' do
   #pod 'ORStackView', '~> 3.0'
   #pod 'SwiftyJSON', '~> 2.3'
   pod "PagingMenuController"
-  pod 'GradientCircularProgress', :git => 'https://github.com/keygx/GradientCircularProgress'
 end

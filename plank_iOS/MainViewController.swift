@@ -9,16 +9,16 @@
 import UIKit
 import PagingMenuController
 
-class ViewController: UIViewController, PagingMenuControllerDelegate {
+class MainViewController: UIViewController, PagingMenuControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let usersViewController = self.storyboard?.instantiateViewControllerWithIdentifier("FirstViewController") as! FirstViewController
-        let repositoriesViewController = self.storyboard?.instantiateViewControllerWithIdentifier("FirstViewController") as! FirstViewController
+        let usersViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TrainViewController") as! TrainViewController
+        let repositoriesViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TrainViewController") as! TrainViewController
         let gistsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SecondViewController") as! SecondViewController
-        let organizationsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("FirstViewController") as! FirstViewController
+        let organizationsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TrainViewController") as! TrainViewController
         
         let viewControllers = [usersViewController, repositoriesViewController, gistsViewController, organizationsViewController]
         

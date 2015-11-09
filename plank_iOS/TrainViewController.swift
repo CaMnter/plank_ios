@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class FirstViewController: UIViewController {
+class TrainViewController: UIViewController {
     
     var secondsPerTime:Double = 8;
     var escapeMillis:Double = 0.0;
@@ -15,9 +15,7 @@ class FirstViewController: UIViewController {
     var timer:NSTimer = NSTimer();
     
     @IBOutlet weak var circularProgressView: CircularProgressView!
-    
     @IBOutlet weak var startButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
