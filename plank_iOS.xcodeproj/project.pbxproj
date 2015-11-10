@@ -11,6 +11,7 @@
 		50519EF31BF0DAE80068FBAB /* FitnessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519EF21BF0DAE80068FBAB /* FitnessTableViewCell.swift */; };
 		50519EF51BF0DFEA0068FBAB /* FitnessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519EF41BF0DFEA0068FBAB /* FitnessTableViewController.swift */; };
 		50519EF71BF0E2D20068FBAB /* Fitness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519EF61BF0E2D20068FBAB /* Fitness.swift */; };
+		50519EFC1BF1CBEE0068FBAB /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519EFB1BF1CBEE0068FBAB /* DBHelper.swift */; };
 		506559041BEF6ED500B3D707 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506559031BEF6ED500B3D707 /* CircularProgressView.swift */; };
 		50D871CF1BEF3692003BE1F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871CE1BEF3692003BE1F3 /* AppDelegate.swift */; };
 		50D871D11BEF3692003BE1F3 /* TrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871D01BEF3692003BE1F3 /* TrainViewController.swift */; };
@@ -46,6 +47,7 @@
 		50519EF21BF0DAE80068FBAB /* FitnessTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTableViewCell.swift; sourceTree = "<group>"; };
 		50519EF41BF0DFEA0068FBAB /* FitnessTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTableViewController.swift; sourceTree = "<group>"; };
 		50519EF61BF0E2D20068FBAB /* Fitness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fitness.swift; sourceTree = "<group>"; };
+		50519EFB1BF1CBEE0068FBAB /* DBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		506559031BEF6ED500B3D707 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		50D871CB1BEF3692003BE1F3 /* plank_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plank_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D871CE1BEF3692003BE1F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		50519EFA1BF1CBCA0068FBAB /* db */ = {
+			isa = PBXGroup;
+			children = (
+				50519EFB1BF1CBEE0068FBAB /* DBHelper.swift */,
+			);
+			name = db;
+			sourceTree = "<group>";
+		};
 		50D871C21BEF3692003BE1F3 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +145,7 @@
 		50D871CD1BEF3692003BE1F3 /* plank_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				50519EFA1BF1CBCA0068FBAB /* db */,
 				50D871CE1BEF3692003BE1F3 /* AppDelegate.swift */,
 				50D871D01BEF3692003BE1F3 /* TrainViewController.swift */,
 				50D871D21BEF3692003BE1F3 /* RecordViewController.swift */,
@@ -359,6 +370,7 @@
 				50519EF51BF0DFEA0068FBAB /* FitnessTableViewController.swift in Sources */,
 				50519EF31BF0DAE80068FBAB /* FitnessTableViewCell.swift in Sources */,
 				50519EF71BF0E2D20068FBAB /* Fitness.swift in Sources */,
+				50519EFC1BF1CBEE0068FBAB /* DBHelper.swift in Sources */,
 				506559041BEF6ED500B3D707 /* CircularProgressView.swift in Sources */,
 				50D871D11BEF3692003BE1F3 /* TrainViewController.swift in Sources */,
 			);

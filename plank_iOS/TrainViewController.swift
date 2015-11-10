@@ -37,8 +37,12 @@ class TrainViewController: UIViewController {
             escapeMillis = 0
             startButton.setTitle("开始", forState: .Normal)
             print(escapeMillis)
+            let db = DBHelper()
+            db.intDB()
+            db.insertDetail("train", startMillis: 1000, endMillis: 2000)
+            db.queryTest()
             showFailAlert()
-        }else{
+       }else{
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)
             isTraining = true
             circularProgressView.value = 0.0
@@ -49,7 +53,8 @@ class TrainViewController: UIViewController {
     private func showFailAlert(){
         let alert = UIAlertController(title: "tiltle fail", message: "message: fail", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "yes", style: .Default, handler:{(acttion) -> Void in
-            print("yes")}))
+            print("yes")
+        }))
         
         self.presentViewController(alert, animated: true, completion: nil)
     }
