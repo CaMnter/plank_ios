@@ -8,4 +8,5 @@ target 'plank_iOS' do
   #pod 'SwiftyJSON', '~> 2.3'
   pod "PagingMenuController"
   pod 'CVCalendar', '~> 1.2.7'
+  pod 'SQLite.swift', git: 'https://github.com/stephencelis/SQLite.swift.git'
 end
