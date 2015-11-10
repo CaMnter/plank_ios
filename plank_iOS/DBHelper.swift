@@ -37,9 +37,11 @@ let path = NSSearchPathForDirectoriesInDomains(
 
 class DBHelper{
     
+    static let sharedInstance = DBHelper()
+    
     var db:Connection?
     
-    func intDB(){
+    init(){
         let filemgr = NSFileManager.defaultManager()
         var needCreateTable = false
         print(path)
@@ -75,14 +77,10 @@ class DBHelper{
     
     func queryTest(){
         let sql = "SELECT * FROM t_train"
-        do{
-            let tmp = db?.prepare(sql)
-            for row in tmp!{
-                print("id: \(row[0]), start: \(row[1]), end: \(row[2])")
-            }
-            print("world \(db?.totalChanges)")
-        }catch{
-            print("insert detail error")
+        let tmp = db?.prepare(sql)
+        for row in tmp!{
+            print("id: \(row[1]), start: \(row[1]), end: \(row[2])")
         }
+        print("world \(db?.totalChanges)")
     }
 }

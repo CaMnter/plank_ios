@@ -37,8 +37,7 @@ class TrainViewController: UIViewController {
             escapeMillis = 0
             startButton.setTitle("开始", forState: .Normal)
             print(escapeMillis)
-            let db = DBHelper()
-            db.intDB()
+            let db = DBHelper.sharedInstance
             db.insertDetail("train", startMillis: 1000, endMillis: 2000)
             db.queryTest()
             showFailAlert()
