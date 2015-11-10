@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Foundation
 class TrainViewController: UIViewController {
     
-    var secondsPerTime:Double = 8;
-    var escapeMillis:Double = 0.0;
+    var secondsPerTime:Int = 8;
+    var escapeMillis:Int = 0;
     var isTraining = false;
     var timer:NSTimer = NSTimer();
+    var startMillis:Int = 0;
     
     @IBOutlet weak var circularProgressView: CircularProgressView!
     @IBOutlet weak var startButton: UIButton!
@@ -34,15 +36,19 @@ class TrainViewController: UIViewController {
         if isTraining{
             isTraining = false
             timer.invalidate()
-            escapeMillis = 0
             startButton.setTitle("开始", forState: .Normal)
             print(escapeMillis)
             let db = DBHelper.sharedInstance
-            db.insertDetail("train", startMillis: 1000, endMillis: 2000)
+            db.insertDetail("train", startMillis: startMillis, endMillis: startMillis + escapeMillis)
             db.queryTest()
             showFailAlert()
+            db.insertOrUpdateDayTrain(escapeMillis)
+            escapeMillis = 0
        }else{
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)
+            let now = NSDate().timeIntervalSince1970;
+            startMillis = Int(now * 1000.0);
+            print("startMillis \(startMillis)")
             isTraining = true
             circularProgressView.value = 0.0
             startButton.setTitle("结束", forState: .Normal)
@@ -67,9 +73,9 @@ class TrainViewController: UIViewController {
     func updateProgress(){
         escapeMillis += 10
         if(secondsPerTime > 60){
-            circularProgressView.value = CGFloat((escapeMillis % (60 * 1000)) / (60 * 1000))
+            circularProgressView.value = CGFloat(CGFloat((escapeMillis % (60 * 1000))) / CGFloat((60 * 1000)))
         }else{
-            circularProgressView.value = CGFloat((escapeMillis % (secondsPerTime * 1000)) / (secondsPerTime * 1000))
+            circularProgressView.value = CGFloat(CGFloat((escapeMillis % (secondsPerTime * 1000))) / CGFloat((secondsPerTime * 1000)))
         }
         
         if(escapeMillis >= secondsPerTime * 1000){

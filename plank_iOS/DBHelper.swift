@@ -23,9 +23,9 @@ let TABLE_CHALLENGE_DETAIL = "t_challenge"; // challenge detail
 let STATUS_PENDING_SYNC = 0
 let STATUS_SYNCED = 1
 
-let CREATE_TRAIN_TABLE:String = "CREATE TABLE IF NOT EXISTS \(TABLE_TRAIN) (_id INTEGER PRIMARY KEY AUTOINCREMENT, \(COLUMN_NAME_TIMESTAMP) date, \(COLUMN_NAME_TIME_DURATION) LONG, \(COLUMN_NAME_SYNC) INT  default \(STATUS_PENDING_SYNC))"
+let CREATE_TRAIN_TABLE:String = "CREATE TABLE IF NOT EXISTS \(TABLE_TRAIN) (_id INTEGER PRIMARY KEY AUTOINCREMENT, \(COLUMN_NAME_TIMESTAMP) date UNIQUE, \(COLUMN_NAME_TIME_DURATION) LONG, \(COLUMN_NAME_SYNC) INT  default \(STATUS_PENDING_SYNC))"
 
-let CREATE_CHALLENGE_TABLE:String = "CREATE TABLE IF NOT EXISTS \(TABLE_TRAIN) (_id INTEGER PRIMARY KEY AUTOINCREMENT, \(COLUMN_NAME_TIMESTAMP) date, \(COLUMN_NAME_TIME_DURATION) LONG, \(COLUMN_NAME_SYNC) INT  default \(STATUS_PENDING_SYNC))"
+let CREATE_CHALLENGE_TABLE:String = "CREATE TABLE IF NOT EXISTS \(TABLE_TRAIN) (_id INTEGER PRIMARY KEY AUTOINCREMENT, \(COLUMN_NAME_TIMESTAMP) date UNIQUE, \(COLUMN_NAME_TIME_DURATION) LONG, \(COLUMN_NAME_SYNC) INT  default \(STATUS_PENDING_SYNC))"
 
 let CREATE_TRAIN_DETAIL_TABLE:String = "CREATE TABLE \(TABLE_TRAIN_DETAIL) (_id INTEGER PRIMARY KEY AUTOINCREMENT, \(COLUMN_NAME_START_MILLIS) BIGINT, \(COLUMN_NAME_END_MILLIS)  BIGINT, \(COLUMN_NAME_SYNC) INT DEFAULT \(STATUS_PENDING_SYNC))"
 let CREATE_CHALLENGE_DETAIL_TABLE:String = "CREATE TABLE \(TABLE_CHALLENGE_DETAIL) (_id INTEGER PRIMARY KEY AUTOINCREMENT, \(COLUMN_NAME_START_MILLIS) BIGINT, \(COLUMN_NAME_END_MILLIS)  BIGINT, \(COLUMN_NAME_SYNC) INT DEFAULT \(STATUS_PENDING_SYNC))"
@@ -75,12 +75,46 @@ class DBHelper{
         }
     }
     
+    func insertTrainDetail(startMillis:Int, endMillis: Int){
+        insertDetail(TABLE_TRAIN_DETAIL, startMillis: startMillis, endMillis:endMillis)
+    }
+    
+    func insertChallengeDetail(startMillis:Int, endMillis: Int){
+        insertDetail(TABLE_CHALLENGE_DETAIL, startMillis:startMillis, endMillis:endMillis)
+    }
+    
+    func insertOrUpdate(table:String, duration:Int){
+        let insert = "INSERT OR IGNORE INTO \(table) (timestamp, timeDuration) VALUES (date(), \(duration))";
+        let update = "UPDATE \(table) SET timeDuration = timeDuration + \(duration) WHERE timestamp = date()";
+        do{
+            try db?.transaction(block: {
+                try self.db?.execute(update)
+                
+                print("tt \(self.db?.totalChanges)")
+                if self.db?.changes == 0{
+                    try self.db?.execute(insert)
+                }
+            })
+            print("toalChanges: \(db?.changes)")
+        }catch{
+            print("insert day info error")
+        }
+    }
+    
+    func insertOrUpdateDayTrain(duration:Int){
+        insertOrUpdate(TABLE_TRAIN, duration: duration)
+    }
+    
+    func insertOrUpdateDayChallenge(duration:Int){
+        insertOrUpdate(TABLE_TRAIN, duration: duration)
+    }
+    
     func queryTest(){
         let sql = "SELECT * FROM t_train"
         let tmp = db?.prepare(sql)
         for row in tmp!{
             print("id: \(row[1]), start: \(row[1]), end: \(row[2])")
         }
-        print("world \(db?.totalChanges)")
+        print("totalChanges: \(db?.totalChanges)")
     }
 }
