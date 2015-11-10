@@ -7,4 +7,5 @@ target 'plank_iOS' do
   #pod 'ORStackView', '~> 3.0'
   #pod 'SwiftyJSON', '~> 2.3'
   pod "PagingMenuController"
+  pod 'CVCalendar', '~> 1.2.7'
 end

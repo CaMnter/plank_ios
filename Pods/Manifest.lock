@@ -1,22 +1,13 @@
 PODS:
-  - GradientCircularProgress (2.0.0)
+  - CVCalendar (1.2.7)
   - PagingMenuController (0.7.5)
 
 DEPENDENCIES:
-  - GradientCircularProgress (from `https://github.com/keygx/GradientCircularProgress`)
+  - CVCalendar (~> 1.2.7)
   - PagingMenuController
 
-EXTERNAL SOURCES:
-  GradientCircularProgress:
-    :git: https://github.com/keygx/GradientCircularProgress
-
-CHECKOUT OPTIONS:
-  GradientCircularProgress:
-    :commit: 1f13491d721178093b9452bc28115f9c735f6a66
-    :git: https://github.com/keygx/GradientCircularProgress
-
 SPEC CHECKSUMS:
-  GradientCircularProgress: 2d2f474f68661c109717371244ad0728b5044ed6
+  CVCalendar: 2e08ed1e31135d51f1f75d4321976ee96ce64282
   PagingMenuController: cc71ac898b688a8523d9c1d98396767fe236e0a1
 
 COCOAPODS: 0.39.0
