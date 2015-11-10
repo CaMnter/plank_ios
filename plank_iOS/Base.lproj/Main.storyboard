@@ -141,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="1400.5" y="881.5"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Animator Delegate-->
         <scene sceneID="XjL-1R-MGe">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" id="yaI-Sq-qPX" customClass="SecondViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecordViewController" id="yaI-Sq-qPX" customClass="RecordViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DhC-Xu-nar"/>
                         <viewControllerLayoutGuide type="bottom" id="BTW-3N-Lu0"/>
@@ -153,8 +153,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Second" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKh-o2-v0g">
-                                <rect key="frame" x="135" y="323" width="104" height="21"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVT-5Q-QbM" customClass="CVCalendarMenuView" customModule="CVCalendar">
+                                <rect key="frame" x="16" y="20" width="343" height="24"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="FRA-S2-25G"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="8" right="8"/>
+                                <connections>
+                                    <outlet property="menuViewDelegate" destination="yaI-Sq-qPX" id="7wm-CW-vV9"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HwI-6o-nSH" customClass="CVCalendarView" customModule="CVCalendar">
+                                <rect key="frame" x="16" y="65" width="343" height="300"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="1Wi-4X-MBf"/>
+                                    <constraint firstAttribute="height" constant="300" id="o3o-HY-lZD"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1Wi-4X-MBf"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="animatorDelegate" destination="yaI-Sq-qPX" id="CVA-EE-07I"/>
+                                    <outlet property="calendarAppearanceDelegate" destination="yaI-Sq-qPX" id="h3h-UI-gl7"/>
+                                    <outlet property="calendarDelegate" destination="yaI-Sq-qPX" id="PUc-3x-LcJ"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VV8-Vv-f9c">
+                                <rect key="frame" x="166.5" y="385" width="42" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -163,8 +194,22 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uVT-5Q-QbM" firstAttribute="leading" secondItem="lRT-Jz-xpD" secondAttribute="leadingMargin" id="GuW-hy-nhu"/>
+                            <constraint firstItem="uVT-5Q-QbM" firstAttribute="top" secondItem="lRT-Jz-xpD" secondAttribute="topMargin" constant="20" id="ULZ-Kg-VhK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uVT-5Q-QbM" secondAttribute="trailing" id="VLM-iY-MNv"/>
+                            <constraint firstItem="VV8-Vv-f9c" firstAttribute="centerX" secondItem="lRT-Jz-xpD" secondAttribute="centerX" id="YTS-Fs-ox0"/>
+                            <constraint firstItem="HwI-6o-nSH" firstAttribute="width" secondItem="uVT-5Q-QbM" secondAttribute="width" id="fB5-mS-tqr"/>
+                            <constraint firstItem="HwI-6o-nSH" firstAttribute="top" secondItem="uVT-5Q-QbM" secondAttribute="bottom" constant="21" id="gPL-Ch-s8z"/>
+                            <constraint firstItem="HwI-6o-nSH" firstAttribute="leading" secondItem="uVT-5Q-QbM" secondAttribute="leading" id="riS-B1-Grn"/>
+                            <constraint firstItem="VV8-Vv-f9c" firstAttribute="top" secondItem="HwI-6o-nSH" secondAttribute="bottom" constant="20" id="wXX-r6-LmG"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="calendarView" destination="HwI-6o-nSH" id="xWp-xP-qHf"/>
+                        <outlet property="menuView" destination="uVT-5Q-QbM" id="xc4-p2-V3L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YRb-8W-kuD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

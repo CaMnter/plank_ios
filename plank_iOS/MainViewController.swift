@@ -19,7 +19,7 @@ class MainViewController: UIViewController, PagingMenuControllerDelegate {
         trainViewController.title = "训练"
         let challengeViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TrainViewController") as! TrainViewController
         challengeViewController.title = "挑战"
-        let recordViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SecondViewController") as! SecondViewController
+        let recordViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RecordViewController") as! RecordViewController
         recordViewController.title = "记录"
         
         let viewControllers = [trainViewController, challengeViewController, recordViewController]
