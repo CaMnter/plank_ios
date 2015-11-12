@@ -131,6 +131,14 @@ class DBHelper{
         
         // TODO need to sort by yourself
         return result
+    }
+    
+    func queryData(table:String, date: NSDate, delegate:LoadDataProtocol?){
         
+        let components = NSCalendar.currentCalendar().components(NSCalendarUnit.Month, fromDate: date)
+        let month = components.month
+        
+        let result = queryData(table, month: month)
+        delegate?.didDataLoadFinish(table, date: date, result: result)
     }
 }

@@ -14,11 +14,11 @@ class RecordViewController: UIViewController {
     @IBOutlet weak var calendarView: CVCalendarView!
     @IBOutlet weak var menuView: CVCalendarMenuView!
 
-    
     var shouldShowDaysOut = false
     var animationFinished = true
     
-    var selectedDay:DayView!
+    var trainData:Dictionary<NSDate, Dictionary<String, Int64>> = [:]
+    var currentDate:NSDate = NSDate();
     
     // MARK: - Life cycle
     
@@ -31,8 +31,24 @@ class RecordViewController: UIViewController {
         
         calendarView.commitCalendarViewUpdate()
         menuView.commitMenuViewUpdate()
+        
+        //DBHelper.sharedInstance.queryData("train", date: NSDate(), delegate: self)
+
+    }
+    @IBAction func test(sender: AnyObject) {
+        self.shouldShowDaysOut = !self.shouldShowDaysOut
     }
 }
+
+extension RecordViewController: LoadDataProtocol {
+    func didDataLoadFinish(table: String, date: NSDate, result: Dictionary<String, Int64>) {
+        // TODO
+        trainData[date] = result
+        self.calendarView.toggleViewWithDate(date)
+        //self.calendarView.commitCalendarViewUpdate()
+    }
+}
+
 
 // MARK: - CVCalendarViewDelegate & CVCalendarMenuViewDelegate
 
@@ -60,7 +76,6 @@ extension RecordViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelega
     
     func didSelectDayView(dayView: CVCalendarDayView, animationDidFinish: Bool) {
         print("\(dayView.date.commonDescription) is selected!")
-        selectedDay = dayView
     }
     
     
@@ -162,11 +177,23 @@ extension RecordViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelega
     
     func supplementaryView(shouldDisplayOnDayView dayView: DayView) -> Bool {
         // TODO check whether show supplementary view or not?
-        if (Int(arc4random_uniform(3)) == 1) {
-            return true
+//        if (Int(arc4random_uniform(3)) == 1) {
+//            return true
+//        }
+        
+        let monthTrainData = trainData[currentDate]
+        if dayView.date != nil{
+            let year = dayView.date.year
+            let month = dayView.date.month
+            let day = dayView.date.day
+            let date:String = String(format: "%d-%2d-%2d", year, month, day)
+            let dayTrainData = monthTrainData?[date]
+        
+            return dayTrainData > 0 ? true : false
+        }else{
+            return false
         }
         
-        return false
     }
 }
 
@@ -240,7 +267,9 @@ extension RecordViewController {
         //        let calendar = NSCalendar.currentCalendar()
         //        let calendarManager = calendarView.manager
         let components = Manager.componentsForDate(date) // from today
+        self.currentDate = date
         
+        DBHelper.sharedInstance.queryData("train", date: date, delegate: self)
         print("Showing Month: \(components.month)")
     }
     
@@ -250,7 +279,9 @@ extension RecordViewController {
         //        let calendar = NSCalendar.currentCalendar()
         //        let calendarManager = calendarView.manager
         let components = Manager.componentsForDate(date) // from today
+        self.currentDate = date
         
+        DBHelper.sharedInstance.queryData("train", date: date, delegate: self)
         print("Showing Month: \(components.month)")
     }
     
