@@ -24,15 +24,6 @@ class RecordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let dirPaths =
-        NSSearchPathForDirectoriesInDomains(.DocumentDirectory,
-            .UserDomainMask, true)
-        
-        let docsDir = dirPaths[0]
-        
-        let dbPath = docsDir + "record.db"
-
     }
     
     override func viewDidLayoutSubviews() {

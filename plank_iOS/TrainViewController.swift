@@ -43,6 +43,7 @@ class TrainViewController: UIViewController {
             db.queryTest()
             showFailAlert()
             db.insertOrUpdateDayTrain(escapeMillis)
+            db.queryData("train", month: 11)
             escapeMillis = 0
        }else{
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)

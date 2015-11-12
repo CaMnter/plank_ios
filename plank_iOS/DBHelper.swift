@@ -7,6 +7,7 @@
 //
 
 import SQLite
+import Foundation
 
 
 let COLUMN_NAME_TIMESTAMP = "timestamp"
@@ -113,8 +114,23 @@ class DBHelper{
         let sql = "SELECT * FROM t_train"
         let tmp = db?.prepare(sql)
         for row in tmp!{
-            print("id: \(row[1]), start: \(row[1]), end: \(row[2])")
+            print("id: \(row[0]), start: \(row[1]), end: \(row[2])")
         }
         print("totalChanges: \(db?.totalChanges)")
+    }
+    
+    func queryData(table:String, month:Int) -> [String: Int64]{
+        let sql:String = String(format: "SELECT timestamp, timeDuration FROM %@ WHERE strftime('%%m', timestamp) = '%2d'", table, month)
+        var result = [String: Int64]()
+        //let sql = "select strftime('%m', timestamp), timeDuration from train"
+        let tmp = db?.prepare(sql)
+        
+        for row in tmp!{
+            result[row[0] as! String] = row[1] as! Int64
+        }
+        
+        // TODO need to sort by yourself
+        return result
+        
     }
 }
