@@ -13,17 +13,19 @@ class RecordViewController: UIViewController {
     // MARK: - Properties
     @IBOutlet weak var calendarView: CVCalendarView!
     @IBOutlet weak var menuView: CVCalendarMenuView!
+    @IBOutlet weak var monthLabel: UILabel!
+    @IBOutlet weak var dayTrainDurationLabel: UILabel!
 
     var shouldShowDaysOut = false
     var animationFinished = true
     
     var trainData:Dictionary<String/* year-month */, Dictionary<String, Int64>> = [:]
-    var currentDate:NSDate = NSDate();
     
     // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        monthLabel.text = CVDate(date: NSDate()).globalDescription
     }
     
     override func viewDidLayoutSubviews() {
@@ -71,9 +73,56 @@ extension RecordViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelega
     }
     
     func didSelectDayView(dayView: CVCalendarDayView, animationDidFinish: Bool) {
-        let tmp = trainData[DateUtil.getYearMonthString(dayView.date.date)];
-        
+        let monthData = trainData[DateUtil.getYearMonthString(dayView.date.date)]
+        if monthData != nil{
+            let duration = monthData![DateUtil.getYearMonthDayString(dayView.date.date)]
+            if duration != nil && duration > 0{
+                dayTrainDurationLabel.text = String(duration as Int64!)
+            }else{
+                dayTrainDurationLabel.text = ""
+            }
+        }else{
+            dayTrainDurationLabel.text = ""
+        }
         print("\(dayView.date.commonDescription) is selected!")
+    }
+    
+    func presentedDateUpdated(date: CVDate) {
+        if monthLabel.text != date.globalDescription && self.animationFinished {
+            let updatedMonthLabel = UILabel()
+            updatedMonthLabel.textColor = monthLabel.textColor
+            updatedMonthLabel.font = monthLabel.font
+            updatedMonthLabel.textAlignment = .Center
+            updatedMonthLabel.text = date.globalDescription
+            updatedMonthLabel.sizeToFit()
+            updatedMonthLabel.alpha = 0
+            updatedMonthLabel.center = self.monthLabel.center
+            
+            let offset = CGFloat(48)
+            updatedMonthLabel.transform = CGAffineTransformMakeTranslation(0, offset)
+            updatedMonthLabel.transform = CGAffineTransformMakeScale(1, 0.1)
+            
+            UIView.animateWithDuration(0.35, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+                self.animationFinished = false
+                self.monthLabel.transform = CGAffineTransformMakeTranslation(0, -offset)
+                self.monthLabel.transform = CGAffineTransformMakeScale(1, 0.1)
+                self.monthLabel.alpha = 0
+                
+                updatedMonthLabel.alpha = 1
+                updatedMonthLabel.transform = CGAffineTransformIdentity
+                
+                }) { _ in
+                    
+                    self.animationFinished = true
+                    self.monthLabel.frame = updatedMonthLabel.frame
+                    self.monthLabel.text = updatedMonthLabel.text
+                    self.monthLabel.transform = CGAffineTransformIdentity
+                    self.monthLabel.alpha = 1
+                    updatedMonthLabel.removeFromSuperview()
+            }
+            
+            self.view.insertSubview(updatedMonthLabel, aboveSubview: self.monthLabel)
+        }
     }
     
     
@@ -190,9 +239,6 @@ extension RecordViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelega
             let monthTrainData = trainData[yearMonth]
             let dayTrainData = monthTrainData?[yearMonthDay]
             
-            print(yearMonth + " \(dayTrainData)")
-            print(yearMonthDay + " \(dayTrainData)")
-        
             return dayTrainData > 0 ? true : false
         }else{
             return false
@@ -271,9 +317,11 @@ extension RecordViewController {
         //        let calendar = NSCalendar.currentCalendar()
         //        let calendarManager = calendarView.manager
         let components = Manager.componentsForDate(date) // from today
-        self.currentDate = date
         
-        DBHelper.sharedInstance.queryData("train", date: date, delegate: self)
+        let monthTrainData = trainData[DateUtil.getYearMonthString(date)]
+        if monthTrainData == nil{
+            DBHelper.sharedInstance.queryData("train", date: date, delegate: self)
+        }
         print("Showing Month: \(components.month)")
     }
     
@@ -283,9 +331,11 @@ extension RecordViewController {
         //        let calendar = NSCalendar.currentCalendar()
         //        let calendarManager = calendarView.manager
         let components = Manager.componentsForDate(date) // from today
-        self.currentDate = date
+        let monthTrainData = trainData[DateUtil.getYearMonthString(date)]
         
-        DBHelper.sharedInstance.queryData("train", date: date, delegate: self)
+        if monthTrainData == nil{
+            DBHelper.sharedInstance.queryData("train", date: date, delegate: self)
+        }
         print("Showing Month: \(components.month)")
     }
     

@@ -9,10 +9,18 @@
 import Foundation
 
 class DateUtil{
-static func getYearMonthString(date: NSDate)->String{
+    static func getYearMonthString(date: NSDate)->String{
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components([NSCalendarUnit.Year, NSCalendarUnit.Month], fromDate: date)
-        return "\(components.year)-\(components.month)"
+        
+        //return "\(components.year)-\(components.month)"
+        return String(format: "%d-%2d", components.year, components.month)
+    }
     
+    static func getYearMonthDayString(date: NSDate) -> String{
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([NSCalendarUnit.Year, NSCalendarUnit.Month, .Day], fromDate: date)
+        //return "\(components.year)-\(components.month)"
+        return String(format: "%d-%2d-%2d", components.year, components.month, components.day)
     }
 }

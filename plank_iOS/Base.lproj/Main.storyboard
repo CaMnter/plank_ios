@@ -209,7 +209,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="calendarView" destination="HwI-6o-nSH" id="xWp-xP-qHf"/>
+                        <outlet property="dayTrainDurationLabel" destination="VV8-Vv-f9c" id="pj5-sD-IkB"/>
                         <outlet property="menuView" destination="uVT-5Q-QbM" id="xc4-p2-V3L"/>
+                        <outlet property="monthLabel" destination="hot-OF-ANx" id="0In-uM-9bm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YRb-8W-kuD" userLabel="First Responder" sceneMemberID="firstResponder"/>
