@@ -11,7 +11,6 @@ import PagingMenuController
 
 class MainViewController: UIViewController, PagingMenuControllerDelegate {
     
-    var viewControllers:[UIViewController] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,18 +22,16 @@ class MainViewController: UIViewController, PagingMenuControllerDelegate {
         let recordViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RecordViewController") as! RecordViewController
         recordViewController.title = "记录"
         
-        self.viewControllers = [trainViewController, challengeViewController, recordViewController]
+        let viewControllers = [trainViewController, challengeViewController, recordViewController]
         
         let options = PagingMenuOptions()
         options.menuHeight = 50
         //options.menuDisplayMode = .Standard(widthMode: .Flexible, centerItem: true, scrollingMode: .ScrollEnabledAndBouces)
         options.menuDisplayMode = .SegmentedControl
-        
+       
         let pagingMenuController = self.childViewControllers.first as! PagingMenuController
         pagingMenuController.delegate = self
         pagingMenuController.setup(viewControllers: viewControllers, options: options)
-        
-        //DBHelper.sharedInstance.queryData("train", date: NSDate(), delegate: self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,17 +45,5 @@ class MainViewController: UIViewController, PagingMenuControllerDelegate {
     }
     
     func didMoveToMenuPage(page: Int) {
-    }
-    
-    
-    
-}
-extension MainViewController: LoadDataProtocol {
-    func didDataLoadFinish(table: String, date: NSDate, result: Dictionary<String, Int64>) {
-        // TODO
-        let recordViewController:RecordViewController = viewControllers[2] as! RecordViewController
-        recordViewController.trainData[date] = result
-        recordViewController.currentDate = date
-        
     }
 }
