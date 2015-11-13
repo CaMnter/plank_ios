@@ -1,0 +1,161 @@
+{
+  "isShowGifDesc":true,
+  "actionGifInfos": [
+    {
+      "bodyPart": "大腿后侧、臀部和后背肌肉",
+      "bodyPartImageName": "fuji_body_1.jpg",
+      "bodyPartImageResId": 0,
+      "actionCount": 8,
+      "name": "仰卧交替脚跟接触",
+      "gifName": "fuji_1_1.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "fuji_1_1.jpg",
+      "gifPreviewImageResId": 0,
+      "descUrl":"798"
+    },
+    {
+      "bodyPart": "腹直肌、腹斜肌",
+      "bodyPartImageName": "fuji_body_7.jpg",
+      "bodyPartImageResId": 0,
+      "actionCount": 8,
+      "name": "仰卧屈膝举腿 ",
+      "gifName": "fuji_1_2.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "fuji_1_2.jpg",
+      "gifPreviewImageResId": 0,
+      "descUrl":"800"
+    },
+    {
+      "bodyPart": "腹直肌、腹斜肌",
+      "bodyPartImageName": "fuji_body_7.jpg",
+      "bodyPartImageResId": 0,
+      "actionCount": 8,
+      "name": "仰卧核心卷腹",
+      "gifName": "fuji_1_3.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "fuji_1_3.jpg",
+      "gifPreviewImageResId": 0,
+      "descUrl":"802"
+    },
+    {
+      "bodyPart": "上腹肌、腹外斜肌",
+      "bodyPartImageName": "fuji_body_2.jpg",
+      "bodyPartImageResId": 0,
+      "actionCount": 10,
+      "name": "仰卧对角交替收膝",
+      "gifName": "fuji_1_4.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "fuji_1_4.jpg",
+      "gifPreviewImageResId": 0,
+      "descUrl":"804"
+    },
+    {
+      "bodyPart": "腹直肌、腹斜肌",
+      "bodyPartImageName": "fuji_body_7.jpg",
+      "bodyPartImageResId": 0,
+      "actionCount": 6,
+      "name": "仰卧卷腹",
+      "gifName": "fuji_1_5.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "fuji_1_5.jpg",
+      "gifPreviewImageResId": 0,
+      "descUrl":"806"
+    },
+    {
+      "bodyPart": "下腹肌",
+      "bodyPartImageName": "fuji_body_3.jpg",
+      "bodyPartImageResId": 0,
+      "actionCount": 30,
+      "name": "平板支撑动作",
+      "gifName": "fuji_1_6.gif",
+      "gifResId": 1,
+      "gifPreviewImageName": "fuji_1_6.jpg",
+      "gifPreviewImageResId": 0,
+      "descUrl":"808"
+    },
+    {
+      "bodyPart": "下腹肌",
+      "bodyPartImageName": "fuji_body_3.jpg",
+      "bodyPartImageResId": 0,
+      "actionCount": 8,
+      "name": "仰卧屈膝举腿转腰",
+      "gifName": "fuji_1_7.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "fuji_1_7.jpg",
+      "gifPreviewImageResId": 0,
+      "descUrl":"816"
+    },
+    {
+      "bodyPart": "（左）腹外斜肌",
+      "bodyPartImageName": "fuji_body_6.jpg",
+      "bodyPartImageResId": 0,
+      "actionCount": 8,
+      "name": "反向卷腹",
+      "gifName": "fuji_1_8.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "fuji_1_8.jpg",
+      "gifPreviewImageResId": 0,
+      "descUrl":"819"
+    },
+    {
+      "bodyPart": "（右)腹外斜肌",
+      "bodyPartImageName": "fuji_body_6.jpg",
+      "bodyPartImageResId": 0,
+      "actionCount": 8,
+      "name": "(左边)侧卧举腿卷腹",
+      "gifName": "fuji_1_9.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "fuji_1_9.jpg",
+      "gifPreviewImageResId": 0,
+      "descUrl":"821"
+    },
+    {
+      "bodyPart": "大腿后侧、臀部和后背肌肉",
+      "bodyPartImageName": "fuji_body_1.jpg",
+      "bodyPartImageResId": 0,
+      "actionCount": 8,
+      "name": "(右边)侧卧举腿卷腹",
+      "gifName": "fuji_1_10.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "fuji_1_10.jpg",
+      "gifPreviewImageResId": 0,
+      "descUrl":"823"
+    },
+    {
+      "bodyPart": "腹直肌、腹斜肌",
+      "bodyPartImageName": "fuji_body_7.jpg",
+      "bodyPartImageResId": 0,
+      "actionCount": 8,
+      "name": "仰卧起坐",
+      "gifName": "fuji_1_11.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "fuji_1_11.jpg",
+      "gifPreviewImageResId": 0,
+      "descUrl":"825"
+    },
+    {
+      "bodyPart": "腹直肌、腹斜肌",
+      "bodyPartImageName": "fuji_body_7.jpg",
+      "bodyPartImageResId": 0,
+      "actionCount": 8,
+      "name": "仰卧拉伸卷腹",
+      "gifName": "fuji_1_12.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "fuji_1_12.jpg",
+      "gifPreviewImageResId": 0,
+      "descUrl":"827"
+    },
+    {
+      "bodyPart": "上腹肌、腹外斜肌",
+      "bodyPartImageName": "fuji_body_2.jpg",
+      "bodyPartImageResId": 0,
+      "actionCount": 10,
+      "name": "仰卧屈膝卷腹",
+      "gifName": "fuji_1_13.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "fuji_1_13.jpg",
+      "gifPreviewImageResId": 0,
+      "descUrl":"829"
+    }
+  ]
+}

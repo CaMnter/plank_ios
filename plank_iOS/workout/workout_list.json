@@ -1,0 +1,36 @@
+{
+  "workoutList": [
+    {
+      "name": "9分钟减肥",
+      "needDownload":false,
+      "previewImage": "lose_weight_1.jpg",
+      "workoutFileName": "loseWeight.json",
+      "workoutName":"9分钟减肥",
+      "desc": "每日9分钟，轻松甩肉"
+    },
+    {
+      "name": "在家瘦全身",
+      "needDownload":false,
+      "previewImage": "0_1.jpg",
+      "workoutFileName": "workout_0.json",
+      "workoutName":"在家瘦全身",
+      "desc": "针对游泳圈，粗腿，肥臀，蝴蝶袖"
+    },
+    {
+      "name": "马甲线指日可待",
+      "needDownload":false,
+      "previewImage": "1_1.jpg",
+      "workoutFileName": "workout_1.json",
+      "workoutName":"马甲线指日可待",
+      "desc": "7天就能感觉到腹部变得紧实"
+    },
+    {
+      "name": "9个动作，不一样的你",
+      "needDownload":false,
+      "previewImage": "2_2.jpg",
+      "workoutFileName": "workout_2.json",
+      "workoutName":"9个动作，不一样的你",
+      "desc": "锻炼后，连老公都不一定认出你"
+    }
+  ]
+}

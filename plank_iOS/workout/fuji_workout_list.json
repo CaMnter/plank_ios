@@ -1,0 +1,28 @@
+{
+  "workoutList": [
+    {
+      "name": "初级",
+      "needDownload":false,
+      "previewImage": "fuji_1.png",
+      "workoutFileName": "fuji_1.json",
+      "workoutName":"腹肌撕裂者-初级",
+      "desc": "难度较低，适合大肚腩患者"
+    },
+    {
+      "name": "中级",
+      "needDownload":false,
+      "previewImage": "fuji_2.png",
+      "workoutFileName": "fuji_2.json",
+      "workoutName":"腹肌撕裂者-中级",
+      "desc": "难度一般，适合马甲线追求者"
+    },
+    {
+      "name": "高级",
+      "needDownload":false,
+      "previewImage": "fuji_3.png",
+      "workoutFileName": "fuji_3.json",
+      "workoutName":"腹肌撕裂者-高级",
+      "desc": "难度较高，适合腹肌撕裂者"
+    }
+  ]
+}

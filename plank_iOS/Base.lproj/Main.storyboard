@@ -240,7 +240,6 @@
         <!--训练-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="FirstViewController" id="9pv-A4-QxB" customClass="FirstViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
@@ -284,6 +283,7 @@
                         <outlet property="startButton" destination="68S-R7-I1W" id="Hwd-zy-sOg"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4779.5" y="-1168.5"/>
         </scene>
@@ -298,10 +298,10 @@
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FitnessTableViewCell" rowHeight="100" id="aQa-yE-vUn" customClass="FitnessTableViewCell" customModule="plank_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="114" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="113.5" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aQa-yE-vUn" id="4L6-Us-AQe">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dOM-Ok-VCP">
@@ -383,12 +383,6 @@
         <!--Train View Controller-->
         <scene sceneID="d9H-ze-PqT">
             <objects>
-                <tapGestureRecognizer id="m6p-JV-qnI">
-                    <connections>
-                        <segue destination="Puj-Kx-TVN" kind="presentation" id="1XH-Qc-IbW"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="223-FK-dic" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="TrainViewController" id="aEy-Be-xlU" customClass="TrainViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hav-QI-02p"/>
@@ -447,13 +441,18 @@
                         <outlet property="startButton" destination="l9a-DO-42W" id="1PY-f0-0Vn"/>
                     </connections>
                 </viewController>
+                <tapGestureRecognizer id="m6p-JV-qnI">
+                    <connections>
+                        <segue destination="Puj-Kx-TVN" kind="presentation" id="1XH-Qc-IbW"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="223-FK-dic" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2198" y="57"/>
         </scene>
         <!--webView-->
         <scene sceneID="Rjf-OI-cSb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qfc-jM-fyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="4ko-sF-WUd" customClass="WebViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y94-TO-jx7"/>
@@ -490,8 +489,9 @@
                         <outlet property="webView" destination="mfy-Xr-Hhq" id="s8Q-69-NAy"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qfc-jM-fyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3719.5" y="145.5"/>
+            <point key="canvasLocation" x="3206.5" y="56.5"/>
         </scene>
         <!--健身-->
         <scene sceneID="ffb-ix-pHf">
@@ -515,7 +515,6 @@
         <!--首页-->
         <scene sceneID="ekJ-3I-7Nr">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dpP-Ok-cwC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MainViewController" id="o16-eJ-8Of" customClass="MainViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UCa-Or-UGS"/>
@@ -545,13 +544,13 @@
                     <tabBarItem key="tabBarItem" title="首页" image="second" id="ZHF-xn-Rou"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dpP-Ok-cwC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="681.5" y="-880.5"/>
         </scene>
         <!--Paging Menu Controller-->
         <scene sceneID="kJL-Lm-pHk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hVZ-9H-xaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="KzT-YW-7hu" customClass="PagingMenuController" customModule="PagingMenuController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MF2-VG-OU6"/>
@@ -565,6 +564,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVZ-9H-xaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1392.5" y="-880.5"/>
         </scene>
@@ -584,7 +584,7 @@
                                         <rect key="frame" x="0.0" y="99" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JLU-R0-HHJ" id="oLN-Ss-bmN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first" translatesAutoresizingMaskIntoConstraints="NO" id="NxG-VU-sPj">
@@ -733,7 +733,6 @@
         <!--Navigation Controller-->
         <scene sceneID="afb-ex-pd6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JcW-6m-ssK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Puj-Kx-TVN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -747,8 +746,9 @@
                         <segue destination="4ko-sF-WUd" kind="relationship" relationship="rootViewController" id="xOz-Ek-Dvm"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JcW-6m-ssK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2907" y="145"/>
+            <point key="canvasLocation" x="2674.5" y="56.5"/>
         </scene>
     </scenes>
     <resources>

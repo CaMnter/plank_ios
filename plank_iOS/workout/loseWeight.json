@@ -1,0 +1,113 @@
+{
+  "isShowGifDesc":false,
+  "actionGifInfos": [
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 60,
+      "actionType": 1,
+      "name": "开合跳",
+      "gifName": "lose_weight_1.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "lose_weight_1.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 60,
+      "actionType": 1,
+      "name": "高抬腿",
+      "gifName": "lose_weight_2.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "lose_weight_2.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 60,
+      "actionType": 1,
+      "name": "深蹲跳",
+      "gifName": "lose_weight_3.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "lose_weight_3.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 60,
+      "actionType": 1,
+      "name": "交替弓箭步",
+      "gifName": "lose_weight_4.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "lose_weight_4.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 60,
+      "actionType": 1,
+      "name": "背刺高抬腿",
+      "gifName": "lose_weight_5.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "lose_weight_5.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 60,
+      "actionType": 1,
+      "name": "登山",
+      "gifName": "lose_weight_6.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "lose_weight_6.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 60,
+      "actionType": 1,
+      "name": "Bicycles",
+      "gifName": "lose_weight_7.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "lose_weight_7.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 60,
+      "actionType": 1,
+      "name": "站式肘触膝",
+      "gifName": "lose_weight_8.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "lose_weight_8.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 30,
+      "actionType": 0,
+      "name": "跪式俯卧撑",
+      "gifName": "lose_weight_9.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "lose_weight_9.jpg",
+      "gifPreviewImageResId": 0
+    }
+  ]
+}

@@ -41,10 +41,10 @@ class WebViewController: UIViewController {
     func loadData(){
         Alamofire.request(.GET, "http://plankmp.sinaapp.com/?json=get_post&post_id=13", parameters: nil)
             .responseJSON { response in
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.data)     // server data
-                print(response.result)   // result of response serialization
+//                print(response.request)  // original URL request
+//                print(response.response) // URL response
+//                print(response.data)     // server data
+//                print(response.result)   // result of response serialization
                 
                 //response.result.value!["content"]
                 if let json = response.result.value {

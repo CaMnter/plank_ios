@@ -1,0 +1,113 @@
+{
+  "isShowGifDesc":false,
+  "actionGifInfos": [
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 45,
+      "actionType": 1,
+      "name": "",
+      "gifName": "2_1.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "2_1.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 45,
+      "actionType": 1,
+      "name": "",
+      "gifName": "2_2.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "2_2.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 45,
+      "actionType": 1,
+      "name": "",
+      "gifName": "2_3.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "2_3.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 45,
+      "actionType": 1,
+      "name": "",
+      "gifName": "2_4.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "2_4.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 45,
+      "actionType": 1,
+      "name": "",
+      "gifName": "2_5.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "2_5.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 45,
+      "actionType": 1,
+      "name": "",
+      "gifName": "2_6.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "2_6.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 45,
+      "actionType": 1,
+      "name": "",
+      "gifName": "2_7.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "2_7.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 45,
+      "actionType": 1,
+      "name": "",
+      "gifName": "2_8.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "2_8.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 45,
+      "actionType": 0,
+      "name": "",
+      "gifName": "2_9.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "2_9.jpg",
+      "gifPreviewImageResId": 0
+    }
+  ]
+}

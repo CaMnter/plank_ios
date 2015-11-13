@@ -1,0 +1,89 @@
+{
+  "isShowGifDesc":false,
+  "actionGifInfos": [
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 45,
+      "actionType": 1,
+      "name": "",
+      "gifName": "1_1.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "1_1.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 45,
+      "actionType": 1,
+      "name": "",
+      "gifName": "1_2.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "1_2.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 45,
+      "actionType": 1,
+      "name": "",
+      "gifName": "1_3.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "1_3.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 45,
+      "actionType": 1,
+      "name": "",
+      "gifName": "1_4.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "1_4.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 45,
+      "actionType": 1,
+      "name": "",
+      "gifName": "1_5.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "1_5.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 45,
+      "actionType": 1,
+      "name": "",
+      "gifName": "1_6.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "1_6.jpg",
+      "gifPreviewImageResId": 0
+    },
+    {
+      "bodyPart": "",
+      "bodyPartImageName" :"",
+      "bodyPartImageResId": 0,
+      "actionCount": 45,
+      "actionType": 1,
+      "name": "",
+      "gifName": "1_7.gif",
+      "gifResId": 0,
+      "gifPreviewImageName": "1_7.jpg",
+      "gifPreviewImageResId": 0
+    }
+  ]
+}
