@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0AD78130EF8A30A0D6897A63 /* Pods_plank_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EB53F00442C3C625C985F5 /* Pods_plank_iOS.framework */; };
 		5030B0201BF5CA8D00FED32F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030B01F1BF5CA8D00FED32F /* WebViewController.swift */; };
+		5030B0291BF5F00F00FED32F /* html in Resources */ = {isa = PBXBuildFile; fileRef = 5030B0281BF5F00F00FED32F /* html */; };
 		50519EF31BF0DAE80068FBAB /* FitnessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519EF21BF0DAE80068FBAB /* FitnessTableViewCell.swift */; };
 		50519EF51BF0DFEA0068FBAB /* FitnessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519EF41BF0DFEA0068FBAB /* FitnessTableViewController.swift */; };
 		50519EF71BF0E2D20068FBAB /* Fitness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519EF61BF0E2D20068FBAB /* Fitness.swift */; };
@@ -75,6 +76,7 @@
 /* Begin PBXFileReference section */
 		309665D23EEE75C41240276C /* Pods-plank_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plank_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-plank_iOS/Pods-plank_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		5030B01F1BF5CA8D00FED32F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		5030B0281BF5F00F00FED32F /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
 		50519EF21BF0DAE80068FBAB /* FitnessTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTableViewCell.swift; sourceTree = "<group>"; };
 		50519EF41BF0DFEA0068FBAB /* FitnessTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTableViewController.swift; sourceTree = "<group>"; };
 		50519EF61BF0E2D20068FBAB /* Fitness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fitness.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 		50D871CD1BEF3692003BE1F3 /* plank_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				5030B0281BF5F00F00FED32F /* html */,
 				50519EFA1BF1CBCA0068FBAB /* db */,
 				50D871CE1BEF3692003BE1F3 /* AppDelegate.swift */,
 				50D871D01BEF3692003BE1F3 /* TrainViewController.swift */,
@@ -387,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50D871DB1BEF3692003BE1F3 /* LaunchScreen.storyboard in Resources */,
+				5030B0291BF5F00F00FED32F /* html in Resources */,
 				50D871D81BEF3692003BE1F3 /* Assets.xcassets in Resources */,
 				50D871D61BEF3692003BE1F3 /* Main.storyboard in Resources */,
 			);
