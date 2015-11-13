@@ -17,7 +17,7 @@ class RecordViewController: UIViewController {
     var shouldShowDaysOut = false
     var animationFinished = true
     
-    var trainData:Dictionary<NSDate, Dictionary<String, Int64>> = [:]
+    var trainData:Dictionary<String/* year-month */, Dictionary<String, Int64>> = [:]
     var currentDate:NSDate = NSDate();
     
     // MARK: - Life cycle
@@ -32,20 +32,16 @@ class RecordViewController: UIViewController {
         calendarView.commitCalendarViewUpdate()
         menuView.commitMenuViewUpdate()
         
-        //DBHelper.sharedInstance.queryData("train", date: NSDate(), delegate: self)
-
-    }
-    @IBAction func test(sender: AnyObject) {
-        self.shouldShowDaysOut = !self.shouldShowDaysOut
+        DBHelper.sharedInstance.queryData("train", date: NSDate(), delegate: self)
     }
 }
 
 extension RecordViewController: LoadDataProtocol {
     func didDataLoadFinish(table: String, date: NSDate, result: Dictionary<String, Int64>) {
         // TODO
-        trainData[date] = result
-        self.calendarView.toggleViewWithDate(date)
-        //self.calendarView.commitCalendarViewUpdate()
+        trainData[DateUtil.getYearMonthString(date)] = result
+        //self.calendarView.toggleViewWithDate(date)
+        self.calendarView.contentController.refreshPresentedMonth()
     }
 }
 
@@ -75,6 +71,8 @@ extension RecordViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelega
     }
     
     func didSelectDayView(dayView: CVCalendarDayView, animationDidFinish: Bool) {
+        let tmp = trainData[DateUtil.getYearMonthString(dayView.date.date)];
+        
         print("\(dayView.date.commonDescription) is selected!")
     }
     
@@ -181,7 +179,7 @@ extension RecordViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelega
 //            return true
 //        }
         
-        let monthTrainData = trainData[currentDate]
+        let monthTrainData = trainData[DateUtil.getYearMonthString(currentDate)]
         if dayView.date != nil{
             let year = dayView.date.year
             let month = dayView.date.month

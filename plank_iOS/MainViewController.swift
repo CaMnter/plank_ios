@@ -34,7 +34,7 @@ class MainViewController: UIViewController, PagingMenuControllerDelegate {
         pagingMenuController.delegate = self
         pagingMenuController.setup(viewControllers: viewControllers, options: options)
         
-        DBHelper.sharedInstance.queryData("train", date: NSDate(), delegate: self)
+        //DBHelper.sharedInstance.queryData("train", date: NSDate(), delegate: self)
     }
     
     override func didReceiveMemoryWarning() {
