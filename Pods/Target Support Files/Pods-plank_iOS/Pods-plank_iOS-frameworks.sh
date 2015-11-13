@@ -84,10 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-plank_iOS/Alamofire.framework"
   install_framework "Pods-plank_iOS/PagingMenuController.framework"
   install_framework "Pods-plank_iOS/SQLite.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-plank_iOS/Alamofire.framework"
   install_framework "Pods-plank_iOS/PagingMenuController.framework"
   install_framework "Pods-plank_iOS/SQLite.framework"
 fi

@@ -1,8 +1,10 @@
 PODS:
+  - Alamofire (3.1.2)
   - PagingMenuController (0.7.5)
   - SQLite.swift (1.0.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 3.0)
   - PagingMenuController
   - SQLite.swift (from `https://github.com/stephencelis/SQLite.swift.git`)
 
@@ -16,6 +18,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/stephencelis/SQLite.swift.git
 
 SPEC CHECKSUMS:
+  Alamofire: 033350d9eac764d61f974ebe40d0e6cf31c20610
   PagingMenuController: cc71ac898b688a8523d9c1d98396767fe236e0a1
   SQLite.swift: 3bb75f5a650f08673276bc6d3fb1de1b542b8f4d
 

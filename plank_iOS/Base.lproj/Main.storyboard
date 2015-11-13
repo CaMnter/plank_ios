@@ -479,13 +479,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="webView" id="xOu-2O-AFC">
-                        <barButtonItem key="rightBarButtonItem" title="finish" id="xlE-qq-n5N">
+                        <barButtonItem key="rightBarButtonItem" title="完成" id="xlE-qq-n5N">
                             <connections>
                                 <action selector="finish:" destination="4ko-sF-WUd" id="VFT-U5-7gU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="webView" destination="mfy-Xr-Hhq" id="s8Q-69-NAy"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="3719.5" y="145.5"/>
@@ -733,6 +736,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JcW-6m-ssK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Puj-Kx-TVN" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lMK-4I-BUb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

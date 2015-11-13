@@ -9,4 +9,5 @@ target 'plank_iOS' do
   pod "PagingMenuController"
   #pod 'CVCalendar', '~> 1.2.7'
   pod 'SQLite.swift', git: 'https://github.com/stephencelis/SQLite.swift.git'
+  pod 'Alamofire', '~> 3.0'
 end
