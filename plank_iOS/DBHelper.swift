@@ -119,8 +119,8 @@ class DBHelper{
         print("totalChanges: \(db?.totalChanges)")
     }
     
-    func queryData(table:String, month:Int) -> [String: Int64]{
-        let sql:String = String(format: "SELECT timestamp, timeDuration FROM %@ WHERE strftime('%%m', timestamp) = '%2d'", table, month)
+    func queryData(table:String, year:Int, month:Int) -> [String: Int64]{
+        let sql:String = String(format: "SELECT timestamp, timeDuration FROM %@ WHERE strftime('%%Y-%%m', timestamp) = '%d-%2d'", table, year, month)
         var result = [String: Int64]()
         //let sql = "select strftime('%m', timestamp), timeDuration from train"
         let tmp = db?.prepare(sql)
@@ -135,10 +135,11 @@ class DBHelper{
     
     func queryData(table:String, date: NSDate, delegate:LoadDataProtocol?){
         
-        let components = NSCalendar.currentCalendar().components(NSCalendarUnit.Month, fromDate: date)
+        let components = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month], fromDate: date)
+        let year = components.year
         let month = components.month
         
-        let result = queryData(table, month: month)
+        let result = queryData(table, year: year, month: month)
         delegate?.didDataLoadFinish(table, date: date, result: result)
     }
 }
