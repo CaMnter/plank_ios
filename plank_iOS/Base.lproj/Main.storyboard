@@ -240,6 +240,7 @@
         <!--训练-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="FirstViewController" id="9pv-A4-QxB" customClass="FirstViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
@@ -283,7 +284,6 @@
                         <outlet property="startButton" destination="68S-R7-I1W" id="Hwd-zy-sOg"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4779.5" y="-1168.5"/>
         </scene>
@@ -383,6 +383,12 @@
         <!--Train View Controller-->
         <scene sceneID="d9H-ze-PqT">
             <objects>
+                <tapGestureRecognizer id="m6p-JV-qnI">
+                    <connections>
+                        <segue destination="Puj-Kx-TVN" kind="presentation" id="1XH-Qc-IbW"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="223-FK-dic" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="TrainViewController" id="aEy-Be-xlU" customClass="TrainViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hav-QI-02p"/>
@@ -393,12 +399,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86g-Du-6aE" customClass="CircularProgressView" customModule="plank_iOS" customModuleProvider="target">
-                                <rect key="frame" x="38" y="20" width="300" height="300"/>
+                                <rect key="frame" x="38" y="40" width="300" height="300"/>
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="hdp-p1-6I0">
+                                        <rect key="frame" x="270" y="0.0" width="30" height="30"/>
+                                        <animations/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="WCJ-WX-NJB"/>
+                                            <constraint firstAttribute="height" constant="30" id="jv9-Ps-XKI"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="m6p-JV-qnI" appends="YES" id="jan-8W-YTa"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="JNw-f7-yd7"/>
+                                    <constraint firstItem="hdp-p1-6I0" firstAttribute="top" secondItem="86g-Du-6aE" secondAttribute="top" id="gpJ-62-tNu"/>
                                     <constraint firstAttribute="height" constant="300" id="jbn-ai-dH1"/>
+                                    <constraint firstAttribute="trailing" secondItem="hdp-p1-6I0" secondAttribute="trailing" id="l3c-PH-Xeg"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9a-DO-42W">
@@ -413,7 +435,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="86g-Du-6aE" firstAttribute="top" secondItem="DIh-Qk-bO5" secondAttribute="topMargin" constant="20" id="3MR-NL-oXJ"/>
+                            <constraint firstItem="86g-Du-6aE" firstAttribute="top" secondItem="DIh-Qk-bO5" secondAttribute="topMargin" constant="40" id="3MR-NL-oXJ"/>
                             <constraint firstItem="86g-Du-6aE" firstAttribute="centerX" secondItem="DIh-Qk-bO5" secondAttribute="centerX" id="4wP-uZ-0td"/>
                             <constraint firstItem="l9a-DO-42W" firstAttribute="centerX" secondItem="DIh-Qk-bO5" secondAttribute="centerX" id="Bfs-dX-XcP"/>
                             <constraint firstItem="hjp-cg-4Gn" firstAttribute="top" secondItem="l9a-DO-42W" secondAttribute="bottom" constant="50" id="kUg-9g-CCC"/>
@@ -425,9 +447,48 @@
                         <outlet property="startButton" destination="l9a-DO-42W" id="1PY-f0-0Vn"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="223-FK-dic" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2198" y="57"/>
+        </scene>
+        <!--webView-->
+        <scene sceneID="Rjf-OI-cSb">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qfc-jM-fyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="4ko-sF-WUd" customClass="WebViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y94-TO-jx7"/>
+                        <viewControllerLayoutGuide type="bottom" id="DUA-TF-Yua"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CkW-a4-9jt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfy-Xr-Hhq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mfy-Xr-Hhq" firstAttribute="leading" secondItem="CkW-a4-9jt" secondAttribute="leading" id="5Ta-D4-i9q"/>
+                            <constraint firstItem="DUA-TF-Yua" firstAttribute="top" secondItem="mfy-Xr-Hhq" secondAttribute="bottom" id="NY8-xd-ufm"/>
+                            <constraint firstItem="mfy-Xr-Hhq" firstAttribute="top" secondItem="CkW-a4-9jt" secondAttribute="top" id="eSm-lS-E4h"/>
+                            <constraint firstAttribute="trailing" secondItem="mfy-Xr-Hhq" secondAttribute="trailing" id="zDn-aL-Y9m"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="webView" id="xOu-2O-AFC">
+                        <barButtonItem key="rightBarButtonItem" title="finish" id="xlE-qq-n5N">
+                            <connections>
+                                <action selector="finish:" destination="4ko-sF-WUd" id="VFT-U5-7gU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3719.5" y="145.5"/>
         </scene>
         <!--健身-->
         <scene sceneID="ffb-ix-pHf">
@@ -451,6 +512,7 @@
         <!--首页-->
         <scene sceneID="ekJ-3I-7Nr">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dpP-Ok-cwC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MainViewController" id="o16-eJ-8Of" customClass="MainViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UCa-Or-UGS"/>
@@ -480,13 +542,13 @@
                     <tabBarItem key="tabBarItem" title="首页" image="second" id="ZHF-xn-Rou"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dpP-Ok-cwC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="681.5" y="-880.5"/>
         </scene>
         <!--Paging Menu Controller-->
         <scene sceneID="kJL-Lm-pHk">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVZ-9H-xaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="KzT-YW-7hu" customClass="PagingMenuController" customModule="PagingMenuController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MF2-VG-OU6"/>
@@ -500,7 +562,6 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hVZ-9H-xaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1392.5" y="-880.5"/>
         </scene>
@@ -665,6 +726,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-42" y="0.0"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="afb-ex-pd6">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JcW-6m-ssK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Puj-Kx-TVN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lMK-4I-BUb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4ko-sF-WUd" kind="relationship" relationship="rootViewController" id="xOz-Ek-Dvm"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="2907" y="145"/>
         </scene>
     </scenes>
     <resources>
