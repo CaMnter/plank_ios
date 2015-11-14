@@ -13,6 +13,7 @@
 		5030B02D1BF6391100FED32F /* workout in Resources */ = {isa = PBXBuildFile; fileRef = 5030B02C1BF6391100FED32F /* workout */; };
 		5030B0381BF754DA00FED32F /* Train.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5030B0361BF754DA00FED32F /* Train.storyboard */; };
 		5030B03A1BF7602600FED32F /* Fitness.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5030B0391BF7602600FED32F /* Fitness.storyboard */; };
+		5030B0491BF7779300FED32F /* DiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030B0481BF7779300FED32F /* DiscoverController.swift */; };
 		50519EF31BF0DAE80068FBAB /* FitnessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519EF21BF0DAE80068FBAB /* FitnessTableViewCell.swift */; };
 		50519EF51BF0DFEA0068FBAB /* FitnessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519EF41BF0DFEA0068FBAB /* FitnessTableViewController.swift */; };
 		50519EF71BF0E2D20068FBAB /* Fitness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519EF61BF0E2D20068FBAB /* Fitness.swift */; };
@@ -83,6 +84,7 @@
 		5030B02C1BF6391100FED32F /* workout */ = {isa = PBXFileReference; lastKnownFileType = folder; path = workout; sourceTree = "<group>"; };
 		5030B0371BF754DA00FED32F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Train.storyboard; sourceTree = "<group>"; };
 		5030B0391BF7602600FED32F /* Fitness.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fitness.storyboard; sourceTree = "<group>"; };
+		5030B0481BF7779300FED32F /* DiscoverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverController.swift; sourceTree = "<group>"; };
 		50519EF21BF0DAE80068FBAB /* FitnessTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTableViewCell.swift; sourceTree = "<group>"; };
 		50519EF41BF0DFEA0068FBAB /* FitnessTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTableViewController.swift; sourceTree = "<group>"; };
 		50519EF61BF0E2D20068FBAB /* Fitness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fitness.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				50519EFD1BF473FF0068FBAB /* LoadDataProtocol.swift */,
 				50702E951BF4E35D00C55D1D /* DateUtil.swift */,
 				5030B01F1BF5CA8D00FED32F /* WebViewController.swift */,
+				5030B0481BF7779300FED32F /* DiscoverController.swift */,
 			);
 			path = plank_iOS;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				50519F671BF4DF5E0068FBAB /* CVCalendarWeekView.swift in Sources */,
 				50519F581BF4DF5E0068FBAB /* CVCalendarManager.swift in Sources */,
 				50519F5B1BF4DF5E0068FBAB /* CVCalendarMonthContentViewController.swift in Sources */,
+				5030B0491BF7779300FED32F /* DiscoverController.swift in Sources */,
 				50519F601BF4DF5E0068FBAB /* CVCalendarViewAnimatorDelegate.swift in Sources */,
 				50D872011BEF6ADD003BE1F3 /* MyStyle.swift in Sources */,
 				50519F6C1BF4DF5E0068FBAB /* CVSet.swift in Sources */,

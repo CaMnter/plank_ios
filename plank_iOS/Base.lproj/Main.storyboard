@@ -382,7 +382,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcx-QX-Ssk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1406.5" y="1766.5"/>
+            <point key="canvasLocation" x="1311.5" y="2000.5"/>
         </scene>
         <!--我-->
         <scene sceneID="TmJ-7h-grn">
@@ -572,7 +572,7 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <segue destination="66m-hC-fq6" kind="show" id="U6k-eB-Tyd"/>
+                                            <segue destination="66m-hC-fq6" kind="show" identifier="showFitnessPlus" id="U6k-eB-Tyd"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -604,7 +604,7 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <segue destination="eA6-BA-4df" kind="show" id="1IK-pE-YzV"/>
+                                            <segue destination="eA6-BA-4df" kind="show" identifier="showContributor" id="1IK-pE-YzV"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
