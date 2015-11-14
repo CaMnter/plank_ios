@@ -116,15 +116,31 @@ class FitnessTableViewController: UITableViewController {
         return true
     }
     */
+    
+    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath?{
+        // TODO check need to download resource or not
+        if indexPath.section == 0 && indexPath.row == 0 {
+            let alertController = UIAlertController(title: "ATTENTION", message: "need download resource", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "CANCEL", style: UIAlertActionStyle.Cancel, handler: nil))
+            alertController.addAction(UIAlertAction(title: "Download", style: UIAlertActionStyle.Default, handler: {(action) in
+                print("begain download")
+                }
+            ))
+            presentViewController(alertController, animated: true, completion: nil)
+            return nil
+        }else{
+            return indexPath
+        }
+    }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        // TODO set the title
+        segue.destinationViewController.title = "hello wolrd"
     }
-    */
 
 }

@@ -364,6 +364,7 @@
                                     <outlet property="fitnessImageView" destination="dOM-Ok-VCP" id="Cwf-aJ-kMC"/>
                                     <outlet property="imageView" destination="dOM-Ok-VCP" id="QNy-Hl-9J8"/>
                                     <outlet property="titleLabel" destination="mOE-ka-sA8" id="6rP-Eq-EL6"/>
+                                    <segue destination="FK5-An-emI" kind="show" id="As7-vV-Yb6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -624,6 +625,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0l-DD-Cz6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2198" y="57"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5AY-wv-ued">
+            <objects>
+                <viewController id="FK5-An-emI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KkU-eo-Ymp"/>
+                        <viewControllerLayoutGuide type="bottom" id="aer-gy-Db9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KKt-0Y-Ihl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rWD-KD-OpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1911.5" y="-0.5"/>
         </scene>
     </scenes>
     <resources>
