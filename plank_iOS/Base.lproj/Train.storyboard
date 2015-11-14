@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="2198" y="57"/>
         </scene>
-        <!--webView-->
+        <!--How to plank-->
         <scene sceneID="Rjf-OI-cSb">
             <objects>
-                <viewController id="4ko-sF-WUd" customClass="WebViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="How to plank" id="4ko-sF-WUd" customClass="WebViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y94-TO-jx7"/>
                         <viewControllerLayoutGuide type="bottom" id="DUA-TF-Yua"/>
@@ -103,6 +103,7 @@
                             <constraint firstAttribute="trailing" secondItem="mfy-Xr-Hhq" secondAttribute="trailing" id="zDn-aL-Y9m"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="webView" id="xOu-2O-AFC">
                         <barButtonItem key="rightBarButtonItem" title="完成" id="xlE-qq-n5N">
                             <connections>
