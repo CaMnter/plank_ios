@@ -380,119 +380,6 @@
             </objects>
             <point key="canvasLocation" x="1400.5" y="-0.5"/>
         </scene>
-        <!--Train View Controller-->
-        <scene sceneID="d9H-ze-PqT">
-            <objects>
-                <viewController storyboardIdentifier="TrainViewController" id="aEy-Be-xlU" customClass="TrainViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hav-QI-02p"/>
-                        <viewControllerLayoutGuide type="bottom" id="hjp-cg-4Gn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DIh-Qk-bO5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86g-Du-6aE" customClass="CircularProgressView" customModule="plank_iOS" customModuleProvider="target">
-                                <rect key="frame" x="38" y="40" width="300" height="300"/>
-                                <subviews>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="hdp-p1-6I0">
-                                        <rect key="frame" x="270" y="0.0" width="30" height="30"/>
-                                        <animations/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="WCJ-WX-NJB"/>
-                                            <constraint firstAttribute="height" constant="30" id="jv9-Ps-XKI"/>
-                                        </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="m6p-JV-qnI" appends="YES" id="jan-8W-YTa"/>
-                                        </connections>
-                                    </imageView>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="JNw-f7-yd7"/>
-                                    <constraint firstItem="hdp-p1-6I0" firstAttribute="top" secondItem="86g-Du-6aE" secondAttribute="top" id="gpJ-62-tNu"/>
-                                    <constraint firstAttribute="height" constant="300" id="jbn-ai-dH1"/>
-                                    <constraint firstAttribute="trailing" secondItem="hdp-p1-6I0" secondAttribute="trailing" id="l3c-PH-Xeg"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9a-DO-42W">
-                                <rect key="frame" x="173" y="587" width="30" height="30"/>
-                                <animations/>
-                                <state key="normal" title="开始"/>
-                                <connections>
-                                    <action selector="startButtonClick:" destination="aEy-Be-xlU" eventType="touchUpInside" id="KEd-B6-tKi"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="86g-Du-6aE" firstAttribute="top" secondItem="DIh-Qk-bO5" secondAttribute="topMargin" constant="40" id="3MR-NL-oXJ"/>
-                            <constraint firstItem="86g-Du-6aE" firstAttribute="centerX" secondItem="DIh-Qk-bO5" secondAttribute="centerX" id="4wP-uZ-0td"/>
-                            <constraint firstItem="l9a-DO-42W" firstAttribute="centerX" secondItem="DIh-Qk-bO5" secondAttribute="centerX" id="Bfs-dX-XcP"/>
-                            <constraint firstItem="hjp-cg-4Gn" firstAttribute="top" secondItem="l9a-DO-42W" secondAttribute="bottom" constant="50" id="kUg-9g-CCC"/>
-                        </constraints>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="circularProgressView" destination="86g-Du-6aE" id="kAW-Rh-aNL"/>
-                        <outlet property="startButton" destination="l9a-DO-42W" id="1PY-f0-0Vn"/>
-                    </connections>
-                </viewController>
-                <tapGestureRecognizer id="m6p-JV-qnI">
-                    <connections>
-                        <segue destination="Puj-Kx-TVN" kind="presentation" id="1XH-Qc-IbW"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="223-FK-dic" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2198" y="57"/>
-        </scene>
-        <!--webView-->
-        <scene sceneID="Rjf-OI-cSb">
-            <objects>
-                <viewController id="4ko-sF-WUd" customClass="WebViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Y94-TO-jx7"/>
-                        <viewControllerLayoutGuide type="bottom" id="DUA-TF-Yua"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CkW-a4-9jt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfy-Xr-Hhq">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                            </webView>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="mfy-Xr-Hhq" firstAttribute="leading" secondItem="CkW-a4-9jt" secondAttribute="leading" id="5Ta-D4-i9q"/>
-                            <constraint firstItem="DUA-TF-Yua" firstAttribute="top" secondItem="mfy-Xr-Hhq" secondAttribute="bottom" id="NY8-xd-ufm"/>
-                            <constraint firstItem="mfy-Xr-Hhq" firstAttribute="top" secondItem="CkW-a4-9jt" secondAttribute="top" id="eSm-lS-E4h"/>
-                            <constraint firstAttribute="trailing" secondItem="mfy-Xr-Hhq" secondAttribute="trailing" id="zDn-aL-Y9m"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="webView" id="xOu-2O-AFC">
-                        <barButtonItem key="rightBarButtonItem" title="完成" id="xlE-qq-n5N">
-                            <connections>
-                                <action selector="finish:" destination="4ko-sF-WUd" id="VFT-U5-7gU"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="webView" destination="mfy-Xr-Hhq" id="s8Q-69-NAy"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qfc-jM-fyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3206.5" y="56.5"/>
-        </scene>
         <!--健身-->
         <scene sceneID="ffb-ix-pHf">
             <objects>
@@ -730,25 +617,13 @@
             </objects>
             <point key="canvasLocation" x="-42" y="0.0"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="afb-ex-pd6">
+        <!--TrainViewController-->
+        <scene sceneID="pxR-Mk-LZq">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Puj-Kx-TVN" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lMK-4I-BUb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="4ko-sF-WUd" kind="relationship" relationship="rootViewController" id="xOz-Ek-Dvm"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JcW-6m-ssK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="TrainViewController" storyboardName="Train" referencedIdentifier="TrainViewController" id="zrg-2D-gzO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G0l-DD-Cz6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2674.5" y="56.5"/>
+            <point key="canvasLocation" x="2198" y="57"/>
         </scene>
     </scenes>
     <resources>

@@ -11,6 +11,7 @@
 		5030B0201BF5CA8D00FED32F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030B01F1BF5CA8D00FED32F /* WebViewController.swift */; };
 		5030B0291BF5F00F00FED32F /* html in Resources */ = {isa = PBXBuildFile; fileRef = 5030B0281BF5F00F00FED32F /* html */; };
 		5030B02D1BF6391100FED32F /* workout in Resources */ = {isa = PBXBuildFile; fileRef = 5030B02C1BF6391100FED32F /* workout */; };
+		5030B0381BF754DA00FED32F /* Train.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5030B0361BF754DA00FED32F /* Train.storyboard */; };
 		50519EF31BF0DAE80068FBAB /* FitnessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519EF21BF0DAE80068FBAB /* FitnessTableViewCell.swift */; };
 		50519EF51BF0DFEA0068FBAB /* FitnessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519EF41BF0DFEA0068FBAB /* FitnessTableViewController.swift */; };
 		50519EF71BF0E2D20068FBAB /* Fitness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519EF61BF0E2D20068FBAB /* Fitness.swift */; };
@@ -79,6 +80,7 @@
 		5030B01F1BF5CA8D00FED32F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		5030B0281BF5F00F00FED32F /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
 		5030B02C1BF6391100FED32F /* workout */ = {isa = PBXFileReference; lastKnownFileType = folder; path = workout; sourceTree = "<group>"; };
+		5030B0371BF754DA00FED32F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Train.storyboard; sourceTree = "<group>"; };
 		50519EF21BF0DAE80068FBAB /* FitnessTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTableViewCell.swift; sourceTree = "<group>"; };
 		50519EF41BF0DFEA0068FBAB /* FitnessTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTableViewController.swift; sourceTree = "<group>"; };
 		50519EF61BF0E2D20068FBAB /* Fitness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fitness.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				50D871D01BEF3692003BE1F3 /* TrainViewController.swift */,
 				50D871D21BEF3692003BE1F3 /* RecordViewController.swift */,
 				50D871D41BEF3692003BE1F3 /* Main.storyboard */,
+				5030B0361BF754DA00FED32F /* Train.storyboard */,
 				50D871D71BEF3692003BE1F3 /* Assets.xcassets */,
 				50D871D91BEF3692003BE1F3 /* LaunchScreen.storyboard */,
 				50D871DC1BEF3692003BE1F3 /* Info.plist */,
@@ -395,6 +398,7 @@
 				50D871DB1BEF3692003BE1F3 /* LaunchScreen.storyboard in Resources */,
 				5030B0291BF5F00F00FED32F /* html in Resources */,
 				50D871D81BEF3692003BE1F3 /* Assets.xcassets in Resources */,
+				5030B0381BF754DA00FED32F /* Train.storyboard in Resources */,
 				5030B02D1BF6391100FED32F /* workout in Resources */,
 				50D871D61BEF3692003BE1F3 /* Main.storyboard in Resources */,
 			);
@@ -544,6 +548,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5030B0361BF754DA00FED32F /* Train.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5030B0371BF754DA00FED32F /* Base */,
+			);
+			name = Train.storyboard;
+			sourceTree = "<group>";
+		};
 		50D871D41BEF3692003BE1F3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
