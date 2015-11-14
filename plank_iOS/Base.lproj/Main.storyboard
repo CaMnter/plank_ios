@@ -288,100 +288,6 @@
             <point key="canvasLocation" x="4779.5" y="-1168.5"/>
         </scene>
         <!--健身-->
-        <scene sceneID="a7N-XA-5oD">
-            <objects>
-                <tableViewController id="BhU-60-GZv" customClass="FitnessTableViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="zmn-R2-Ddy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FitnessTableViewCell" rowHeight="100" id="aQa-yE-vUn" customClass="FitnessTableViewCell" customModule="plank_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="113.5" width="375" height="100"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aQa-yE-vUn" id="4L6-Us-AQe">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dOM-Ok-VCP">
-                                            <rect key="frame" x="18" y="10" width="120" height="80"/>
-                                            <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="120" id="hGu-gf-3XG"/>
-                                                <constraint firstAttribute="height" constant="80" id="ofE-hm-YiH"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOE-ka-sA8">
-                                            <rect key="frame" x="148" y="18" width="149" height="24"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="desc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdn-4W-iYQ">
-                                            <rect key="frame" x="148" y="62" width="149" height="20"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDQ-UJ-3Bn">
-                                            <rect key="frame" x="307" y="35" width="50" height="30"/>
-                                            <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="Uze-Ri-hAY"/>
-                                            </constraints>
-                                            <state key="normal" title="下载"/>
-                                        </button>
-                                    </subviews>
-                                    <animations/>
-                                    <constraints>
-                                        <constraint firstItem="mOE-ka-sA8" firstAttribute="top" secondItem="4L6-Us-AQe" secondAttribute="topMargin" constant="10" id="3ur-hb-ODF"/>
-                                        <constraint firstItem="EDQ-UJ-3Bn" firstAttribute="centerY" secondItem="4L6-Us-AQe" secondAttribute="centerY" id="6UM-wA-5EO"/>
-                                        <constraint firstItem="EDQ-UJ-3Bn" firstAttribute="leading" secondItem="bdn-4W-iYQ" secondAttribute="trailing" constant="10" id="A9g-Jf-Qam"/>
-                                        <constraint firstItem="dOM-Ok-VCP" firstAttribute="leading" secondItem="4L6-Us-AQe" secondAttribute="leadingMargin" constant="-8" id="Lva-gk-mm1"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="EDQ-UJ-3Bn" secondAttribute="trailing" constant="-10" id="RP9-2E-ZLP"/>
-                                        <constraint firstItem="bdn-4W-iYQ" firstAttribute="leading" secondItem="dOM-Ok-VCP" secondAttribute="trailing" constant="10" id="Upg-to-LHk"/>
-                                        <constraint firstItem="dOM-Ok-VCP" firstAttribute="leading" secondItem="4L6-Us-AQe" secondAttribute="leadingMargin" constant="10" id="lhu-2t-F3d"/>
-                                        <constraint firstItem="EDQ-UJ-3Bn" firstAttribute="leading" secondItem="mOE-ka-sA8" secondAttribute="trailing" constant="10" id="sHc-9k-hUj"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="EDQ-UJ-3Bn" secondAttribute="trailing" constant="10" id="t0r-gE-14B"/>
-                                        <constraint firstItem="dOM-Ok-VCP" firstAttribute="centerY" secondItem="4L6-Us-AQe" secondAttribute="centerY" id="tdC-zR-Poz"/>
-                                        <constraint firstItem="bdn-4W-iYQ" firstAttribute="top" secondItem="mOE-ka-sA8" secondAttribute="bottom" constant="19.5" id="vq0-Tg-ZHZ"/>
-                                        <constraint firstItem="mOE-ka-sA8" firstAttribute="leading" secondItem="dOM-Ok-VCP" secondAttribute="trailing" constant="10" id="z9d-Vi-bYY"/>
-                                    </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="Lva-gk-mm1"/>
-                                            <exclude reference="RP9-2E-ZLP"/>
-                                        </mask>
-                                    </variation>
-                                </tableViewCellContentView>
-                                <animations/>
-                                <connections>
-                                    <outlet property="descLabel" destination="bdn-4W-iYQ" id="beb-nr-cYh"/>
-                                    <outlet property="downloadButton" destination="EDQ-UJ-3Bn" id="SFO-I8-OgS"/>
-                                    <outlet property="fitnessImageView" destination="dOM-Ok-VCP" id="Cwf-aJ-kMC"/>
-                                    <outlet property="imageView" destination="dOM-Ok-VCP" id="QNy-Hl-9J8"/>
-                                    <outlet property="titleLabel" destination="mOE-ka-sA8" id="6rP-Eq-EL6"/>
-                                    <segue destination="FK5-An-emI" kind="show" id="As7-vV-Yb6"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="BhU-60-GZv" id="5Q5-Md-Ev4"/>
-                            <outlet property="delegate" destination="BhU-60-GZv" id="iOL-nJ-wFQ"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="健身" id="idI-xF-9Uz"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBd-Md-KKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1400.5" y="-0.5"/>
-        </scene>
-        <!--健身-->
         <scene sceneID="ffb-ix-pHf">
             <objects>
                 <navigationController id="VHQ-5n-kFW" sceneMemberID="viewController">
@@ -393,7 +299,7 @@
                         <animations/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BhU-60-GZv" kind="relationship" relationship="rootViewController" id="fbM-gL-smt"/>
+                        <segue destination="0CJ-Or-Ubd" kind="relationship" relationship="rootViewController" id="vuO-Ih-oqm"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgX-wd-SEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -626,25 +532,15 @@
             </objects>
             <point key="canvasLocation" x="2198" y="57"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="5AY-wv-ued">
+        <!--Fitness-->
+        <scene sceneID="Lxr-1x-kNj">
             <objects>
-                <viewController id="FK5-An-emI" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KkU-eo-Ymp"/>
-                        <viewControllerLayoutGuide type="bottom" id="aer-gy-Db9"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KKt-0Y-Ihl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rWD-KD-OpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Fitness" id="0CJ-Or-Ubd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dVu-ER-OOp"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JLW-Bo-RgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911.5" y="-0.5"/>
+            <point key="canvasLocation" x="1142" y="16"/>
         </scene>
     </scenes>
     <resources>
