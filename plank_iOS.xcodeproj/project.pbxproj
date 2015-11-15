@@ -14,6 +14,8 @@
 		5030B0381BF754DA00FED32F /* Train.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5030B0361BF754DA00FED32F /* Train.storyboard */; };
 		5030B03A1BF7602600FED32F /* Fitness.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5030B0391BF7602600FED32F /* Fitness.storyboard */; };
 		5030B0491BF7779300FED32F /* DiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030B0481BF7779300FED32F /* DiscoverController.swift */; };
+		5030B0511BF8D45700FED32F /* Coding_iOS in Resources */ = {isa = PBXBuildFile; fileRef = 5030B0501BF8D45700FED32F /* Coding_iOS */; };
+		5030B0531BF8D48B00FED32F /* WebP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5030B0521BF8D48A00FED32F /* WebP.framework */; };
 		50519EF31BF0DAE80068FBAB /* FitnessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519EF21BF0DAE80068FBAB /* FitnessTableViewCell.swift */; };
 		50519EF51BF0DFEA0068FBAB /* FitnessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519EF41BF0DFEA0068FBAB /* FitnessTableViewController.swift */; };
 		50519EF71BF0E2D20068FBAB /* Fitness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519EF61BF0E2D20068FBAB /* Fitness.swift */; };
@@ -85,6 +87,9 @@
 		5030B0371BF754DA00FED32F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Train.storyboard; sourceTree = "<group>"; };
 		5030B0391BF7602600FED32F /* Fitness.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fitness.storyboard; sourceTree = "<group>"; };
 		5030B0481BF7779300FED32F /* DiscoverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverController.swift; sourceTree = "<group>"; };
+		5030B04F1BF8D27F00FED32F /* MyApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		5030B0501BF8D45700FED32F /* Coding_iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Coding_iOS; sourceTree = "<group>"; };
+		5030B0521BF8D48A00FED32F /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebP.framework; sourceTree = "<group>"; };
 		50519EF21BF0DAE80068FBAB /* FitnessTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTableViewCell.swift; sourceTree = "<group>"; };
 		50519EF41BF0DFEA0068FBAB /* FitnessTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTableViewController.swift; sourceTree = "<group>"; };
 		50519EF61BF0E2D20068FBAB /* Fitness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fitness.swift; sourceTree = "<group>"; };
@@ -144,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5030B0531BF8D48B00FED32F /* WebP.framework in Frameworks */,
 				0AD78130EF8A30A0D6897A63 /* Pods_plank_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +233,8 @@
 		50D871C21BEF3692003BE1F3 = {
 			isa = PBXGroup;
 			children = (
+				5030B0521BF8D48A00FED32F /* WebP.framework */,
+				5030B0501BF8D45700FED32F /* Coding_iOS */,
 				50519F381BF4DF5E0068FBAB /* CVCalendar */,
 				50D871CD1BEF3692003BE1F3 /* plank_iOS */,
 				50D871E41BEF3692003BE1F3 /* plank_iOSTests */,
@@ -272,6 +280,7 @@
 				50702E951BF4E35D00C55D1D /* DateUtil.swift */,
 				5030B01F1BF5CA8D00FED32F /* WebViewController.swift */,
 				5030B0481BF7779300FED32F /* DiscoverController.swift */,
+				5030B04F1BF8D27F00FED32F /* MyApp-Bridging-Header.h */,
 			);
 			path = plank_iOS;
 			sourceTree = "<group>";
@@ -401,6 +410,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5030B0511BF8D45700FED32F /* Coding_iOS in Resources */,
 				50D871DB1BEF3692003BE1F3 /* LaunchScreen.storyboard in Resources */,
 				5030B03A1BF7602600FED32F /* Fitness.storyboard in Resources */,
 				5030B0291BF5F00F00FED32F /* html in Resources */,
@@ -669,10 +679,17 @@
 			baseConfigurationReference = FB12125A8CA749DD2FAF9D27 /* Pods-plank_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/**",
+				);
 				INFOPLIST_FILE = plank_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				New_Setting = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jiangecho.plank-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "plank_iOS/MyApp-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "/Users/jiangecho/github/plank_iOS/plank_iOS/Pods/Headers/Private/** /Users/jiangecho/github/plank_iOS/plank_iOS/Coding_iOS/**";
 			};
 			name = Debug;
 		};
@@ -681,10 +698,17 @@
 			baseConfigurationReference = 309665D23EEE75C41240276C /* Pods-plank_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/**",
+				);
 				INFOPLIST_FILE = plank_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				New_Setting = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jiangecho.plank-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "plank_iOS/MyApp-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "/Users/jiangecho/github/plank_iOS/plank_iOS/Pods/Headers/Private/** /Users/jiangecho/github/plank_iOS/plank_iOS/Coding_iOS/**";
 			};
 			name = Release;
 		};

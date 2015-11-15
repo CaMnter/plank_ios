@@ -444,6 +444,26 @@
             </objects>
             <point key="canvasLocation" x="1142" y="16"/>
         </scene>
+        <!--Tweet Root View Controller-->
+        <scene sceneID="HxY-VA-Mq7">
+            <objects>
+                <viewController id="HiV-Qf-444" customClass="Tweet_RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1mr-51-Z4r"/>
+                        <viewControllerLayoutGuide type="bottom" id="6cq-hG-xjt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q7F-fs-c7N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2de-vE-Jl8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1402" y="271"/>
+        </scene>
         <!--贡献者-->
         <scene sceneID="3Jz-Rf-aQZ">
             <objects>
@@ -517,6 +537,9 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <segue destination="HiV-Qf-444" kind="show" id="ZCX-5a-4xu"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="l3U-Il-GIw" imageView="gI2-MP-VcY" style="IBUITableViewCellStyleDefault" id="gRo-7p-Jml">
                                         <rect key="frame" x="0.0" y="143" width="375" height="44"/>
