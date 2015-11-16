@@ -198,10 +198,11 @@ static NSMutableDictionary *_inputStrDict, *_inputMediaDict;
     if (_contentType == UIMessageInputViewContentTypePriMsg) {
         inputKey = [NSString stringWithFormat:@"privateMessage_%@", self.toUser.global_key];
     }else{
-        if (_commentOfId) {
+        if (_commentOfId && _toUser != nil) {
             switch (_contentType) {
                 case UIMessageInputViewContentTypeTweet:
                     inputKey = [NSString stringWithFormat:@"tweet_%@_%@", _commentOfId.stringValue, _toUser.global_key.length > 0? _toUser.global_key:@""];
+
                     break;
                 case UIMessageInputViewContentTypeTopic:
                     inputKey = [NSString stringWithFormat:@"topic_%@_%@", _commentOfId.stringValue, _toUser.global_key.length > 0? _toUser.global_key:@""];
@@ -212,6 +213,8 @@ static NSMutableDictionary *_inputStrDict, *_inputMediaDict;
                 default:
                     break;
             }
+        }else{
+            inputKey = @"";
         }
     }
     return inputKey;
