@@ -21,4 +21,5 @@
 + (UIImage *)fullScreenImageALAsset:(ALAsset *)asset;
 
 + (UIImage *)imageWithFileType:(NSString *)fileType;
+- (UIImage *)imageWithColor:(UIColor *)color;
 @end

@@ -84,6 +84,10 @@ CGFloat X_OFFSET = 8.0; //%%% for some reason there's a little bit of a glitchy 
     viewControllerArray = [[NSMutableArray alloc]init];
     self.currentPageIndex = 0;
     self.isPageScrollingFlag = NO;
+
+    self.navigationBar.barTintColor = [UIColor whiteColor];
+    self.navigationBar.tintColor = [UIColor blackColor];
+
 }
 
 #pragma mark Customizables
@@ -116,7 +120,8 @@ CGFloat X_OFFSET = 8.0; //%%% for some reason there's a little bit of a glitchy 
         button.tag = i; //%%% IMPORTANT: if you make your own custom buttons, you have to tag them appropriately
         [button addTarget:self action:@selector(tapSegmentButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         button.titleLabel.font = [UIFont boldSystemFontOfSize:kNavTitleFontSize];
-        button.titleLabel.textColor = [UIColor whiteColor];
+        button.titleLabel.textColor = [UIColor blackColor];
+        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [button setTitle:[buttonText objectAtIndex:i] forState:UIControlStateNormal]; //%%%buttontitle
     }
     [navigationView addSubview:_buttonContainer];
@@ -126,8 +131,9 @@ CGFloat X_OFFSET = 8.0; //%%% for some reason there's a little bit of a glitchy 
         SMPageControl *pageControl = [[SMPageControl alloc] init];
         pageControl.userInteractionEnabled = NO;
         pageControl.backgroundColor = [UIColor clearColor];
-        pageControl.pageIndicatorImage = [UIImage imageNamed:@"nav_page_unselected"];
-        pageControl.currentPageIndicatorImage = [UIImage imageNamed:@"nav_page_selected"];
+        pageControl.pageIndicatorImage = [[UIImage imageNamed:@"nav_page_unselected"] imageWithColor:[UIColor blackColor]];
+
+        pageControl.currentPageIndicatorImage = [[UIImage imageNamed:@"nav_page_selected"] imageWithColor:[UIColor redColor]];
         pageControl.frame = (CGRect){0, SELECTOR_Y_BUFFER, CGRectGetWidth(navigationView.frame), SELECTOR_HEIGHT};
         pageControl.numberOfPages = numControllers;
         pageControl.currentPage = 0;
@@ -135,6 +141,7 @@ CGFloat X_OFFSET = 8.0; //%%% for some reason there's a little bit of a glitchy 
     });
     [navigationView addSubview:_pageControl];
     pageController.navigationController.navigationBar.topItem.titleView = navigationView;
+
 }
 
 //generally, this shouldn't be changed unless you know what you're changing
