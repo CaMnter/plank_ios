@@ -24,6 +24,11 @@ class DiscoverController: UITableViewController {
             break
         case "showContributor":
             break
+        case "showTweet":
+            let tweetController = Tweet_RootViewController.newTweetVCWithType(Tweet_RootViewControllerType.All)
+            //presentViewController(tweetController, animated: true, completion: nil)
+            //segue.destinationViewController = tweetController
+            break
         default:
             break
             

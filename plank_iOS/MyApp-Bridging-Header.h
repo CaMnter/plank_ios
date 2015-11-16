@@ -9,7 +9,7 @@
 #ifndef MyApp_Bridging_Header_h
 #define MyApp_Bridging_Header_h
 
-#import "../Coding_iOS/Controllers/RootControllers/Tweet_RootViewController.h"
+#import "Tweet_RootViewController.h"
 
 
 #endif /* MyApp_Bridging_Header_h */

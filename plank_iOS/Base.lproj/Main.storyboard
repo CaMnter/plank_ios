@@ -504,7 +504,7 @@
         <!--发现-->
         <scene sceneID="YF7-3d-dQs">
             <objects>
-                <tableViewController id="NFr-cS-17T" sceneMemberID="viewController">
+                <tableViewController id="NFr-cS-17T" customClass="DiscoverController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="tIQ-Jx-SSq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -538,7 +538,7 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <segue destination="HiV-Qf-444" kind="show" id="ZCX-5a-4xu"/>
+                                            <segue destination="HiV-Qf-444" kind="show" identifier="showTweet" id="ZCX-5a-4xu"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="l3U-Il-GIw" imageView="gI2-MP-VcY" style="IBUITableViewCellStyleDefault" id="gRo-7p-Jml">

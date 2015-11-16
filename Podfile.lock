@@ -72,6 +72,7 @@ PODS:
   - TTTAttributedLabel (1.10.1)
   - UIImage+BlurredFrame (0.0.4)
   - UMengAnalytics (3.5.10)
+  - UMengSocial (4.2.3)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
@@ -99,6 +100,7 @@ DEPENDENCIES:
   - TTTAttributedLabel (= 1.10.1)
   - UIImage+BlurredFrame (= 0.0.4)
   - UMengAnalytics (= 3.5.10)
+  - UMengSocial (= 4.2.3)
 
 EXTERNAL SOURCES:
   SQLite.swift:
@@ -139,5 +141,6 @@ SPEC CHECKSUMS:
   TTTAttributedLabel: ec4f73a0bec465c5a88a9c797a7e4edc756ca9dc
   UIImage+BlurredFrame: 5a65e211290be58fe4e37db53f0d7892cee1f08e
   UMengAnalytics: 07a4010a9b58eb8a51695baf9c3346f61d9d5ada
+  UMengSocial: 540f782db4ba5a1a1d048c190b7d6168d9175f5a
 
 COCOAPODS: 0.39.0
