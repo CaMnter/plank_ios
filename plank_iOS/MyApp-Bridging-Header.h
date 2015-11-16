@@ -10,6 +10,7 @@
 #define MyApp_Bridging_Header_h
 
 #import "Tweet_RootViewController.h"
+#import "RKSwipeBetweenViewControllers.h"
 
 
 #endif /* MyApp_Bridging_Header_h */

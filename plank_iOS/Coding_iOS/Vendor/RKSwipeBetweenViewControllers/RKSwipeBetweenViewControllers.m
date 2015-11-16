@@ -65,6 +65,17 @@ CGFloat X_OFFSET = 8.0; //%%% for some reason there's a little bit of a glitchy 
     return self;
 }
 
+- (id)initWithCoder:(NSCoder*)aDecoder
+{
+    if(self = [super initWithCoder:aDecoder])
+    {
+        EasePageViewController *pageController_t = [[EasePageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+        self = [self initWithRootViewController:pageController_t];
+        // Do something
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

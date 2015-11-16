@@ -17,7 +17,6 @@ class DiscoverController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         // TODO set the title
-        segue.destinationViewController.title = "hello wolrd"
         // TODO
         switch segue.identifier! {
         case "showFitnessPlus":
@@ -25,14 +24,26 @@ class DiscoverController: UITableViewController {
         case "showContributor":
             break
         case "showTweet":
-            let tweetController = Tweet_RootViewController.newTweetVCWithType(Tweet_RootViewControllerType.All)
-            //presentViewController(tweetController, animated: true, completion: nil)
-            //segue.destinationViewController = tweetController
+            segue.destinationViewController.title = "冒泡"
+            let nav_tweet = segue.destinationViewController as! RKSwipeBetweenViewControllers
+            setupMaopao(nav_tweet)
             break
         default:
             break
             
         }
+    }
+    
+    func setupMaopao(nav_tweet:RKSwipeBetweenViewControllers){
+//        let nav_tweet = RKSwipeBetweenViewControllers.newSwipeBetweenViewControllers();
+        nav_tweet.viewControllerArray.addObjectsFromArray([Tweet_RootViewController.newTweetVCWithType(Tweet_RootViewControllerType.All),
+            Tweet_RootViewController.newTweetVCWithType(Tweet_RootViewControllerType.Friend),
+            Tweet_RootViewController.newTweetVCWithType(Tweet_RootViewControllerType.Hot)
+            ])
+        //[nav_tweet.viewControllerArray addObjectsFromArray:@[[Tweet_RootViewController newTweetVCWithType:Tweet_RootViewControllerTypeAll],
+        //[Tweet_RootViewController newTweetVCWithType:Tweet_RootViewControllerTypeFriend],
+        //[Tweet_RootViewController newTweetVCWithType:Tweet_RootViewControllerTypeHot]]];
+        nav_tweet.buttonText = ["冒泡广场", "朋友圈", "热门冒泡"];
     }
     
 }

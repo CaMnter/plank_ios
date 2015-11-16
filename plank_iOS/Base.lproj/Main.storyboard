@@ -444,10 +444,10 @@
             </objects>
             <point key="canvasLocation" x="1142" y="16"/>
         </scene>
-        <!--Tweet Root View Controller-->
+        <!--Swipe Between View Controllers-->
         <scene sceneID="HxY-VA-Mq7">
             <objects>
-                <viewController id="HiV-Qf-444" customClass="Tweet_RootViewController" sceneMemberID="viewController">
+                <viewController id="HiV-Qf-444" customClass="RKSwipeBetweenViewControllers" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1mr-51-Z4r"/>
                         <viewControllerLayoutGuide type="bottom" id="6cq-hG-xjt"/>

@@ -148,6 +148,7 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "BaseNavigationController.h"
 
 @protocol RKSwipeBetweenViewControllersDelegate <NSObject>
 
