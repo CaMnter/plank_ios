@@ -105,7 +105,8 @@
         baseURLStr = kBaseUrlStr_Test;
     }else{
         //生产
-        baseURLStr = @"https://coding.net/";
+        //baseURLStr = @"https://coding.net/";
+        baseURLStr = @"http://mp.diaoba.wang/";
     }
 //    //staging
 //    baseURLStr = kBaseUrlStr_Test;
