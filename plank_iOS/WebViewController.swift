@@ -32,5 +32,14 @@ class WebViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func navigationShouldPopOnBackButton() -> Bool {
+        if webView.canGoBack {
+            webView.goBack()
+            return false
+        }else{
+            return true
+        }
+    }
+    
 
 }

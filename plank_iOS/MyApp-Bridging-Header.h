@@ -11,6 +11,7 @@
 
 #import "Tweet_RootViewController.h"
 #import "RKSwipeBetweenViewControllers.h"
+#import "UIViewController+BackButtonHandler.h"
 
 
 #endif /* MyApp_Bridging_Header_h */

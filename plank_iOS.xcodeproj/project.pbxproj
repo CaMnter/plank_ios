@@ -840,6 +840,7 @@
 		50D871FF1BEF4668003BE1F3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871FE1BEF4668003BE1F3 /* MainViewController.swift */; };
 		50D872011BEF6ADD003BE1F3 /* MyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D872001BEF6ADD003BE1F3 /* MyStyle.swift */; };
 		50E676731BFB140600E7A025 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E676721BFB140600E7A025 /* WebViewController.swift */; };
+		50E676761BFB236700E7A025 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E676741BFB236600E7A025 /* UIViewController+BackButtonHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -2020,6 +2021,8 @@
 		50D871FE1BEF4668003BE1F3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		50D872001BEF6ADD003BE1F3 /* MyStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStyle.swift; sourceTree = "<group>"; };
 		50E676721BFB140600E7A025 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		50E676741BFB236600E7A025 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
+		50E676751BFB236600E7A025 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
 		A7EB53F00442C3C625C985F5 /* Pods_plank_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_plank_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB12125A8CA749DD2FAF9D27 /* Pods-plank_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plank_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-plank_iOS/Pods-plank_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -4213,6 +4216,8 @@
 		50D871CD1BEF3692003BE1F3 /* plank_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				50E676741BFB236600E7A025 /* UIViewController+BackButtonHandler.m */,
+				50E676751BFB236600E7A025 /* UIViewController+BackButtonHandler.h */,
 				50E676721BFB140600E7A025 /* WebViewController.swift */,
 				5030B0541BF97E7100FED32F /* Coding_iOS */,
 				5030B02C1BF6391100FED32F /* workout */,
@@ -5021,6 +5026,7 @@
 				5030B8091BF97E7300FED32F /* TweetCommentCell.m in Sources */,
 				5030B54F1BF97E7200FED32F /* TweetSendViewController.m in Sources */,
 				5030B5261BF97E7200FED32F /* IntroductionViewController.m in Sources */,
+				50E676761BFB236700E7A025 /* UIViewController+BackButtonHandler.m in Sources */,
 				5030B7FF1BF97E7300FED32F /* SettingTextCell.m in Sources */,
 				5030B7561BF97E7200FED32F /* UIViewController+DownMenu.m in Sources */,
 				5030B8251BF97E7300FED32F /* UIMessageInputView_Add.m in Sources */,
