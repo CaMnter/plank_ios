@@ -11,7 +11,7 @@ import Alamofire
 
 class WebViewController: UIViewController {
     
-    var url = "http://mp.diaoba.wang/api/wx/daily_post_list?category_id=1"
+    var url = ""
     let htmlTemplateFile = "post.html"
     var htmlTemplateCotent = ""
     
