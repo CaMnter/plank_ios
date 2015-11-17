@@ -22,6 +22,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="66m-hC-fq6" id="skv-I1-eCp"/>
+                                </connections>
                             </webView>
                         </subviews>
                         <animations/>

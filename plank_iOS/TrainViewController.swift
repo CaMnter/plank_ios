@@ -102,6 +102,7 @@ class TrainViewController: UIViewController {
         case "showHowPost":
             let postWebViewController = segue.destinationViewController.childViewControllers[0] as! PostWebViewController;
             postWebViewController.postID = 13;
+            postWebViewController.defaultTitle = "如何完成标准的平板支撑？"
         default:
            break
         }

@@ -26,6 +26,7 @@ class DiscoverController: UITableViewController {
         case "showContributor":
             let postWebViewController = segue.destinationViewController as! PostWebViewController
             postWebViewController.postID = 207;
+            postWebViewController.defaultTitle = "贡献者"
             break
         case "showTweet":
             segue.destinationViewController.title = "冒泡"

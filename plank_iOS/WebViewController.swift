@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class WebViewController: UIViewController {
+class WebViewController: UIViewController, UIWebViewDelegate {
     
     var url = ""
     let htmlTemplateFile = "post.html"
@@ -24,7 +24,7 @@ class WebViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         webView.loadRequest(NSURLRequest(URL: NSURL(string: url)!))
-        
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,6 +39,11 @@ class WebViewController: UIViewController {
         }else{
             return true
         }
+    }
+    
+    func webViewDidFinishLoad(webView: UIWebView) {
+        let title = webView.stringByEvaluatingJavaScriptFromString("document.title")
+        self.title = title
     }
     
 

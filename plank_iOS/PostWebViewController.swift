@@ -15,6 +15,7 @@ class PostWebViewController: UIViewController {
     let htmlTemplateFile = "post.html"
     var htmlTemplateCotent = ""
     var postID:Int = 0;
+    var defaultTitle:String = ""
     
     @IBOutlet weak var webView: UIWebView!
     @IBAction func finish(sender: AnyObject) {
@@ -23,6 +24,7 @@ class PostWebViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = defaultTitle
         // Do any additional setup after loading the view, typically from a nib.
         loadData()
         
