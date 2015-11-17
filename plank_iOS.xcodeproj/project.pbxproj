@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AD78130EF8A30A0D6897A63 /* Pods_plank_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EB53F00442C3C625C985F5 /* Pods_plank_iOS.framework */; };
-		5030B0201BF5CA8D00FED32F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030B01F1BF5CA8D00FED32F /* WebViewController.swift */; };
+		5030B0201BF5CA8D00FED32F /* PostWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030B01F1BF5CA8D00FED32F /* PostWebViewController.swift */; };
 		5030B0291BF5F00F00FED32F /* html in Resources */ = {isa = PBXBuildFile; fileRef = 5030B0281BF5F00F00FED32F /* html */; };
 		5030B02D1BF6391100FED32F /* workout in Resources */ = {isa = PBXBuildFile; fileRef = 5030B02C1BF6391100FED32F /* workout */; };
 		5030B0381BF754DA00FED32F /* Train.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5030B0361BF754DA00FED32F /* Train.storyboard */; };
@@ -860,7 +860,7 @@
 
 /* Begin PBXFileReference section */
 		309665D23EEE75C41240276C /* Pods-plank_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plank_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-plank_iOS/Pods-plank_iOS.release.xcconfig"; sourceTree = "<group>"; };
-		5030B01F1BF5CA8D00FED32F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		5030B01F1BF5CA8D00FED32F /* PostWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostWebViewController.swift; sourceTree = "<group>"; };
 		5030B0281BF5F00F00FED32F /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
 		5030B02C1BF6391100FED32F /* workout */ = {isa = PBXFileReference; lastKnownFileType = folder; path = workout; sourceTree = "<group>"; };
 		5030B0371BF754DA00FED32F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Train.storyboard; sourceTree = "<group>"; };
@@ -4232,7 +4232,7 @@
 				50519EF61BF0E2D20068FBAB /* Fitness.swift */,
 				50519EFD1BF473FF0068FBAB /* LoadDataProtocol.swift */,
 				50702E951BF4E35D00C55D1D /* DateUtil.swift */,
-				5030B01F1BF5CA8D00FED32F /* WebViewController.swift */,
+				5030B01F1BF5CA8D00FED32F /* PostWebViewController.swift */,
 				5030B0481BF7779300FED32F /* DiscoverController.swift */,
 				5030B04F1BF8D27F00FED32F /* MyApp-Bridging-Header.h */,
 			);
@@ -5141,7 +5141,7 @@
 				5030B7F51BF97E7300FED32F /* AddCommentCell.m in Sources */,
 				5030B80A1BF97E7300FED32F /* TweetCommentMoreCell.m in Sources */,
 				50519EF71BF0E2D20068FBAB /* Fitness.swift in Sources */,
-				5030B0201BF5CA8D00FED32F /* WebViewController.swift in Sources */,
+				5030B0201BF5CA8D00FED32F /* PostWebViewController.swift in Sources */,
 				5030B7591BF97E7300FED32F /* NSMutableString+Common.m in Sources */,
 				5030B53A1BF97E7200FED32F /* CSSearchDisplayVC.m in Sources */,
 				5030B6F71BF97E7200FED32F /* CodingTips.m in Sources */,

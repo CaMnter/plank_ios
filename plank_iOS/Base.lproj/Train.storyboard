@@ -69,7 +69,7 @@
                 </viewController>
                 <tapGestureRecognizer id="m6p-JV-qnI">
                     <connections>
-                        <segue destination="Puj-Kx-TVN" kind="presentation" id="1XH-Qc-IbW"/>
+                        <segue destination="Puj-Kx-TVN" kind="presentation" identifier="showHowPost" id="1XH-Qc-IbW"/>
                     </connections>
                 </tapGestureRecognizer>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="223-FK-dic" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -79,7 +79,7 @@
         <!--How to plank-->
         <scene sceneID="Rjf-OI-cSb">
             <objects>
-                <viewController title="How to plank" id="4ko-sF-WUd" customClass="WebViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="How to plank" id="4ko-sF-WUd" customClass="PostWebViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y94-TO-jx7"/>
                         <viewControllerLayoutGuide type="bottom" id="DUA-TF-Yua"/>

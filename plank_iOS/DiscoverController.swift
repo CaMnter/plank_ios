@@ -22,6 +22,8 @@ class DiscoverController: UITableViewController {
         case "showFitnessPlus":
             break
         case "showContributor":
+            let postWebViewController = segue.destinationViewController as! PostWebViewController;
+            postWebViewController.postID = 207;
             break
         case "showTweet":
             segue.destinationViewController.title = "冒泡"

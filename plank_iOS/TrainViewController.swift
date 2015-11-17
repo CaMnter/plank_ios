@@ -97,6 +97,17 @@ class TrainViewController: UIViewController {
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch (segue.identifier!){
+        case "showHowPost":
+            let postWebViewController = segue.destinationViewController.childViewControllers[0] as! PostWebViewController;
+            postWebViewController.postID = 13;
+        default:
+           break
+        }
+        
+    }
+    
     
 }
 

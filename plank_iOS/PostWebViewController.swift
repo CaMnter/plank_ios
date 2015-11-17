@@ -9,10 +9,12 @@
 import UIKit
 import Alamofire
 
-class WebViewController: UIViewController {
+class PostWebViewController: UIViewController {
     
+    let postBaseUrl = "http://plankmp.sinaapp.com/?json=get_post&post_id=%d";
     let htmlTemplateFile = "post.html"
     var htmlTemplateCotent = ""
+    var postID:Int = 0;
     
     @IBOutlet weak var webView: UIWebView!
     @IBAction func finish(sender: AnyObject) {
@@ -22,15 +24,15 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //let url = URL(string: "www.baidu.com")
-        self.title = "webView"
         loadData()
         
         //reading
-        do {
-            htmlTemplateCotent = try String(contentsOfFile: NSBundle.mainBundle().pathForResource("post.html", ofType: nil, inDirectory: "html")!, encoding: NSUTF8StringEncoding)
+        if htmlTemplateCotent == ""{
+            do {
+                htmlTemplateCotent = try String(contentsOfFile: NSBundle.mainBundle().pathForResource("post.html", ofType: nil, inDirectory: "html")!, encoding: NSUTF8StringEncoding)
+            }
+            catch {/* error handling here */}
         }
-        catch {/* error handling here */}
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,7 +41,7 @@ class WebViewController: UIViewController {
     }
     
     func loadData(){
-        Alamofire.request(.GET, "http://plankmp.sinaapp.com/?json=get_post&post_id=13", parameters: nil)
+        Alamofire.request(.GET, String(format:postBaseUrl, postID), parameters: nil)
             .responseJSON { response in
                 //                print(response.request)  // original URL request
                 //                print(response.response) // URL response
@@ -56,10 +58,6 @@ class WebViewController: UIViewController {
                         self.webView.loadHTMLString(tmp, baseURL: nil)
                     }
                 }
-                
-                //                if let JSON = response.result.value {
-                //                    print("JSON: \(JSON)")
-                //                }
         }
     }
     
