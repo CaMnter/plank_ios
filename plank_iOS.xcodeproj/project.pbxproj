@@ -839,6 +839,7 @@
 		50D871F11BEF3692003BE1F3 /* plank_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871F01BEF3692003BE1F3 /* plank_iOSUITests.swift */; };
 		50D871FF1BEF4668003BE1F3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871FE1BEF4668003BE1F3 /* MainViewController.swift */; };
 		50D872011BEF6ADD003BE1F3 /* MyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D872001BEF6ADD003BE1F3 /* MyStyle.swift */; };
+		50E676731BFB140600E7A025 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E676721BFB140600E7A025 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -2018,6 +2019,7 @@
 		50D871F21BEF3692003BE1F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50D871FE1BEF4668003BE1F3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		50D872001BEF6ADD003BE1F3 /* MyStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStyle.swift; sourceTree = "<group>"; };
+		50E676721BFB140600E7A025 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		A7EB53F00442C3C625C985F5 /* Pods_plank_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_plank_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB12125A8CA749DD2FAF9D27 /* Pods-plank_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plank_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-plank_iOS/Pods-plank_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -4211,6 +4213,7 @@
 		50D871CD1BEF3692003BE1F3 /* plank_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				50E676721BFB140600E7A025 /* WebViewController.swift */,
 				5030B0541BF97E7100FED32F /* Coding_iOS */,
 				5030B02C1BF6391100FED32F /* workout */,
 				5030B0281BF5F00F00FED32F /* html */,
@@ -5138,6 +5141,7 @@
 				50519EF31BF0DAE80068FBAB /* FitnessTableViewCell.swift in Sources */,
 				5030B52E1BF97E7200FED32F /* SettingTagsViewController.m in Sources */,
 				5030B5571BF97E7200FED32F /* ZXScanCodeViewController.m in Sources */,
+				50E676731BFB140600E7A025 /* WebViewController.swift in Sources */,
 				5030B7F51BF97E7300FED32F /* AddCommentCell.m in Sources */,
 				5030B80A1BF97E7300FED32F /* TweetCommentMoreCell.m in Sources */,
 				50519EF71BF0E2D20068FBAB /* Fitness.swift in Sources */,
