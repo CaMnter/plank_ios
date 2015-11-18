@@ -11,7 +11,7 @@
 #import "CannotLoginViewController.h"
 #import "Input_OnlyText_Cell.h"
 #import "Coding_NetAPIManager.h"
-#import "AppDelegate.h"
+#import "AppDelegate_coding.h"
 #import "StartImagesManager.h"
 #import <NYXImagesKit/NYXImagesKit.h>
 #import "UIImage+BlurredFrame/UIImage+BlurredFrame.h"
@@ -20,6 +20,8 @@
 
 #import "Ease_2FA.h"
 #import "Login2FATipCell.h"
+#import "plank_iOS-Swift.h"
+
 
 @interface LoginViewController ()
 @property (nonatomic, strong) Login *myLogin;
@@ -396,7 +398,7 @@
             [weakSelf.activityIndicator stopAnimating];
             if (data) {
                 [Login setPreUserEmail:self.myLogin.email];//记住登录账号
-                [((AppDelegate *)[UIApplication sharedApplication].delegate) setupTabViewController];
+                [((AppDelegate *)[UIApplication sharedApplication].delegate) setTabViewController];
             }else{
                 NSString *status_expired = error.userInfo[@"msg"][@"user_login_status_expired"];
                 if (status_expired.length > 0) {
@@ -410,7 +412,13 @@
             [weakSelf.activityIndicator stopAnimating];
             if (data) {
                 [Login setPreUserEmail:self.myLogin.email];//记住登录账号
-                [((AppDelegate *)[UIApplication sharedApplication].delegate) setupTabViewController];
+                
+                [((AppDelegate *)[UIApplication sharedApplication].delegate) setTabViewController];
+                // call swift
+                //AppDelegate_Swift* delegate = (AppDelegate_Swift *)[UIApplication sharedApplication].delegate;
+                
+                //AppDelegate.setTabViewController()
+                
             }else{
                 NSString *global_key = error.userInfo[@"msg"][@"two_factor_auth_code_not_empty"];
                 if (global_key.length > 0) {

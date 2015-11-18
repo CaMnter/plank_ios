@@ -9,7 +9,7 @@
 #import "SettingViewController.h"
 #import "TitleDisclosureCell.h"
 #import "Login.h"
-#import "AppDelegate.h"
+#import "AppDelegate_coding.h"
 #import "SettingAccountViewController.h"
 #import "AboutViewController.h"
 

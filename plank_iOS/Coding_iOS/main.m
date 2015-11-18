@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-#import "AppDelegate.h"
+#import "AppDelegate_coding.h"
 #import "UIViewController+Swizzle.h"
 
 int main_coding(int argc, char * argv[])
 {
 
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate_coding class]));
     }
 }

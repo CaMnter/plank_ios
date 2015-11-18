@@ -10,6 +10,8 @@
 #import "Login.h"
 #import "TPKeyboardAvoidingTableView.h"
 
+@class AppDelegate_coding;
+
 @interface LoginViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate>
 @property (assign, nonatomic) BOOL showDismissButton;
 @end

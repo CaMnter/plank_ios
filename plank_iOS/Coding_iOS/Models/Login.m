@@ -8,7 +8,8 @@
 
 #import "Login.h"
 #import "XGPush.h"
-#import "AppDelegate.h"
+#import "AppDelegate_coding.h"
+#import "plank_iOS-Swift.h"
 
 #define kLoginStatus @"login_status"
 #define kLoginPreUserEmail @"pre_user_email"
@@ -131,7 +132,8 @@ static User *curLoginUser;
         if (user && user.global_key.length > 0) {
             NSString *global_key = user.global_key;
             [XGPush setAccount:global_key];
-            [(AppDelegate *)[UIApplication sharedApplication].delegate registerPush];
+            // TODO
+            //[(AppDelegate *)[UIApplication sharedApplication].delegate registerPush];
         }
     }else{
         [XGPush setAccount:nil];

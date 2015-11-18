@@ -8,6 +8,7 @@
 
 import UIKit
 
+@objc
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //net
+        AFNetworkActivityIndicatorManager.sharedManager().enabled = true
+        AFNetworkReachabilityManager.sharedManager().startMonitoring()
+        
+        // sd image
+        SDWebImageManager.sharedManager().imageDownloader.setValue("text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" ,forHTTPHeaderField:"Accept")
+        
+        if Login.isLogin() {
+           setupIntroductionViewController()
+        }else{
+           setupIntroductionViewController()
+        }
+        
+        
         return true
     }
 
@@ -39,6 +55,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+//    - (void)setupIntroductionViewController{
+//    IntroductionViewController *introductionVC = [[IntroductionViewController alloc] init];
+//    //    [self.window setRootViewController:[[BaseNavigationController alloc] initWithRootViewController:introductionVC]];
+//    [self.window setRootViewController:introductionVC];
+//    }
+    
+    func setupIntroductionViewController() -> Void{
+        let introductionVC = IntroductionViewController()
+        self.window?.rootViewController = introductionVC
+    }
+    
+    func setTabViewController(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("mainTab") as! UIViewController
+        self.window?.rootViewController = vc
     }
 
 

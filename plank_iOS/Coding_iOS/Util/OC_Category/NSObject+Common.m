@@ -13,7 +13,7 @@
 #import "NSObject+Common.h"
 #import "JDStatusBarNotification.h"
 #import "Login.h"
-#import "AppDelegate.h"
+#import "AppDelegate_coding.h"
 #import "MBProgressHUD+Add.h"
 #import "CodingNetAPIClient.h"
 
@@ -106,7 +106,8 @@
     }else{
         //生产
         //baseURLStr = @"https://coding.net/";
-        baseURLStr = @"http://mp.diaoba.wang/";
+        //baseURLStr = @"http://mp.diaoba.wang/";
+        baseURLStr = @"http://plank.ngrok.diaoba.wang/";
     }
 //    //staging
 //    baseURLStr = kBaseUrlStr_Test;
@@ -294,9 +295,10 @@
 
         if (resultCode.intValue == 1000 || resultCode.intValue == 3207) {//用户未登录
             if ([Login isLogin]) {//已登录的状态要抹掉
-                [Login doLogout];
-                [((AppDelegate *)[UIApplication sharedApplication].delegate) setupLoginViewController];
-                kTipAlert(@"%@", [NSObject tipFromError:error]);
+                // TODO
+//                [Login doLogout];
+//                [((AppDelegate *)[UIApplication sharedApplication].delegate) setupLoginViewController];
+//                kTipAlert(@"%@", [NSObject tipFromError:error]);
             }
         }else{
             if (autoShowError) {

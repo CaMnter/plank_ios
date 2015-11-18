@@ -16,7 +16,7 @@
 
 #import "UserTweetsViewController.h"
 #import "Coding_NetAPIManager.h"
-#import "AppDelegate.h"
+#import "AppDelegate_coding.h"
 #import "WebViewController.h"
 #import "RootTabViewController.h"
 #import "Message_RootViewController.h"
@@ -378,7 +378,8 @@ typedef NS_ENUM(NSInteger, AnalyseMethodType) {
 #pragma mark Login
 - (void)loginOutToLoginVC{
     [Login doLogout];
-    [((AppDelegate *)[UIApplication sharedApplication].delegate) setupLoginViewController];
+    // TODO
+    //[((AppDelegate *)[UIApplication sharedApplication].delegate) setupLoginViewController];
 }
 
 @end

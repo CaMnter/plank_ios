@@ -12,7 +12,7 @@
 
 
 
-#import "AppDelegate.h"
+#import "AppDelegate_coding.h"
 #import "RootTabViewController.h"
 #import "LoginViewController.h"
 #import "AFNetworking.h"
@@ -34,7 +34,7 @@
 #import "Tweet.h"
 #import "sys/utsname.h"
 
-@implementation AppDelegate
+@implementation AppDelegate_coding
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;

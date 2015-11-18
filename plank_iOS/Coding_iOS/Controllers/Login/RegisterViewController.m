@@ -10,7 +10,7 @@
 #import "Input_OnlyText_Cell.h"
 
 #import "Coding_NetAPIManager.h"
-#import "AppDelegate.h"
+#import "AppDelegate_coding.h"
 #import "UIUnderlinedButton.h"
 #import "TPKeyboardAvoidingTableView.h"
 #import "WebViewController.h"
@@ -268,9 +268,10 @@
         weakSelf.footerBtn.enabled = YES;
         [weakSelf.activityIndicator stopAnimating];
         if (data) {
-            [Login setPreUserEmail:self.myRegister.email];//记住登录账号
-            [((AppDelegate *)[UIApplication sharedApplication].delegate) setupTabViewController];
-            kTipAlert(@"欢迎注册 Coding，请尽快去邮箱查收邮件并激活账号。如若在收件箱中未看到激活邮件，请留意一下垃圾邮件箱(T_T)。");
+            // TODO
+//            [Login setPreUserEmail:self.myRegister.email];//记住登录账号
+//            [((AppDelegate *)[UIApplication sharedApplication].delegate) setupTabViewController];
+//            kTipAlert(@"欢迎注册 Coding，请尽快去邮箱查收邮件并激活账号。如若在收件箱中未看到激活邮件，请留意一下垃圾邮件箱(T_T)。");
         }else{
             [weakSelf refreshCaptchaNeeded];
         }

@@ -15,7 +15,7 @@
 		5030B03A1BF7602600FED32F /* Fitness.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5030B0391BF7602600FED32F /* Fitness.storyboard */; };
 		5030B0491BF7779300FED32F /* DiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030B0481BF7779300FED32F /* DiscoverController.swift */; };
 		5030B0531BF8D48B00FED32F /* WebP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5030B0521BF8D48A00FED32F /* WebP.framework */; };
-		5030B51D1BF97E7200FED32F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5030B0561BF97E7100FED32F /* AppDelegate.m */; };
+		5030B51D1BF97E7200FED32F /* AppDelegate_coding.m in Sources */ = {isa = PBXBuildFile; fileRef = 5030B0561BF97E7100FED32F /* AppDelegate_coding.m */; };
 		5030B51E1BF97E7200FED32F /* Coding_iOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5030B0571BF97E7100FED32F /* Coding_iOS-Info.plist */; };
 		5030B51F1BF97E7200FED32F /* Coding_iOS-Prefix.pch.example in Resources */ = {isa = PBXBuildFile; fileRef = 5030B0591BF97E7100FED32F /* Coding_iOS-Prefix.pch.example */; };
 		5030B5201BF97E7200FED32F /* Coding_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5030B05A1BF97E7100FED32F /* Coding_iOS.xcdatamodeld */; };
@@ -870,8 +870,8 @@
 		5030B0481BF7779300FED32F /* DiscoverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverController.swift; sourceTree = "<group>"; };
 		5030B04F1BF8D27F00FED32F /* MyApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		5030B0521BF8D48A00FED32F /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebP.framework; sourceTree = "<group>"; };
-		5030B0551BF97E7100FED32F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5030B0561BF97E7100FED32F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5030B0551BF97E7100FED32F /* AppDelegate_coding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate_coding.h; sourceTree = "<group>"; };
+		5030B0561BF97E7100FED32F /* AppDelegate_coding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate_coding.m; sourceTree = "<group>"; };
 		5030B0571BF97E7100FED32F /* Coding_iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Coding_iOS-Info.plist"; sourceTree = "<group>"; };
 		5030B0581BF97E7100FED32F /* Coding_iOS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Coding_iOS-Prefix.pch"; sourceTree = "<group>"; };
 		5030B0591BF97E7100FED32F /* Coding_iOS-Prefix.pch.example */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Coding_iOS-Prefix.pch.example"; sourceTree = "<group>"; };
@@ -2077,8 +2077,8 @@
 		5030B0541BF97E7100FED32F /* Coding_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				5030B0551BF97E7100FED32F /* AppDelegate.h */,
-				5030B0561BF97E7100FED32F /* AppDelegate.m */,
+				5030B0551BF97E7100FED32F /* AppDelegate_coding.h */,
+				5030B0561BF97E7100FED32F /* AppDelegate_coding.m */,
 				5030B0571BF97E7100FED32F /* Coding_iOS-Info.plist */,
 				5030B0581BF97E7100FED32F /* Coding_iOS-Prefix.pch */,
 				5030B0591BF97E7100FED32F /* Coding_iOS-Prefix.pch.example */,
@@ -5140,7 +5140,7 @@
 				5030B7581BF97E7200FED32F /* NSDate+convenience.m in Sources */,
 				50519F6D1BF4DF5E0068FBAB /* CVShape.swift in Sources */,
 				5030B7AA1BF97E7300FED32F /* PopMenu.m in Sources */,
-				5030B51D1BF97E7200FED32F /* AppDelegate.m in Sources */,
+				5030B51D1BF97E7200FED32F /* AppDelegate_coding.m in Sources */,
 				50519EFE1BF474000068FBAB /* LoadDataProtocol.swift in Sources */,
 				5030B7771BF97E7300FED32F /* AFHTTPRequestOperationManager.m in Sources */,
 				50519F5E1BF4DF5E0068FBAB /* CVCalendarView.swift in Sources */,
