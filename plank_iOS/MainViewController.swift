@@ -9,12 +9,13 @@
 import UIKit
 import PagingMenuController
 
-class MainViewController: UIViewController, PagingMenuControllerDelegate {
+class MainViewController: UIViewController, PagingMenuControllerDelegate, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        self.tabBarController?.delegate = self
         let trainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TrainViewController") as! TrainViewController
         trainViewController.title = "训练"
         let challengeViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TrainViewController") as! TrainViewController
@@ -28,7 +29,7 @@ class MainViewController: UIViewController, PagingMenuControllerDelegate {
         options.menuHeight = 50
         //options.menuDisplayMode = .Standard(widthMode: .Flexible, centerItem: true, scrollingMode: .ScrollEnabledAndBouces)
         options.menuDisplayMode = .SegmentedControl
-       
+        
         let pagingMenuController = self.childViewControllers.first as! PagingMenuController
         pagingMenuController.delegate = self
         pagingMenuController.setup(viewControllers: viewControllers, options: options)
@@ -45,5 +46,24 @@ class MainViewController: UIViewController, PagingMenuControllerDelegate {
     }
     
     func didMoveToMenuPage(page: Int) {
+    }
+    
+    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
+        if let viewController = viewController as? RKSwipeBetweenViewControllers {
+            setupMaopao(viewController)
+        }
+        return true
+    }
+    
+    func setupMaopao(nav_tweet:RKSwipeBetweenViewControllers){
+        //        let nav_tweet = RKSwipeBetweenViewControllers.newSwipeBetweenViewControllers();
+        nav_tweet.viewControllerArray.addObjectsFromArray([Tweet_RootViewController.newTweetVCWithType(Tweet_RootViewControllerType.All),
+            Tweet_RootViewController.newTweetVCWithType(Tweet_RootViewControllerType.Friend),
+            Tweet_RootViewController.newTweetVCWithType(Tweet_RootViewControllerType.Hot)
+            ])
+        //[nav_tweet.viewControllerArray addObjectsFromArray:@[[Tweet_RootViewController newTweetVCWithType:Tweet_RootViewControllerTypeAll],
+        //[Tweet_RootViewController newTweetVCWithType:Tweet_RootViewControllerTypeFriend],
+        //[Tweet_RootViewController newTweetVCWithType:Tweet_RootViewControllerTypeHot]]];
+        nav_tweet.buttonText = ["冒泡广场", "朋友圈", "热门冒泡"];
     }
 }

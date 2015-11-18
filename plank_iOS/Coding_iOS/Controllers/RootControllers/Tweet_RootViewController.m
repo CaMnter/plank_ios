@@ -104,10 +104,10 @@
 //                          }];
 //    
     //UIBarButtonItem *leftBarItem =[UIBarButtonItem itemWithIcon:@"search_Nav" showBadge:NO target:self action:@selector(searchItemClicked:)];
-    UIBarButtonItem *leftBarItem =[UIBarButtonItem itemWithBtnTitle:@"close" target:self action:@selector(myDismiss)];
-    leftBarItem.tintColor = [UIColor blackColor];
+//    UIBarButtonItem *leftBarItem =[UIBarButtonItem itemWithBtnTitle:@"close" target:self action:@selector(myDismiss)];
+//    leftBarItem.tintColor = [UIColor blackColor];
 
-    [self.parentViewController.navigationItem setLeftBarButtonItem:leftBarItem animated:NO];
+//    [self.parentViewController.navigationItem setLeftBarButtonItem:leftBarItem animated:NO];
     
     _tweetsDict = [[NSMutableDictionary alloc] initWithCapacity:4];
 

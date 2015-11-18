@@ -192,20 +192,17 @@
             </objects>
             <point key="canvasLocation" x="4779.5" y="-1168.5"/>
         </scene>
-        <!--健身-->
+        <!--冒泡-->
         <scene sceneID="ffb-ix-pHf">
             <objects>
-                <navigationController id="VHQ-5n-kFW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="健身" image="first" id="XXQ-Zl-rOx"/>
+                <navigationController id="VHQ-5n-kFW" customClass="RKSwipeBetweenViewControllers" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="冒泡" image="first" id="XXQ-Zl-rOx"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eJj-1i-M4X">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="0CJ-Or-Ubd" kind="relationship" relationship="rootViewController" id="vuO-Ih-oqm"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgX-wd-SEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -445,7 +442,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JLW-Bo-RgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1142" y="16"/>
+            <point key="canvasLocation" x="1411" y="-224"/>
         </scene>
         <!--贡献者-->
         <scene sceneID="3Jz-Rf-aQZ">
@@ -496,36 +493,8 @@
                         <sections>
                             <tableViewSection id="TOx-Bs-dD9">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="KIT-sH-tT7" imageView="b3b-0m-eJt" style="IBUITableViewCellStyleDefault" id="yah-FC-kjp">
-                                        <rect key="frame" x="0.0" y="99" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yah-FC-kjp" id="0eu-xn-YnO">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="冒泡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KIT-sH-tT7">
-                                                    <rect key="frame" x="60" y="0.0" width="280" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="first" id="b3b-0m-eJt">
-                                                    <rect key="frame" x="15" y="6" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <animations/>
-                                                </imageView>
-                                            </subviews>
-                                            <animations/>
-                                        </tableViewCellContentView>
-                                        <animations/>
-                                        <connections>
-                                            <segue destination="FPG-K8-XPN" kind="show" identifier="showTweet" id="ZCX-5a-4xu"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="l3U-Il-GIw" imageView="gI2-MP-VcY" style="IBUITableViewCellStyleDefault" id="gRo-7p-Jml">
-                                        <rect key="frame" x="0.0" y="143" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="99" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gRo-7p-Jml" id="WMc-iv-8sS">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -554,7 +523,7 @@
                             <tableViewSection id="V3C-az-ivh">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="gAB-l1-WfK" imageView="wuP-ch-uTy" style="IBUITableViewCellStyleDefault" id="YmY-Ju-WcA">
-                                        <rect key="frame" x="0.0" y="223" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="179" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YmY-Ju-WcA" id="cFf-Y2-SgJ">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -581,19 +550,15 @@
                                             <segue destination="66m-hC-fq6" kind="show" identifier="showFitnessPlus" id="U6k-eB-Tyd"/>
                                         </connections>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="D8C-fD-foi">
-                                <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="0df-ns-buY" imageView="DWs-Pr-hC4" style="IBUITableViewCellStyleDefault" id="LbG-qG-CYV">
-                                        <rect key="frame" x="0.0" y="303" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="223" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LbG-qG-CYV" id="y2W-rA-a88">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="贡献者" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0df-ns-buY">
-                                                    <rect key="frame" x="60" y="0.0" width="280" height="43.5"/>
+                                                    <rect key="frame" x="60" y="0.0" width="280" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -629,22 +594,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eR0-Cp-3Dg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1311.5" y="1119.5"/>
-        </scene>
-        <!--Swipe Between View Controllers-->
-        <scene sceneID="ihz-9K-bWU">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FPG-K8-XPN" customClass="RKSwipeBetweenViewControllers" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kGQ-Ap-uxk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UtC-Wc-AIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1401.5" y="270.5"/>
         </scene>
     </scenes>
     <resources>
