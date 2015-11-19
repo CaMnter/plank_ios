@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class WebViewController: UIViewController, UIWebViewDelegate {
+class WebViewControllerSwift: UIViewController, UIWebViewDelegate {
     
     var url = ""
     let htmlTemplateFile = "post.html"

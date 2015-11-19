@@ -16,6 +16,7 @@
 #import "WebViewController.h"
 #import "CannotLoginViewController.h"
 #import "EaseInputTipsView.h"
+#import "plank_iOS-Swift.h"
 
 @interface RegisterViewController ()<UITableViewDataSource, UITableViewDelegate, TTTAttributedLabelDelegate>
 @property (assign, nonatomic) BOOL captchaNeeded;
@@ -53,7 +54,7 @@
     });
     self.myTableView.tableHeaderView = [self customHeaderView];
     self.myTableView.tableFooterView=[self customFooterView];
-    [self configBottomView];
+    //[self configBottomView];
     if (self.navigationController.childViewControllers.count <= 1) {
         self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithBtnTitle:@"取消" target:self action:@selector(dismissSelf)];
     }
@@ -79,7 +80,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
-    [self refreshCaptchaNeeded];
+    //[self refreshCaptchaNeeded];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -114,7 +115,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return _captchaNeeded? 3 : 2;
+    return _captchaNeeded? 4 : 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -134,9 +135,14 @@
             weakSelf.inputTipsView.active = NO;
         };
     }else if (indexPath.row == 1){
-        [cell configWithPlaceholder:@" 个性后缀" andValue:self.myRegister.global_key];
+        [cell configWithPlaceholder:@" 昵称" andValue:self.myRegister.global_key];
         cell.textValueChangedBlock = ^(NSString *valueStr){
             weakSelf.myRegister.global_key = valueStr;
+        };
+    }else if (indexPath.row == 2){
+        [cell configWithPlaceholder:@" 密码" andValue:self.myRegister.global_key];
+        cell.textValueChangedBlock = ^(NSString *valueStr){
+            weakSelf.myRegister.password = valueStr;
         };
     }else{
         cell.isCaptcha = YES;
@@ -162,7 +168,7 @@
     headerLabel.font = [UIFont boldSystemFontOfSize:18];
     headerLabel.textColor = [UIColor colorWithHexString:@"0x222222"];
     headerLabel.textAlignment = NSTextAlignmentCenter;
-    headerLabel.text = @"加入Coding，体验云端开发之美！";
+    headerLabel.text = @"加入平板支撑，体验健身之乐！";
     [headerLabel setCenter:headerV.center];
     [headerV addSubview:headerLabel];
     
@@ -194,9 +200,9 @@
         label;
     });
 
-    NSString *tipStr = @"点击立即体验，即表示同意《coding服务条款》";
+    NSString *tipStr = @"点击立即体验，即表示同意《平板支撑服务条款》";
     lineLabel.text = tipStr;
-    [lineLabel addLinkToTransitInformation:@{@"actionStr" : @"gotoServiceTermsVC"} withRange:[tipStr rangeOfString:@"《coding服务条款》"]];
+    [lineLabel addLinkToTransitInformation:@{@"actionStr" : @"gotoServiceTermsVC"} withRange:[tipStr rangeOfString:@"《平板支撑服务条款》"]];
     
     CGRect footerBtnFrame = _footerBtn.frame;
     lineLabel.frame = CGRectMake(CGRectGetMinX(footerBtnFrame), CGRectGetMaxY(footerBtnFrame) +12, CGRectGetWidth(footerBtnFrame), 12);
@@ -268,12 +274,14 @@
         weakSelf.footerBtn.enabled = YES;
         [weakSelf.activityIndicator stopAnimating];
         if (data) {
-            // TODO
-//            [Login setPreUserEmail:self.myRegister.email];//记住登录账号
-//            [((AppDelegate *)[UIApplication sharedApplication].delegate) setupTabViewController];
-//            kTipAlert(@"欢迎注册 Coding，请尽快去邮箱查收邮件并激活账号。如若在收件箱中未看到激活邮件，请留意一下垃圾邮件箱(T_T)。");
+
+            [Login setPreUserEmail:self.myRegister.email];//记住登录账号
+            [((AppDelegate *)[UIApplication sharedApplication].delegate) setupTabViewController];
+            //kTipAlert(@"欢迎注册 Coding，请尽快去邮箱查收邮件并激活账号。如若在收件箱中未看到激活邮件，请留意一下垃圾邮件箱(T_T)。");
         }else{
-            [weakSelf refreshCaptchaNeeded];
+            //[weakSelf refreshCaptchaNeeded];
+            kTipAlert(@"邮箱或昵称已被占用");
+            
         }
     }];
 }

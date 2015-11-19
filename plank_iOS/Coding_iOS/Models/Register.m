@@ -22,6 +22,7 @@
 - (NSDictionary *)toParams{
     return @{@"email" : self.email,
              @"global_key" : self.global_key,
+             @"password"   : [self.password sha1Str],
              @"j_captcha" : _j_captcha? _j_captcha: @""};
 }
 @end

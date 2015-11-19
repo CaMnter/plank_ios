@@ -9,7 +9,7 @@
         <!--健身+-->
         <scene sceneID="85X-I5-FTJ">
             <objects>
-                <viewController storyboardIdentifier="UIViewController-66m-hC-fq6" title="健身+" id="66m-hC-fq6" customClass="WebViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UIViewController-66m-hC-fq6" title="健身+" id="66m-hC-fq6" customClass="WebViewControllerSwift" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HOg-dP-HuB"/>
                         <viewControllerLayoutGuide type="bottom" id="evK-G3-mxf"/>

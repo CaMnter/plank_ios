@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc
+//@objc
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SDWebImageManager.sharedManager().imageDownloader.setValue("text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" ,forHTTPHeaderField:"Accept")
         
         if Login.isLogin() {
-           setupIntroductionViewController()
+            setupTabViewController()
         }else{
            setupIntroductionViewController()
         }
@@ -68,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = introductionVC
     }
     
-    func setTabViewController(){
+    func setupTabViewController() -> Void{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier("mainTab") as! UIViewController
         self.window?.rootViewController = vc

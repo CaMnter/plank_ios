@@ -152,7 +152,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
-    [self refreshCaptchaNeeded];
+    //[self refreshCaptchaNeeded];
     [self refreshIconUserImage];
 }
 
@@ -398,8 +398,9 @@
             [weakSelf.activityIndicator stopAnimating];
             if (data) {
                 [Login setPreUserEmail:self.myLogin.email];//记住登录账号
-                [((AppDelegate *)[UIApplication sharedApplication].delegate) setTabViewController];
+                [((AppDelegate *)[UIApplication sharedApplication].delegate) setupTabViewController];
             }else{
+                // TODO login error
                 NSString *status_expired = error.userInfo[@"msg"][@"user_login_status_expired"];
                 if (status_expired.length > 0) {
                     [weakSelf changeUITo2FAWithGK:nil];
@@ -413,20 +414,21 @@
             if (data) {
                 [Login setPreUserEmail:self.myLogin.email];//记住登录账号
                 
-                [((AppDelegate *)[UIApplication sharedApplication].delegate) setTabViewController];
+                [((AppDelegate *)[UIApplication sharedApplication].delegate) setupTabViewController];
                 // call swift
                 //AppDelegate_Swift* delegate = (AppDelegate_Swift *)[UIApplication sharedApplication].delegate;
                 
                 //AppDelegate.setTabViewController()
                 
             }else{
-                NSString *global_key = error.userInfo[@"msg"][@"two_factor_auth_code_not_empty"];
-                if (global_key.length > 0) {
-                    [weakSelf changeUITo2FAWithGK:global_key];
-                }else{
-                    [NSObject showError:error];
-                    [weakSelf refreshCaptchaNeeded];
-                }
+                kTipAlert(@"用户名或密码错误");
+//                NSString *global_key = error.userInfo[@"msg"][@"two_factor_auth_code_not_empty"];
+//                if (global_key.length > 0) {
+//                    [weakSelf changeUITo2FAWithGK:global_key];
+//                }else{
+//                    [NSObject showError:error];
+//                    //[weakSelf refreshCaptchaNeeded];
+//                }
             }
         }];
     }
@@ -463,7 +465,7 @@
 #pragma mark 2FA
 - (void)changeUITo2FAWithGK:(NSString *)global_key{
     self.otpCode = [OTPListViewController otpCodeWithGK:global_key];
-    self.is2FAUI = global_key.length > 0;
+    //self.is2FAUI = global_key.length > 0;
     if (self.otpCode) {
         [self sendLogin];
     }
