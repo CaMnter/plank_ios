@@ -30,6 +30,7 @@
 #import "UMengSocial/UMSocialQQHandler.h"
 #import "evernote-cloud-sdk-ios/ENSDK/ENSDK.h"
 #import "SDWebImageManager.h"
+#import "Me_RootViewController.h"
 
 
 #import "Tweet.h"

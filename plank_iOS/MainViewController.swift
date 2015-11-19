@@ -51,6 +51,10 @@ class MainViewController: UIViewController, PagingMenuControllerDelegate, UITabB
     func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
         if let viewController = viewController as? RKSwipeBetweenViewControllers {
             setupMaopao(viewController)
+        }else if let nv = viewController as? UINavigationController{
+            if let meController = nv.childViewControllers[0] as? Me_RootViewController {
+                meController.isRoot = true
+            }
         }
         return true
     }
