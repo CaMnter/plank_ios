@@ -70,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setupTabViewController() -> Void{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("mainTab") as! UIViewController
+        let vc = storyboard.instantiateViewControllerWithIdentifier("mainTab")
         self.window?.rootViewController = vc
     }
 

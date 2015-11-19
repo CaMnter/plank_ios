@@ -8,13 +8,14 @@
 
 import UIKit
 
-class MainViewController: UIViewController,  UITabBarControllerDelegate {
+class MainViewController: UITabBarController, UITabBarControllerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        self.tabBarController?.delegate = self
+        //self.tabBarController?.delegate = self
+        // FYI: http://stackoverflow.com/questions/31611756/uitabbarcontrollerdelegate-method-not-getting-called
+        self.delegate = self
 
     }
     
@@ -23,14 +24,7 @@ class MainViewController: UIViewController,  UITabBarControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - PagingMenuControllerDelegate
-    
-    func willMoveToMenuPage(page: Int) {
-    }
-    
-    func didMoveToMenuPage(page: Int) {
-    }
-    
+
     func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
         if let nv = viewController as? UINavigationController{
             if let meController = nv.childViewControllers[0] as? Me_RootViewController {

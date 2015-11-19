@@ -212,7 +212,7 @@
         <scene sceneID="jLD-oS-5vL">
             <objects>
                 <navigationController title="首页" id="T4M-Na-D9c" customClass="MainNavController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页ljoj" image="second" id="AdJ-8i-sRQ"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="second" id="AdJ-8i-sRQ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="44Z-Xl-iAU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -264,10 +264,10 @@
             </objects>
             <point key="canvasLocation" x="681.5" y="1766.5"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController storyboardIdentifier="mainTab" id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTab" id="49e-Tb-3d3" customClass="MainViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">

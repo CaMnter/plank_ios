@@ -15,6 +15,7 @@ class MainNavController: RKSwipeBetweenViewControllers {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPages()
+        self.tabBarItem.title = "首页"
     }
     
     
