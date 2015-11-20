@@ -20,8 +20,9 @@ class DiscoverController: UITableViewController {
         // TODO
         switch segue.identifier! {
         case "showFitnessPlus":
+            let baseUrl = NSObject.baseURLStr()
             let webViewController = segue.destinationViewController as! WebViewControllerSwift
-            webViewController.url = "http://mp.diaoba.wang/api/wx/daily_post_list?category_id=-1" // all post
+            webViewController.url = baseUrl + "api/wx/daily_post_list?category_id=-1" // all post
             break
         case "showContributor":
             let postWebViewController = segue.destinationViewController as! PostWebViewController

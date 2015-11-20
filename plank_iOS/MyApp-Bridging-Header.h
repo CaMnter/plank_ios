@@ -31,6 +31,7 @@
 #import "evernote-cloud-sdk-ios/ENSDK/ENSDK.h"
 #import "SDWebImageManager.h"
 #import "Me_RootViewController.h"
+#import "NSObject+Common.h"
 
 
 #import "Tweet.h"
