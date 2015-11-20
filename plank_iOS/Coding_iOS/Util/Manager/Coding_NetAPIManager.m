@@ -12,8 +12,13 @@
 #import <NYXImagesKit/NYXImagesKit.h>
 #import <MMMarkdown/MMMarkdown.h>
 #import "MBProgressHUD+Add.h"
+#import "QiniuSDK.h"
+
 
 @implementation Coding_NetAPIManager
+
+static QNUploadManager *upManager = nil;
+
 + (instancetype)sharedManager {
     static Coding_NetAPIManager *shared_manager = nil;
     static dispatch_once_t pred;
@@ -258,7 +263,7 @@
             TweetImage *imageItem = [tweet.tweetImages objectAtIndex:i];
             if (imageItem.uploadState == TweetImageUploadStateInit) {
                 imageItem.uploadState = TweetImageUploadStateIng;
-                [self uploadTweetImage:imageItem.image doneBlock:^(NSString *imagePath, NSError *error) {
+                [self uploadTweetImageToQiniu:imageItem.image doneBlock:^(NSString *imagePath, NSError *error) {
                     if (imagePath) {
                         imageItem.uploadState = TweetImageUploadStateSuccess;
                         imageItem.imageStr = [NSString stringWithFormat:@" ![图片](%@) ", imagePath];
@@ -707,7 +712,64 @@
         }
     }];
 }
+// upload image to qiniu
+- (NSError* )qiniuError: (NSDictionary*) resp {
+    NSError *error = [[NSError alloc] initWithDomain:@""
+                                        code:-1
+                                    userInfo:resp];
+    return error;
+}
 
+- (NSString* )qiniuUrl: (NSString* )key{
+    NSString* qiniuBaseUrl = @"http://7xj08q.com1.z0.glb.clouddn.com/";
+    return [qiniuBaseUrl stringByAppendingString:key];
+}
+
+#pragma mark Image
+- (void)uploadTweetImageToQiniu:(UIImage *)image
+               doneBlock:(void (^)(NSString *imagePath, NSError *error))done
+           progerssBlock:(void (^)(CGFloat progressValue))progress{
+    if (!image) {
+        done(nil, [NSError errorWithDomain:@"DATA EMPTY" code:0 userInfo:@{NSLocalizedDescriptionKey : @"有张照片没有读取成功"}]);
+        return;
+    }
+    
+    if (upManager == nil) {
+        upManager = [[QNUploadManager alloc]init];
+    }
+    NSData *data = UIImageJPEGRepresentation(image, 1.0);
+    if ((float)data.length/1024 > 1000) {
+        data = UIImageJPEGRepresentation(image, 1024*1000.0/(float)data.length);
+    }
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyyMMddHHmmss";
+    NSString *str = [formatter stringFromDate:[NSDate date]];
+    NSString *fileName = [NSString stringWithFormat:@"%@_%@.jpg", [Login curLoginUser].global_key, str];
+    DebugLog(@"\nuploadImageSize\n%@ : %.0f", fileName, (float)data.length/1024);
+    
+    QNUploadOption *opt = [[QNUploadOption alloc] initWithMime:nil progressHandler: ^(NSString *key, float percent) {
+        progress(percent);
+        NSLog(@"progress %f", percent);
+    } params:nil checkCrc:NO cancellationSignal: nil ];
+    
+    NSString *token = @"KMA1TsVFfbaFVlS04nCwrdWB0hiGNLi_isuRsoHN:T1K4jXfjTMsJFChIXgmLQGQoW88=:eyJzY29wZSI6Im1hb3BhbyIsImRlYWRsaW5lIjoxNDQ4MDMzNjcyfQ==";
+    [upManager putData: data key:fileName token:token complete: ^(QNResponseInfo *info, NSString *key, NSDictionary *resp){
+        //NSLog(@"qiniu %@", info);
+        NSLog(@"qiniu %@", resp);
+        if (resp != nil) {
+            NSString* key = [resp objectForKey:@"key"];
+            if ([fileName isEqualToString:key]) {
+                done([self qiniuUrl:key], nil);
+            }else{
+                done(nil, [self qiniuError: resp]);
+            }
+        }else{
+            done(nil, [self qiniuError: resp]);
+        }
+    } option: opt];
+    
+}
 
 // TODO JYJ upload image to qiniu
 #pragma mark Image
@@ -718,6 +780,7 @@
         done(nil, [NSError errorWithDomain:@"DATA EMPTY" code:0 userInfo:@{NSLocalizedDescriptionKey : @"有张照片没有读取成功"}]);
         return;
     }
+    
     [[CodingNetAPIClient sharedJsonClient] uploadImage:image path:@"api/tweet/insert_image" name:@"tweetImg" successBlock:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSString *reslutString = [responseObject objectForKey:@"data"];
         DebugLog(@"%@", reslutString);
