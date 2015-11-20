@@ -16,32 +16,39 @@
 #import "AppDelegate_coding.h"
 #import "MBProgressHUD+Add.h"
 #import "CodingNetAPIClient.h"
+#import "plank_iOS-Swift.h"
 
 @implementation NSObject (Common)
 
 #pragma mark Tip M
 + (NSString *)tipFromError:(NSError *)error{
-    if (error && error.userInfo) {
-        NSMutableString *tipStr = [[NSMutableString alloc] init];
-        if ([error.userInfo objectForKey:@"msg"]) {
-            NSArray *msgArray = [[error.userInfo objectForKey:@"msg"] allValues];
-            NSUInteger num = [msgArray count];
-            for (int i = 0; i < num; i++) {
-                NSString *msgStr = [msgArray objectAtIndex:i];
-                if (i+1 < num) {
-                    [tipStr appendString:[NSString stringWithFormat:@"%@\n", msgStr]];
+    @try {
+        if (error && error.userInfo) {
+            NSMutableString *tipStr = [[NSMutableString alloc] init];
+            if ([error.userInfo objectForKey:@"msg"]) {
+                NSArray *msgArray = [[error.userInfo objectForKey:@"msg"] allValues];
+                NSUInteger num = [msgArray count];
+                for (int i = 0; i < num; i++) {
+                    NSString *msgStr = [msgArray objectAtIndex:i];
+                    if (i+1 < num) {
+                        [tipStr appendString:[NSString stringWithFormat:@"%@\n", msgStr]];
+                    }else{
+                        [tipStr appendString:msgStr];
+                    }
+                }
+            }else{
+                if ([error.userInfo objectForKey:@"NSLocalizedDescription"]) {
+                    tipStr = [error.userInfo objectForKey:@"NSLocalizedDescription"];
                 }else{
-                    [tipStr appendString:msgStr];
+                    [tipStr appendFormat:@"ErrorCode%ld", (long)error.code];
                 }
             }
-        }else{
-            if ([error.userInfo objectForKey:@"NSLocalizedDescription"]) {
-                tipStr = [error.userInfo objectForKey:@"NSLocalizedDescription"];
-            }else{
-                [tipStr appendFormat:@"ErrorCode%ld", (long)error.code];
-            }
+            return tipStr;
         }
-        return tipStr;
+    }
+    @catch (NSException *exception) {
+    }
+    @finally {
     }
     return nil;
 }
@@ -296,8 +303,8 @@
         if (resultCode.intValue == 1000 || resultCode.intValue == 3207) {//用户未登录
             if ([Login isLogin]) {//已登录的状态要抹掉
                 // TODO
-//                [Login doLogout];
-//                [((AppDelegate *)[UIApplication sharedApplication].delegate) setupLoginViewController];
+                [Login doLogout];
+                [((AppDelegate *)[UIApplication sharedApplication].delegate) setupLoginViewController];
 //                kTipAlert(@"%@", [NSObject tipFromError:error]);
             }
         }else{

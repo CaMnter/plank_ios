@@ -415,6 +415,7 @@
                 [Login setPreUserEmail:self.myLogin.email];//记住登录账号
                 
                 [((AppDelegate *)[UIApplication sharedApplication].delegate) setupTabViewController];
+                // TODO cookie
                 // call swift
                 //AppDelegate_Swift* delegate = (AppDelegate_Swift *)[UIApplication sharedApplication].delegate;
                 

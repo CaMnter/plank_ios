@@ -132,8 +132,8 @@ static User *curLoginUser;
         if (user && user.global_key.length > 0) {
             NSString *global_key = user.global_key;
             [XGPush setAccount:global_key];
-            // TODO
-            //[(AppDelegate *)[UIApplication sharedApplication].delegate registerPush];
+
+            [(AppDelegate *)[UIApplication sharedApplication].delegate registerPush];
         }
     }else{
         [XGPush setAccount:nil];
