@@ -33,6 +33,7 @@
 
 @property (strong, nonatomic) NSString *user_global_key;
 @property (strong, nonatomic) NSNumber *project_id;
+@property (assign, nonatomic) BOOL isPrivareTweet;
 
 - (void)addASelectedAssetURL:(NSURL *)assetURL;
 - (void)deleteASelectedAssetURL:(NSURL *)assetURL;

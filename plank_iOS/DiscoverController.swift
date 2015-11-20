@@ -30,7 +30,7 @@ class DiscoverController: UITableViewController {
             postWebViewController.defaultTitle = "贡献者"
             break
         case "showPrivateTweet":
-            segue.destinationViewController.title = "冒泡"
+            segue.destinationViewController.title = "腰迹-私人空间"
             let tweetVC:Tweet_RootViewController = segue.destinationViewController as! Tweet_RootViewController
             tweetVC.setType(Tweet_RootViewControllerType.Private)
             

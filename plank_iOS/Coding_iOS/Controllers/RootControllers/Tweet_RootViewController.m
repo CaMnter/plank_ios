@@ -175,7 +175,14 @@
     if (_myMsgInputView) {
         [_myMsgInputView prepareToShow];
     }
-    [self.parentViewController.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"tweetBtn_Nav"] style:UIBarButtonItemStylePlain target:self action:@selector(sendTweet)] animated:NO];
+    
+    if (_curIndex == TweetTypePrivate) {
+        [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"tweetBtn_Nav"] style:UIBarButtonItemStylePlain target:self action:@selector(sendTweet)] animated:NO];
+    }else{
+        [self.parentViewController.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"tweetBtn_Nav"] style:UIBarButtonItemStylePlain target:self action:@selector(sendTweet)] animated:NO];
+    }
+
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -247,6 +254,11 @@
     TweetSendViewController *vc = [[TweetSendViewController alloc] init];
     vc.sendNextTweet = ^(Tweet *nextTweet){
         [nextTweet saveSendData];//发送前保存草稿
+        if (_curIndex == TweetTypePrivate){
+            nextTweet.isPrivareTweet = YES;
+        }else{
+            nextTweet.isPrivareTweet = NO;
+        }
         [[Coding_NetAPIManager sharedManager] request_Tweet_DoTweet_WithObj:nextTweet andBlock:^(id data, NSError *error) {
             if (data) {
                 [Tweet deleteSendData];//发送成功后删除草稿

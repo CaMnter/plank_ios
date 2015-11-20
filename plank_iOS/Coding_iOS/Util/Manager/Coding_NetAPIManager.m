@@ -242,6 +242,13 @@
     }];
 }
 - (void)request_Tweet_DoTweet_WithObj:(Tweet *)tweet andBlock:(void (^)(id data, NSError *error))block{
+    NSString *path;
+    if (tweet.isPrivareTweet) {
+        path = @"api/private_tweet";
+    }else{
+        path = @"api/tweet";
+    }
+    
     if (tweet.tweetImages && tweet.tweetImages.count > 0) {
         /**
          *  冒泡多张一起发送，不显示进度条
@@ -263,7 +270,8 @@
                         return ;
                     }
                     if ([tweet isAllImagesHaveDone]) {
-                        [[CodingNetAPIClient sharedJsonClient] requestJsonDataWithPath:@"api/tweet" withParams:[tweet toDoTweetParams] withMethodType:Post andBlock:^(id data, NSError *error) {
+                    
+                        [[CodingNetAPIClient sharedJsonClient] requestJsonDataWithPath:path withParams:[tweet toDoTweetParams] withMethodType:Post andBlock:^(id data, NSError *error) {
                             if (data) {
                                 [MobClick event:kUmeng_Event_Request_ActionOfServer label:@"冒泡_添加_有图"];
 
@@ -286,7 +294,7 @@
 
     }else{
         [NSObject showStatusBarQueryStr:@"正在发送冒泡"];
-        [[CodingNetAPIClient sharedJsonClient] requestJsonDataWithPath:@"api/tweet" withParams:[tweet toDoTweetParams] withMethodType:Post andBlock:^(id data, NSError *error) {
+        [[CodingNetAPIClient sharedJsonClient] requestJsonDataWithPath:path withParams:[tweet toDoTweetParams] withMethodType:Post andBlock:^(id data, NSError *error) {
             if (data) {
                 [MobClick event:kUmeng_Event_Request_ActionOfServer label:@"冒泡_添加_无图"];
 
@@ -701,6 +709,7 @@
 }
 
 
+// TODO JYJ upload image to qiniu
 #pragma mark Image
 - (void)uploadTweetImage:(UIImage *)image
                doneBlock:(void (^)(NSString *imagePath, NSError *error))done

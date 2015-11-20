@@ -23,6 +23,7 @@ static Tweet *_tweetForSend = nil;
         _canLoadMore = YES;
         _isLoading = _willLoadMore = NO;
         _contentHeight = 1;
+        _isPrivareTweet = NO;
     }
     return self;
 }

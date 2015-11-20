@@ -71,7 +71,13 @@
         default:
             break;
     }
-    [params setObject:(_willLoadMore? _last_id:kDefaultLastId) forKey:@"last_id"];
+    NSNumber* defaultLastId = kDefaultLastId;
+    
+    if (_tweetType == TweetTypePrivate) {
+        defaultLastId = [NSNumber numberWithLong:LONG_MAX];
+    }
+    
+    [params setObject:(_willLoadMore? _last_id:defaultLastId) forKey:@"last_id"];
     if (kDevice_Is_iPhone6Plus) {
         params[@"default_like_count"] = @12;
     }
