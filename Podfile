@@ -35,4 +35,5 @@ target 'plank_iOS' do
   #pod 'evernote-cloud-sdk-ios', :git => 'https://github.com/evernote/evernote-cloud-sdk-ios.git', :branch => 'ios7'
   pod 'evernote-cloud-sdk-ios', '2.0.2'
   pod 'UMengAnalytics', '3.5.10'
+  pod "Qiniu", "~> 7.0"
 end 

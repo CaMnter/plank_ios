@@ -1,4 +1,25 @@
 PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
   - Alamofire (3.1.2)
   - APParallaxHeader (0.1.6)
   - BlocksKit (2.2.5):
@@ -18,6 +39,7 @@ PODS:
     - BlocksKit/DynamicDelegate
   - evernote-cloud-sdk-ios (2.0.2)
   - FontAwesome+iOS (0.1.4)
+  - HappyDNS (0.2.3)
   - hpple (0.2.0)
   - iVersion (1.11.4)
   - JazzHands (2.0.0)
@@ -52,6 +74,9 @@ PODS:
     - POP+MCAnimate/Internal
   - PPiAwesomeButton (1.5.2):
     - FontAwesome+iOS
+  - Qiniu (7.0.15):
+    - AFNetworking (~> 2.0)
+    - HappyDNS (~> 0.2)
   - RBBAnimation (0.4.0)
   - ReactiveCocoa (2.3.1):
     - ReactiveCocoa/UI (= 2.3.1)
@@ -90,6 +115,7 @@ DEPENDENCIES:
   - PagingMenuController
   - POP+MCAnimate (= 2.0.1)
   - PPiAwesomeButton
+  - Qiniu (~> 7.0)
   - ReactiveCocoa (= 2.3.1)
   - RegexKitLite-NoWarning (= 1.1.0)
   - SDCAlertView (= 2.5.2)
@@ -112,11 +138,13 @@ CHECKOUT OPTIONS:
     :git: https://github.com/stephencelis/SQLite.swift.git
 
 SPEC CHECKSUMS:
+  AFNetworking: e8ee4af5d936e4ba47e5f0da8c4e24334d6cf56c
   Alamofire: 033350d9eac764d61f974ebe40d0e6cf31c20610
   APParallaxHeader: f95cf55e4122602e6bd6c477fba3ff400eacadf5
   BlocksKit: 82161d3dcbc2c1c559a456099c965e9da77291cc
   evernote-cloud-sdk-ios: f50e1e55258ecb2a7f6d53e9bde9c809691e8c84
   FontAwesome+iOS: 97536432e89396e5b9ef81d7911ec8a62c194331
+  HappyDNS: 0adcd5bf7a8f3003f1c6feff3c121f0a87bd328a
   hpple: 48c3da73519a8ee14d49fda9001fa97a93453cc1
   iVersion: 6765e067fdda8e05d11f36a1420cb8aa62cc27a4
   JazzHands: 0ba9993100da7bc7a6ab7b57764ad93d68f41a71
@@ -129,6 +157,7 @@ SPEC CHECKSUMS:
   pop: 4faa5417fa080769436096525cbff443a6dd2ff6
   POP+MCAnimate: b38a4fc958b46e3380ea79046bb9fa109a1e248b
   PPiAwesomeButton: 65ee9bf044d8371f6215369723ea51b04328f15f
+  Qiniu: 1baa9c642ad4a42609e1e5c498ffab9278475183
   RBBAnimation: b7ce5547b0807955fdff4bc844a829c6762d4861
   ReactiveCocoa: ed6e3267c2b5fffb27723015ed7138b838cfd56f
   RegexKitLite-NoWarning: 45dda57c3152fa653ccd861e8e7984d211dd449c

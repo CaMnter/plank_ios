@@ -84,10 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-plank_iOS/AFNetworking.framework"
   install_framework "Pods-plank_iOS/APParallaxHeader.framework"
   install_framework "Pods-plank_iOS/Alamofire.framework"
   install_framework "Pods-plank_iOS/BlocksKit.framework"
   install_framework "Pods-plank_iOS/FontAwesome_iOS.framework"
+  install_framework "Pods-plank_iOS/HappyDNS.framework"
   install_framework "Pods-plank_iOS/JazzHands.framework"
   install_framework "Pods-plank_iOS/MBProgressHUD.framework"
   install_framework "Pods-plank_iOS/MMMarkdown.framework"
@@ -97,6 +99,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-plank_iOS/POP_MCAnimate.framework"
   install_framework "Pods-plank_iOS/PPiAwesomeButton.framework"
   install_framework "Pods-plank_iOS/PagingMenuController.framework"
+  install_framework "Pods-plank_iOS/Qiniu.framework"
   install_framework "Pods-plank_iOS/RBBAnimation.framework"
   install_framework "Pods-plank_iOS/ReactiveCocoa.framework"
   install_framework "Pods-plank_iOS/RegexKitLite_NoWarning.framework"
@@ -114,10 +117,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-plank_iOS/pop.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-plank_iOS/AFNetworking.framework"
   install_framework "Pods-plank_iOS/APParallaxHeader.framework"
   install_framework "Pods-plank_iOS/Alamofire.framework"
   install_framework "Pods-plank_iOS/BlocksKit.framework"
   install_framework "Pods-plank_iOS/FontAwesome_iOS.framework"
+  install_framework "Pods-plank_iOS/HappyDNS.framework"
   install_framework "Pods-plank_iOS/JazzHands.framework"
   install_framework "Pods-plank_iOS/MBProgressHUD.framework"
   install_framework "Pods-plank_iOS/MMMarkdown.framework"
@@ -127,6 +132,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-plank_iOS/POP_MCAnimate.framework"
   install_framework "Pods-plank_iOS/PPiAwesomeButton.framework"
   install_framework "Pods-plank_iOS/PagingMenuController.framework"
+  install_framework "Pods-plank_iOS/Qiniu.framework"
   install_framework "Pods-plank_iOS/RBBAnimation.framework"
   install_framework "Pods-plank_iOS/ReactiveCocoa.framework"
   install_framework "Pods-plank_iOS/RegexKitLite_NoWarning.framework"
