@@ -354,7 +354,7 @@
                         <sections>
                             <tableViewSection id="TOx-Bs-dD9">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="l3U-Il-GIw" imageView="gI2-MP-VcY" style="IBUITableViewCellStyleDefault" id="gRo-7p-Jml">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="showPrivateTweet" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="l3U-Il-GIw" imageView="gI2-MP-VcY" style="IBUITableViewCellStyleDefault" id="gRo-7p-Jml">
                                         <rect key="frame" x="0.0" y="99" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gRo-7p-Jml" id="WMc-iv-8sS">
@@ -378,6 +378,9 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <segue destination="08A-BX-x6b" kind="show" identifier="showPrivateTweet" id="rnR-z1-TCF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -455,6 +458,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eR0-Cp-3Dg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1311.5" y="1119.5"/>
+        </scene>
+        <!--Tweet Root View Controller-->
+        <scene sceneID="BnS-r0-U8O">
+            <objects>
+                <viewController id="08A-BX-x6b" customClass="Tweet_RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4eW-bf-DDQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="gZW-eX-Rua"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="62d-sg-I6Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zn9-yQ-cl9"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="294-lo-RGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1618.5" y="352.5"/>
         </scene>
     </scenes>
     <resources>

@@ -20,7 +20,8 @@ typedef NS_ENUM(NSInteger, TweetType)
     TweetTypePublicTime = 0,
     TweetTypeUserFriends,
     TweetTypePublicHot,
-    TweetTypeUserSingle
+    TweetTypeUserSingle,
+    TweetTypePrivate
 };
 
 

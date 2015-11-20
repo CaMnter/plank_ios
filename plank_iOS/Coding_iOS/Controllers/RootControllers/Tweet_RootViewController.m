@@ -63,8 +63,13 @@
     return vc;
 }
 
+- (void) setType:(Tweet_RootViewControllerType) type{
+    _curIndex = type;
+}
+
 - (instancetype)init
 {
+
     self = [super init];
     if (self) {
         _curIndex = 0;

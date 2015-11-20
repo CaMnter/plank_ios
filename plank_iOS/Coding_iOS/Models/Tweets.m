@@ -40,6 +40,10 @@
         case TweetTypeUserSingle:
             requstPath = @"api/tweet/user_public";
             break;
+        case TweetTypePrivate:
+            requstPath = @"api/tweet/private_tweets";
+            break;
+        
         default:
             break;
     }

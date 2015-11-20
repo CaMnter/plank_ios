@@ -29,10 +29,12 @@ class DiscoverController: UITableViewController {
             postWebViewController.postID = 207;
             postWebViewController.defaultTitle = "贡献者"
             break
-        case "showTweet":
+        case "showPrivateTweet":
             segue.destinationViewController.title = "冒泡"
-            let nav_tweet = segue.destinationViewController as! RKSwipeBetweenViewControllers
-            setupMaopao(nav_tweet)
+            let tweetVC:Tweet_RootViewController = segue.destinationViewController as! Tweet_RootViewController
+            tweetVC.setType(Tweet_RootViewControllerType.Private)
+            
+
             break
         default:
             break
