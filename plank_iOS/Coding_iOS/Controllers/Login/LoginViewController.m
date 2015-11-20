@@ -416,10 +416,17 @@
                 
                 [((AppDelegate *)[UIApplication sharedApplication].delegate) setupTabViewController];
                 // TODO cookie
-                // call swift
+               // call swift
                 //AppDelegate_Swift* delegate = (AppDelegate_Swift *)[UIApplication sharedApplication].delegate;
                 
                 //AppDelegate.setTabViewController()
+                
+                // store cookie
+                NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL: [NSURL URLWithString:[NSObject baseURLStr]]];
+                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:cookies];
+                [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"cookie"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+                // end store cookie
                 
             }else{
                 kTipAlert(@"用户名或密码错误");
