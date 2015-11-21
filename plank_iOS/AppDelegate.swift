@@ -13,39 +13,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    var appDelegate_coding: AppDelegate_coding?
     
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-        //net
-        AFNetworkActivityIndicatorManager.sharedManager().enabled = true
-        AFNetworkReachabilityManager.sharedManager().startMonitoring()
-        
-        // sd image
-        SDWebImageManager.sharedManager().imageDownloader.setValue("text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" ,forHTTPHeaderField:"Accept")
-        
-        if Login.isLogin() {
-            setupTabViewController()
-        }else{
-            setupIntroductionViewController()
-        }
-        /*
-        [self.window makeKeyAndVisible];
-        [FunctionIntroManager showIntroPage];
-        
-        EaseStartView *startView = [EaseStartView startView];
-        @weakify(self);
-        [startView startAnimationWithCompletionBlock:^(EaseStartView *easeStartView) {
-        @strongify(self);
-        [self completionStartAnimationWithOptions:launchOptions];
-        }];
-        */
-        
+        appDelegate_coding = AppDelegate_coding()
         self.window?.makeKeyAndVisible()
-        // todo introPage
-        let startView:EaseStartView = EaseStartView.getStartView()
-        startView.startAnimationWithCompletionBlock(nil)
+        appDelegate_coding!.application(application, didFinishLaunchingWithOptions: launchOptions, window: self.window!);
         
         return true
     }
@@ -72,56 +47,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    //    - (void)setupIntroductionViewController{
-    //    IntroductionViewController *introductionVC = [[IntroductionViewController alloc] init];
-    //    //    [self.window setRootViewController:[[BaseNavigationController alloc] initWithRootViewController:introductionVC]];
-    //    [self.window setRootViewController:introductionVC];
-    //    }
     
     func setupIntroductionViewController() -> Void{
-        let introductionVC = IntroductionViewController()
-        self.window?.rootViewController = introductionVC
+        appDelegate_coding!.setupIntroductionViewController()
     }
     
     func setupTabViewController() -> Void{
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("mainTab")
-        self.window?.rootViewController = vc
-        self.window?.rootViewController = vc
+        
+        appDelegate_coding!.setupTabViewController()
+        
     }
     
     func setupLoginViewController() ->Void {
-        //LoginViewController *loginVC = [[LoginViewController alloc] init];
-        //[self.window setRootViewController:[[BaseNavigationController alloc] initWithRootViewController:loginVC]];
-        let loginVC = LoginViewController()
-        self.window?.rootViewController = loginVC
+        appDelegate_coding!.setupLoginViewController()
         
     }
+    
     
     // TODO
     //#pragma mark XGPush
     func registerPush() -> Void {
-//    float sysVer = [[[UIDevice currentDevice] systemVersion] floatValue];
-//    if(sysVer < 8){
-//    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
-//    }else{
-//    #if __IPHONE_OS_VERSION_MAX_ALLOWED >= _IPHONE80_
-//    UIMutableUserNotificationCategory *categorys = [[UIMutableUserNotificationCategory alloc] init];
-//    UIUserNotificationSettings *userSettings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge|UIUserNotificationTypeSound|UIUserNotificationTypeAlert
-//    categories:[NSSet setWithObject:categorys]];
-//    [[UIApplication sharedApplication] registerUserNotificationSettings:userSettings];
-//    [[UIApplication sharedApplication] registerForRemoteNotifications];
-//    #endif
-//    }
-//        
-        let sysVer = Float(UIDevice.currentDevice().systemVersion)
-        if sysVer < 8 {
-            UIApplication.sharedApplication().registerForRemoteNotificationTypes([UIRemoteNotificationType.Alert, UIRemoteNotificationType.Badge, UIRemoteNotificationType.Sound])
-        }else{
-            
-        }
         
+        
+        appDelegate_coding!.registerPush()
     }
+    
     
 }
 

@@ -32,6 +32,7 @@
 #import "SDWebImageManager.h"
 #import "Me_RootViewController.h"
 #import "NSObject+Common.h"
+#import "AppDelegate_coding.h"
 
 
 #import "Tweet.h"

@@ -85,17 +85,14 @@ CGFloat X_OFFSET = 8.0; //%%% for some reason there's a little bit of a glitchy 
     self.currentPageIndex = 0;
     self.isPageScrollingFlag = NO;
 
-    self.navigationBar.barTintColor = [UIColor whiteColor];
-    self.navigationBar.tintColor = [UIColor blackColor];
-
 }
 
 #pragma mark Customizables
 
 //%%% color of the status bar
 -(UIStatusBarStyle)preferredStatusBarStyle {
-    //return UIStatusBarStyleLightContent;
-    return UIStatusBarStyleDefault;
+    return UIStatusBarStyleLightContent;
+    //return UIStatusBarStyleDefault;
 }
 
 //%%% sets up the tabs using a loop.  You can take apart the loop to customize individual buttons, but remember to tag the buttons.  (button.tag=0 and the second button.tag=1, etc)
@@ -120,8 +117,9 @@ CGFloat X_OFFSET = 8.0; //%%% for some reason there's a little bit of a glitchy 
         button.tag = i; //%%% IMPORTANT: if you make your own custom buttons, you have to tag them appropriately
         [button addTarget:self action:@selector(tapSegmentButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         button.titleLabel.font = [UIFont boldSystemFontOfSize:kNavTitleFontSize];
-        button.titleLabel.textColor = [UIColor blackColor];
-        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        button.titleLabel.textColor = [UIColor whiteColor];
+        //button.titleLabel.textColor = [UIColor blackColor];
+        //[button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [button setTitle:[buttonText objectAtIndex:i] forState:UIControlStateNormal]; //%%%buttontitle
     }
     [navigationView addSubview:_buttonContainer];

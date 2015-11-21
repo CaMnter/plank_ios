@@ -68,9 +68,9 @@
 
 
 #pragma lifeCycle
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions window:(UIWindow* ) window{
+    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = window;
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
@@ -96,6 +96,7 @@
     }
     [self.window makeKeyAndVisible];
     [FunctionIntroManager showIntroPage];
+    
 
     EaseStartView *startView = [EaseStartView startView];
     @weakify(self);
@@ -229,8 +230,10 @@
 }
 
 - (void)setupTabViewController{
-    RootTabViewController *rootVC = [[RootTabViewController alloc] init];
-    rootVC.tabBar.translucent = YES;
+    //RootTabViewController *rootVC = [[RootTabViewController alloc] init];
+    UIStoryboard* storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController* rootVC = [storyBoard instantiateViewControllerWithIdentifier:@"mainTab"];
+    //rootVC.tabBar.translucent = YES;
     
     [self.window setRootViewController:rootVC];
 }

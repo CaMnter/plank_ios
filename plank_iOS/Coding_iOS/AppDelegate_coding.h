@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate_coding : UIResponder <UIApplicationDelegate>
+@interface AppDelegate_coding:NSObject
 
 @property (strong, nonatomic) UIWindow *window;
 
@@ -22,6 +22,7 @@
 - (void)setupTabViewController;
 - (void)setupLoginViewController;
 - (void)setupIntroductionViewController;
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions window:(UIWindow* )window;
 
 /**
  *  注册推送

@@ -14,7 +14,8 @@
 int main_coding(int argc, char * argv[])
 {
 
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate_coding class]));
-    }
+//    @autoreleasepool {
+//        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate_coding class]));
+//    }
+    return 0;
 }
