@@ -26,19 +26,27 @@
                                     <outlet property="delegate" destination="66m-hC-fq6" id="skv-I1-eCp"/>
                                 </connections>
                             </webView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kJG-h9-Gz4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="2"/>
+                                <animations/>
+                            </progressView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="g6A-Py-4tE" secondAttribute="trailing" id="FCf-Lx-y73"/>
+                            <constraint firstItem="kJG-h9-Gz4" firstAttribute="top" secondItem="HOg-dP-HuB" secondAttribute="bottom" id="Gjv-3j-I32"/>
                             <constraint firstItem="g6A-Py-4tE" firstAttribute="leading" secondItem="qwf-Zm-SMU" secondAttribute="leading" id="HvH-zx-6Mt"/>
+                            <constraint firstItem="kJG-h9-Gz4" firstAttribute="leading" secondItem="qwf-Zm-SMU" secondAttribute="leading" id="UO9-81-QlK"/>
                             <constraint firstItem="g6A-Py-4tE" firstAttribute="top" secondItem="HOg-dP-HuB" secondAttribute="bottom" id="eyU-2l-ubA"/>
+                            <constraint firstAttribute="trailing" secondItem="kJG-h9-Gz4" secondAttribute="trailing" id="loS-7E-9gA"/>
                             <constraint firstItem="evK-G3-mxf" firstAttribute="top" secondItem="g6A-Py-4tE" secondAttribute="bottom" id="pbi-lD-Vtb"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="progressView" destination="kJG-h9-Gz4" id="lMp-1q-vyh"/>
                         <outlet property="webView" destination="g6A-Py-4tE" id="w7U-Lh-90i"/>
                     </connections>
                 </viewController>
