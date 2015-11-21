@@ -17,6 +17,13 @@
 
 @implementation EaseStartView
 
+// fix but: swift can not found startView, i do not know why
+// http://stackoverflow.com/questions/24367390/how-to-access-an-objective-c-class-method-from-swift-language
+// refer to the comment
++ (instancetype)getStartView{
+    return [EaseStartView startView];
+}
+
 + (instancetype)startView{
     UIImage *logoIcon = [UIImage imageNamed:@"logo_coding_top"];
     StartImage *st = [[StartImagesManager shareManager] randomImage];

@@ -10,6 +10,7 @@
 
 @interface EaseStartView : UIView
 + (instancetype)startView;
++ (instancetype)getStartView;
 
 - (void)startAnimationWithCompletionBlock:(void(^)(EaseStartView *easeStartView))completionHandler;
 @end

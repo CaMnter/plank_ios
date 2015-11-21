@@ -30,7 +30,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }else{
             setupIntroductionViewController()
         }
+        /*
+        [self.window makeKeyAndVisible];
+        [FunctionIntroManager showIntroPage];
         
+        EaseStartView *startView = [EaseStartView startView];
+        @weakify(self);
+        [startView startAnimationWithCompletionBlock:^(EaseStartView *easeStartView) {
+        @strongify(self);
+        [self completionStartAnimationWithOptions:launchOptions];
+        }];
+        */
+        
+        self.window?.makeKeyAndVisible()
+        // todo introPage
+        let startView:EaseStartView = EaseStartView.getStartView()
+        startView.startAnimationWithCompletionBlock(nil)
         
         return true
     }
