@@ -83,7 +83,7 @@
     self.myTableView.tableFooterView=[self customFooterView];
     [self configBottomView];
     [self showdismissButton:self.showDismissButton];
-    [self buttonFor2FA];
+    //[self buttonFor2FA];
 }
 
 - (UIButton *)buttonFor2FA{
