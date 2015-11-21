@@ -147,6 +147,9 @@
     //评论
     _myMsgInputView = [UIMessageInputView messageInputViewWithType:UIMessageInputViewContentTypeTweet];
     _myMsgInputView.delegate = self;
+    
+    //sync qiniu token
+    [[Coding_NetAPIManager sharedManager] fetchQiniuToken];
 }
 
 - (void) myDismiss{

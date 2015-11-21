@@ -28,6 +28,8 @@ typedef NS_ENUM(NSUInteger, VerifyType){
 @interface Coding_NetAPIManager : NSObject
 + (instancetype)sharedManager;
 
+- (void) fetchQiniuToken;
+
 //UnRead
 - (void)request_UnReadCountWithBlock:(void (^)(id data, NSError *error))block;
 - (void)request_UnReadNotificationsWithBlock:(void (^)(id data, NSError *error))block;

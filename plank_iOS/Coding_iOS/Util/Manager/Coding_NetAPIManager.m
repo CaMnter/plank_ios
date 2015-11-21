@@ -712,7 +712,23 @@ static QNUploadManager *upManager = nil;
         }
     }];
 }
+
 // upload image to qiniu
+
+- (void) fetchQiniuToken{
+    
+    [[CodingNetAPIClient sharedJsonClient] requestJsonDataWithPath:@"api/token_json" withParams:nil withMethodType:Get andBlock:^(id data, NSError* error){
+        
+        NSString* token = [data objectForKey:@"token"];
+        if (token && token.length > 0) {
+            NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+            [defaults setObject:token forKey:@"qiniuToken"];
+            [defaults synchronize];
+        }
+    }];
+}
+
+
 - (NSError* )qiniuError: (NSDictionary*) resp {
     NSError *error = [[NSError alloc] initWithDomain:@""
                                         code:-1
@@ -753,7 +769,8 @@ static QNUploadManager *upManager = nil;
         NSLog(@"progress %f", percent);
     } params:nil checkCrc:NO cancellationSignal: nil ];
     
-    NSString *token = @"KMA1TsVFfbaFVlS04nCwrdWB0hiGNLi_isuRsoHN:T1K4jXfjTMsJFChIXgmLQGQoW88=:eyJzY29wZSI6Im1hb3BhbyIsImRlYWRsaW5lIjoxNDQ4MDMzNjcyfQ==";
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSString* token = [defaults objectForKey:@"qiniuToken"];
     [upManager putData: data key:fileName token:token complete: ^(QNResponseInfo *info, NSString *key, NSDictionary *resp){
         //NSLog(@"qiniu %@", info);
         NSLog(@"qiniu %@", resp);
