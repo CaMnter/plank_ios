@@ -93,9 +93,12 @@
         [weakSelf followBtnClicked];
     };
     [_myTableView addParallaxWithView:_headerView andHeight:CGRectGetHeight(_headerView.frame)];
+    
+    /*
     if (![self isMe]) {
         _myTableView.tableFooterView = [self footerV];
     }
+    */
     
     _refreshControl = [[ODRefreshControl alloc] initInScrollView:self.myTableView];
     [_refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
@@ -141,10 +144,13 @@
 
 #pragma mark Table M
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return [self.curUser.global_key isEqualToString:[Login curLoginUser].global_key]? 4: 3;
+    //return [self.curUser.global_key isEqualToString:[Login curLoginUser].global_key]? 4: 3;
+    return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    /*
     NSInteger row = 0;
+
     if (section == 0) {
         row = [self isMe]? 0: 3;
     }else if (section == 1){
@@ -155,10 +161,15 @@
         row = 1;
     }
     return row;
+     */
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    UserInfoIconCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier_UserInfoIconCell forIndexPath:indexPath];
+    [cell setTitle:[self isMe]? @"我的冒泡": @"Ta的冒泡" icon:@"user_info_tweet"];
+    /*
     if (indexPath.section == 0) {
         UserInfoTextCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier_UserInfoTextCell forIndexPath:indexPath];
         switch (indexPath.row) {
@@ -194,9 +205,13 @@
                 [cell addTipIcon];
             }
         }
+
         [tableView addLineforPlainCell:cell forRowAtIndexPath:indexPath withLeftSpace:kPaddingLeftWidth];
         return cell;
     }
+    */
+    [tableView addLineforPlainCell:cell forRowAtIndexPath:indexPath withLeftSpace:kPaddingLeftWidth];
+    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -227,6 +242,8 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self goToTweets];
+    /*
     if (indexPath.section == 1) {
         [self goToDetailInfo];
     }else if (indexPath.section == 2){
@@ -249,6 +266,7 @@
         }
         [self goToPoint];
     }
+    */
 }
 
 #pragma mark Btn Clicked
