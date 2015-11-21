@@ -12,8 +12,8 @@ import Alamofire
 class WebViewControllerSwift: UIViewController, UIWebViewDelegate {
     
     @IBOutlet weak var progressView: UIProgressView!
-    var theBool: Bool?
-    var myTimer: NSTimer?
+    var didLoadFinish: Bool?
+    var timer: NSTimer?
     
     var url = ""
     let htmlTemplateFile = "post.html"
@@ -26,9 +26,9 @@ class WebViewControllerSwift: UIViewController, UIWebViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.theBool = false
+        self.didLoadFinish = false
         self.progressView.progress = 0
-        self.myTimer = NSTimer.scheduledTimerWithTimeInterval(0.1667, target: self, selector: "timerCallback", userInfo: nil, repeats: true)
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1667, target: self, selector: "timerCallback", userInfo: nil, repeats: true)
         // Do any additional setup after loading the view, typically from a nib.
         webView.loadRequest(NSURLRequest(URL: NSURL(string: url)!))
 
@@ -52,14 +52,14 @@ class WebViewControllerSwift: UIViewController, UIWebViewDelegate {
     func webViewDidFinishLoad(webView: UIWebView) {
         let title = webView.stringByEvaluatingJavaScriptFromString("document.title")
         self.title = title
-        self.theBool = true
+        self.didLoadFinish = true
     }
     
     func timerCallback() {
-        if self.theBool! {
+        if self.didLoadFinish! {
             if self.progressView.progress >= 1 {
                 self.progressView.hidden = true
-                self.myTimer!.invalidate()
+                self.timer!.invalidate()
             } else {
                 self.progressView.progress += 0.1
             }
