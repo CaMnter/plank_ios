@@ -771,6 +771,10 @@ static QNUploadManager *upManager = nil;
     
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     NSString* token = [defaults objectForKey:@"qiniuToken"];
+    if (token == nil) {
+        // default token
+        token = @"KMA1TsVFfbaFVlS04nCwrdWB0hiGNLi_isuRsoHN:T1K4jXfjTMsJFChIXgmLQGQoW88=:eyJzY29wZSI6Im1hb3BhbyIsImRlYWRsaW5lIjoxNDQ4MDMzNjcyfQ==";
+    }
     [upManager putData: data key:fileName token:token complete: ^(QNResponseInfo *info, NSString *key, NSDictionary *resp){
         //NSLog(@"qiniu %@", info);
         NSLog(@"qiniu %@", resp);
