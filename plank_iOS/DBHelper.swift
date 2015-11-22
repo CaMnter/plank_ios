@@ -86,7 +86,7 @@ class DBHelper{
     
     func insertOrUpdate(table:String, duration:Int){
         let insert = "INSERT OR IGNORE INTO \(table) (timestamp, timeDuration) VALUES (date(), \(duration))";
-        let update = "UPDATE \(table) SET timeDuration = timeDuration + \(duration) WHERE timestamp = date()";
+        let update = "UPDATE \(table) SET timeDuration = timeDuration + \(duration), sync = 0 WHERE timestamp = date()";
         do{
             try db?.transaction(block: {
                 try self.db?.execute(update)
