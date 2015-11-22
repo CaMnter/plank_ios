@@ -831,6 +831,9 @@
 		50702E961BF4E35D00C55D1D /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50702E951BF4E35D00C55D1D /* DateUtil.swift */; };
 		508FB27A1BFDFACC003D9D70 /* MainNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FB2791BFDFACC003D9D70 /* MainNavController.swift */; };
 		508FB27C1BFE0D63003D9D70 /* MaopaoNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FB27B1BFE0D63003D9D70 /* MaopaoNavController.swift */; };
+		508FB27E1C00C247003D9D70 /* Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FB27D1C00C247003D9D70 /* Sync.swift */; };
+		508FB2811C00C7CF003D9D70 /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FB2801C00C7CF003D9D70 /* Threading.swift */; };
+		508FB2831C01AB12003D9D70 /* SyncRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FB2821C01AB11003D9D70 /* SyncRecord.swift */; };
 		50D871CF1BEF3692003BE1F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871CE1BEF3692003BE1F3 /* AppDelegate.swift */; };
 		50D871D11BEF3692003BE1F3 /* TrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871D01BEF3692003BE1F3 /* TrainViewController.swift */; };
 		50D871D31BEF3692003BE1F3 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871D21BEF3692003BE1F3 /* RecordViewController.swift */; };
@@ -2008,6 +2011,9 @@
 		50702E951BF4E35D00C55D1D /* DateUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		508FB2791BFDFACC003D9D70 /* MainNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavController.swift; sourceTree = "<group>"; };
 		508FB27B1BFE0D63003D9D70 /* MaopaoNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaopaoNavController.swift; sourceTree = "<group>"; };
+		508FB27D1C00C247003D9D70 /* Sync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sync.swift; sourceTree = "<group>"; };
+		508FB2801C00C7CF003D9D70 /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
+		508FB2821C01AB11003D9D70 /* SyncRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncRecord.swift; sourceTree = "<group>"; };
 		50D871CB1BEF3692003BE1F3 /* plank_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plank_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D871CE1BEF3692003BE1F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50D871D01BEF3692003BE1F3 /* TrainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainViewController.swift; sourceTree = "<group>"; };
@@ -4193,6 +4199,15 @@
 			path = CVCalendar;
 			sourceTree = "<group>";
 		};
+		508FB27F1C00C259003D9D70 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				508FB2801C00C7CF003D9D70 /* Threading.swift */,
+				508FB27D1C00C247003D9D70 /* Sync.swift */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
 		50D871C21BEF3692003BE1F3 = {
 			isa = PBXGroup;
 			children = (
@@ -4229,7 +4244,9 @@
 				50519EFA1BF1CBCA0068FBAB /* db */,
 				50D871CE1BEF3692003BE1F3 /* AppDelegate.swift */,
 				50D871D01BEF3692003BE1F3 /* TrainViewController.swift */,
+				508FB27F1C00C259003D9D70 /* util */,
 				50D871D21BEF3692003BE1F3 /* RecordViewController.swift */,
+				508FB2821C01AB11003D9D70 /* SyncRecord.swift */,
 				50D871D41BEF3692003BE1F3 /* Main.storyboard */,
 				5030B0391BF7602600FED32F /* Fitness.storyboard */,
 				5030B0361BF754DA00FED32F /* Train.storyboard */,
@@ -4963,6 +4980,7 @@
 				5030B7C31BF97E7300FED32F /* SDWebImageManager.m in Sources */,
 				5030B7A11BF97E7300FED32F /* NJKWebViewProgress.m in Sources */,
 				5030B7F21BF97E7300FED32F /* TweetMediaItemCCell.m in Sources */,
+				508FB27E1C00C247003D9D70 /* Sync.swift in Sources */,
 				5030B7361BF97E7200FED32F /* amrFileCodec.m in Sources */,
 				5030B7F91BF97E7300FED32F /* Input_OnlyText_Cell.m in Sources */,
 				5030B7871BF97E7300FED32F /* AGEmojiKeyBoardView.m in Sources */,
@@ -4992,12 +5010,14 @@
 				5030B7A01BF97E7300FED32F /* UIImageView+MJWebCache.m in Sources */,
 				5030B5301BF97E7200FED32F /* SettingViewController.m in Sources */,
 				5030B53F1BF97E7200FED32F /* TMCacheExtend.m in Sources */,
+				508FB2811C00C7CF003D9D70 /* Threading.swift in Sources */,
 				5030B78C1BF97E7300FED32F /* ASProgressPopUpView.m in Sources */,
 				5030B0491BF7779300FED32F /* DiscoverController.swift in Sources */,
 				5030B52B1BF97E7200FED32F /* SettingAccountViewController.m in Sources */,
 				5030B7B11BF97E7300FED32F /* QBAssetsCollectionViewLayout.m in Sources */,
 				5030B73E1BF97E7200FED32F /* LocationHelper.m in Sources */,
 				5030B5621BF97E7200FED32F /* UIColor+MobileColors.m in Sources */,
+				508FB2831C01AB12003D9D70 /* SyncRecord.swift in Sources */,
 				5030B7341BF97E7200FED32F /* README.md in Sources */,
 				5030B8051BF97E7300FED32F /* ToMessageCell.m in Sources */,
 				5030B7DE1BF97E7300FED32F /* SVWebViewControllerActivity.m in Sources */,

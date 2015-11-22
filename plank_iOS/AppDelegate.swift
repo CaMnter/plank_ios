@@ -8,7 +8,7 @@
 
 import UIKit
 
-//@objc
+@objc
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appDelegate_coding = AppDelegate_coding()
         self.window?.makeKeyAndVisible()
         appDelegate_coding!.application(application, didFinishLaunchingWithOptions: launchOptions, window: self.window!);
+        
+        //Sync.shareInstance.syncTrainAndChallengeData()
+        Sync.shareInstance.sync()
         
         return true
     }
@@ -67,10 +70,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // TODO
     //#pragma mark XGPush
     func registerPush() -> Void {
-        
-        
         appDelegate_coding!.registerPush()
     }
+    
+    func syncTrainAndChallengeData() ->Void {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+                // TODO query db and sync
+            })
+        
+    }
+        func test() -> Void{
+        { print("back") } ~> { print("main") }
+ 
+    }
+    
     
     
 }

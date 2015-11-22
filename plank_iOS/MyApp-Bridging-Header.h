@@ -33,6 +33,7 @@
 #import "Me_RootViewController.h"
 #import "NSObject+Common.h"
 #import "AppDelegate_coding.h"
+#import "CodingNetAPIClient.h"
 
 
 #import "Tweet.h"

@@ -126,11 +126,61 @@ class DBHelper{
         let tmp = db?.prepare(sql)
         
         for row in tmp!{
-            result[row[0] as! String] = row[1] as! Int64
+            result[row[0] as! String] = row[1] as? Int64
         }
         
         // TODO need to sort by yourself
         return result
+    }
+    
+    func queryPendingSyncDetail(table:String) -> [(id: Int64,  startMillis: Int64, endMillis: Int64)]{
+        let sql:String = String(format: "SELECT _id, startMillis, endMillis from \(table) WHERE sync = 0")
+        var result = [(id: Int64,  startMillis: Int64, endMillis: Int64)]()
+        
+        let tmp = db?.prepare(sql)
+        for row in tmp! {
+            result.append((row[0] as! Int64, row[1] as! Int64, row[2] as! Int64))
+        }
+    
+        return result
+    }
+    
+    func queryPendingSyncDayInfo(table:String) -> [(id:Int64, timeStamp:String, timeDuration:Int64 )]{
+        let sql:String = String(format: "SELECT _id, timestamp, timeDuration from \(table) WHERE sync = 0")
+        var result = [(id: Int64,  timeStamp: String, timeDuration: Int64)]()
+        
+        let tmp = db?.prepare(sql)
+        for row in tmp! {
+            result.append((row[0] as! Int64, row[1] as! String, row[2] as! Int64))
+        }
+    
+        return result
+    }
+    
+    func updateSyncStatus(table:String, ids: [Int64]) -> Void{
+        
+        if ids.count == 0 {
+            return
+        }
+        
+        var sql:String = String(format: "UPDATE \(table) SET sync = 1 WHERE _id in ")
+        
+        sql.appendContentsOf("( ")
+        for var i = 0; i < ids.count; i++ {
+            sql.appendContentsOf("\(ids[i])")
+            
+            if i < (ids.count - 1) {
+                sql.appendContentsOf(", ")
+            }
+        }
+        
+        sql.appendContentsOf(" )")
+        
+        do{
+            try db?.execute(sql)
+            
+        }catch{
+        }
     }
     
     func queryData(table:String, date: NSDate, delegate:LoadDataProtocol?){
