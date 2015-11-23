@@ -43,21 +43,21 @@ class DBHelper{
     var db:Connection?
     
     init(){
-//        let filemgr = NSFileManager.defaultManager()
-//        var needCreateTable = false
+        //        let filemgr = NSFileManager.defaultManager()
+        //        var needCreateTable = false
         print(path)
-//        if !filemgr.fileExistsAtPath(path + "/db.sqlite3"){
-//            needCreateTable = true
-//        }
+        //        if !filemgr.fileExistsAtPath(path + "/db.sqlite3"){
+        //            needCreateTable = true
+        //        }
         do{
             let db = try Connection("\(path)/db.sqlite3")
             //if needCreateTable{
-                try db.transaction(block: {
-                    try db.execute(CREATE_TRAIN_TABLE)
-                    try db.execute(CREATE_CHALLENGE_TABLE)
-                    try db.execute(CREATE_TRAIN_DETAIL_TABLE)
-                    try db.execute(CREATE_CHALLENGE_DETAIL_TABLE)
-                })
+            try db.transaction(block: {
+                try db.execute(CREATE_TRAIN_TABLE)
+                try db.execute(CREATE_CHALLENGE_TABLE)
+                try db.execute(CREATE_TRAIN_DETAIL_TABLE)
+                try db.execute(CREATE_CHALLENGE_DETAIL_TABLE)
+            })
             //}
             self.db = db
         }catch{
@@ -141,7 +141,7 @@ class DBHelper{
         for row in tmp! {
             result.append((row[0] as! Int64, row[1] as! Int64, row[2] as! Int64))
         }
-    
+        
         return result
     }
     
@@ -153,7 +153,7 @@ class DBHelper{
         for row in tmp! {
             result.append((row[0] as! Int64, row[1] as! String, row[2] as! Int64))
         }
-    
+        
         return result
     }
     
@@ -183,6 +183,35 @@ class DBHelper{
         }
     }
     
+    func insertDayRecords(table: String, records:NSArray?) -> Void{
+        if records == nil || records!.count == 0 {
+            return
+        }
+        
+        let insertSQL:String = "insert into \(table) ( \(COLUMN_NAME_TIMESTAMP) ,  \(COLUMN_NAME_TIME_DURATION) , \(COLUMN_NAME_SYNC) ) values ( '%@', %d, \(STATUS_SYNCED) )";
+        do {
+           
+            try db?.transaction(block: {
+                var dict:NSDictionary
+                var sql:String
+                var date:String
+                var duration:Int
+ 
+                for record in records! {
+                    dict = record as! NSDictionary
+                    date = dict.objectForKey("date") as! String
+                    duration = dict.objectForKey("duration") as! Int
+                    sql = String(format: insertSQL, date, duration)
+                    try self.db?.execute(sql)
+                }
+                
+            })
+        } catch {
+            // do nothing
+        }
+        
+    }
+    
     func queryData(table:String, date: NSDate, delegate:LoadDataProtocol?){
         
         let components = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month], fromDate: date)
@@ -191,5 +220,24 @@ class DBHelper{
         
         let result = queryData(table, year: year, month: month)
         delegate?.didDataLoadFinish(table, date: date, result: result)
+    }
+    
+    static func convert2ServerTableName(table:String) -> String {
+        var serverTable:String
+        switch table{
+        case TABLE_TRAIN:
+            serverTable = "t_train"
+        case TABLE_CHALLENGE:
+            serverTable = "t_challenge"
+        case TABLE_TRAIN_DETAIL:
+            serverTable = "t_train_record"
+        case TABLE_CHALLENGE_DETAIL:
+            serverTable = "t_challenge_record"
+        default:
+            serverTable = ""
+        }
+        
+        return serverTable
+        
     }
 }

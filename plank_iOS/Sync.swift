@@ -35,10 +35,12 @@ class Sync{
     
     func sync() -> Void {
         // TODO
-        uploadDayRecord("train")
-        uploadDayRecord("challenge")
-        uploadDetailRecord("t_train")
-        uploadDetailRecord("t_challenge")
+        //        uploadDayRecord("train")
+        //        uploadDayRecord("challenge")
+        //        uploadDetailRecord("t_train")
+        //        uploadDetailRecord("t_challenge")
+        
+        downloadData("train") // t_train on server == train on local
     }
     
     //table: train, challenge
@@ -104,6 +106,8 @@ class Sync{
         request.HTTPMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
+        // TODO maybe need to handle cookie, but i am confused why the request inlcude the cookie
+        // set cookie: http://stackoverflow.com/questions/28927887/alamofire-request-with-cookies
         
         request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(dict, options: [])
         Alamofire.request(request)
@@ -123,18 +127,20 @@ class Sync{
             })
     }
     
-    
-    func jsonStringify(data: NSData) -> NSData? {
-        
-        do {
-            if let jsonResult = try NSJSONSerialization.JSONObjectWithData(data, options: []) as? NSData{
-                return jsonResult
-            }
-        } catch {
-            print(error)
-        }
-        
-        return nil
+    func downloadData(table:String){
+        let serverTable = DBHelper.convert2ServerTableName(table)
+        Alamofire.request(.GET, baseUrl + "api/sync/download/\(serverTable)")
+            .responseJSON(completionHandler: { response in
+                if let json = response.result.value {
+                    let code:Int = json["code"] as! Int
+                    
+                    if code == 0 {
+                        let records = json["records"] as? NSArray
+                        //let table = json["table"] as! String
+                        DBHelper.sharedInstance.insertDayRecords(table, records: records)
+                    }
+                }
+            })
     }
     
 }
