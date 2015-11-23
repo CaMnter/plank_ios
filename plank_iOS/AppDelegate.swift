@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appDelegate_coding!.application(application, didFinishLaunchingWithOptions: launchOptions, window: self.window!);
         
         //Sync.shareInstance.syncTrainAndChallengeData()
-        Sync.shareInstance.sync()
+        Sync.shareInstance.async()
         
         return true
     }

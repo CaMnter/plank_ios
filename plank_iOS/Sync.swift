@@ -14,33 +14,26 @@ class Sync{
     let baseUrl = "http://plank.ngrok.diaoba.wang/"
     static let shareInstance = Sync()
     
-    func syncTrainAndChallengeData() ->Void {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), { () -> Void in
-            // TODO query db and sync
-            // only need to download from server one time(the first time)
-            // then send data to server
-            let userDefaults = NSUserDefaults.standardUserDefaults()
-            var sync = userDefaults.objectForKey("sync")
-            userDefaults.setObject(1, forKey: "sync")
-            userDefaults.synchronize()
-            sync = userDefaults.objectForKey("sync")
-            sync = 2
-        })
-        
-    }
-    
-    func test() -> Void{
-        { print("back") } ~> { print("main") }
+    func async() -> Void{
+        { self.sync() } ~> { print("synced") }
     }
     
     func sync() -> Void {
-        // TODO
-        //        uploadDayRecord("train")
-        //        uploadDayRecord("challenge")
-        //        uploadDetailRecord("t_train")
-        //        uploadDetailRecord("t_challenge")
-        
-        downloadData("train") // t_train on server == train on local
+        if !Login.isLogin() {
+            return
+        }
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let sync = userDefaults.objectForKey("sync")
+        if (sync != nil) {
+            // synced
+            uploadDayRecord("train")
+            uploadDayRecord("challenge")
+            uploadDetailRecord("t_train")
+            uploadDetailRecord("t_challenge")
+        }else{
+            downloadData("train") // t_train on server == train on local
+            downloadData("challenge") // t_train on server == train on local
+        }
     }
     
     //table: train, challenge
@@ -138,6 +131,8 @@ class Sync{
                         let records = json["records"] as? NSArray
                         //let table = json["table"] as! String
                         DBHelper.sharedInstance.insertDayRecords(table, records: records)
+                        let userDefaults = NSUserDefaults.standardUserDefaults()
+                        userDefaults.setValue("synced", forKey: "sync")
                     }
                 }
             })
