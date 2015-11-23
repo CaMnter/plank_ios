@@ -34,8 +34,11 @@ class Sync{
     }
     
     func sync() -> Void {
+        // TODO
         uploadDayRecord("train")
-        
+        uploadDayRecord("challenge")
+        uploadDetailRecord("t_train")
+        uploadDetailRecord("t_challenge")
     }
     
     //table: train, challenge
@@ -63,7 +66,40 @@ class Sync{
         
         dict.setValue(items, forKey: "records")
         
+        uploadData(table, dict: dict)
         
+        
+    }
+    
+    //table: t_train, t_challenge
+    func uploadDetailRecord(table:String) -> Void {
+        let pendingSyncData = DBHelper.sharedInstance.queryPendingSyncDetail(table)
+        if pendingSyncData.count == 0 {
+            return
+        }
+        
+        let dict:NSMutableDictionary = NSMutableDictionary()
+        dict.setValue(0, forKey: "code")
+        dict.setValue(table, forKey: "table")
+        
+        let items:NSMutableArray = NSMutableArray()
+        let itemDict: NSMutableDictionary = NSMutableDictionary()
+        
+        for item in pendingSyncData {
+            itemDict.setValue(NSNumber(longLong: item.id), forKey: "id")
+            itemDict.setValue(NSNumber(longLong: item.startMillis), forKey: "startMillis")
+            itemDict.setValue(NSNumber(longLong: item.endMillis), forKey: "endMillis")
+            
+            items.addObject(itemDict)
+        }
+        
+        dict.setValue(items, forKey: "records")
+        
+        uploadData(table, dict: dict)
+        
+    }
+    
+    func uploadData(table:String, dict:NSDictionary) -> Void {
         let request = NSMutableURLRequest(URL: NSURL(string: baseUrl + "api/sync/upload")!)
         request.HTTPMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -72,40 +108,21 @@ class Sync{
         request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(dict, options: [])
         Alamofire.request(request)
             .responseJSON(completionHandler: { response in
-            // TODO
-            if let json = response.result.value{
-                let code:Int = json["code"] as! Int
-                if code == 0 {
-                    var ids:[Int64] = [Int64]()
-                    for item in pendingSyncData {
-                        ids.append(item.id)
+                // TODO
+                if let json = response.result.value{
+                    let code:Int = json["code"] as! Int
+                    if code == 0 {
+                        var ids:[Int64] = [Int64]()
+                        let items = dict.objectForKey("records") as! NSArray
+                        for item in items {
+                            ids.append(item.objectForKey("id")!.longLongValue)
+                        }
+                        DBHelper.sharedInstance.updateSyncStatus(table, ids: ids)
                     }
-                    DBHelper.sharedInstance.updateSyncStatus(table, ids: ids)
                 }
-            }
-        })
-        
-        //        let jsonClient:CodingNetAPIClient = CodingNetAPIClient.sharedJsonClient() as! CodingNetAPIClient
-        //        jsonClient.requestJsonDataWithPath("/api/sync/upload", withParams: dict as [NSObject : AnyObject], withMethodType: NetworkMethod(1), andBlock: {
-        //            (data, error) -> Void in
-        //            // TODO
-        //            if let data = data {
-        //                let code:Int = data.objectForKey("code") as! Int
-        //                if code == 0 {
-        //                    // success
-        //                }
-        //
-        //            }
-        //
-        //
-        //        })
-        
+            })
     }
     
-    //table: t_train, t_challenge
-    func uploadDetailRecord(table:String) -> Void {
-        
-    }
     
     func jsonStringify(data: NSData) -> NSData? {
         
