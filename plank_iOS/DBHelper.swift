@@ -26,10 +26,10 @@ let STATUS_SYNCED = 1
 
 let CREATE_TRAIN_TABLE:String = "CREATE TABLE IF NOT EXISTS \(TABLE_TRAIN) (_id INTEGER PRIMARY KEY AUTOINCREMENT, \(COLUMN_NAME_TIMESTAMP) date UNIQUE, \(COLUMN_NAME_TIME_DURATION) LONG, \(COLUMN_NAME_SYNC) INT  default \(STATUS_PENDING_SYNC))"
 
-let CREATE_CHALLENGE_TABLE:String = "CREATE TABLE IF NOT EXISTS \(TABLE_TRAIN) (_id INTEGER PRIMARY KEY AUTOINCREMENT, \(COLUMN_NAME_TIMESTAMP) date UNIQUE, \(COLUMN_NAME_TIME_DURATION) LONG, \(COLUMN_NAME_SYNC) INT  default \(STATUS_PENDING_SYNC))"
+let CREATE_CHALLENGE_TABLE:String = "CREATE TABLE IF NOT EXISTS \(TABLE_CHALLENGE) (_id INTEGER PRIMARY KEY AUTOINCREMENT, \(COLUMN_NAME_TIMESTAMP) date UNIQUE, \(COLUMN_NAME_TIME_DURATION) LONG, \(COLUMN_NAME_SYNC) INT  default \(STATUS_PENDING_SYNC))"
 
-let CREATE_TRAIN_DETAIL_TABLE:String = "CREATE TABLE \(TABLE_TRAIN_DETAIL) (_id INTEGER PRIMARY KEY AUTOINCREMENT, \(COLUMN_NAME_START_MILLIS) BIGINT, \(COLUMN_NAME_END_MILLIS)  BIGINT, \(COLUMN_NAME_SYNC) INT DEFAULT \(STATUS_PENDING_SYNC))"
-let CREATE_CHALLENGE_DETAIL_TABLE:String = "CREATE TABLE \(TABLE_CHALLENGE_DETAIL) (_id INTEGER PRIMARY KEY AUTOINCREMENT, \(COLUMN_NAME_START_MILLIS) BIGINT, \(COLUMN_NAME_END_MILLIS)  BIGINT, \(COLUMN_NAME_SYNC) INT DEFAULT \(STATUS_PENDING_SYNC))"
+let CREATE_TRAIN_DETAIL_TABLE:String = "CREATE TABLE IF NOT EXISTS \(TABLE_TRAIN_DETAIL) (_id INTEGER PRIMARY KEY AUTOINCREMENT, \(COLUMN_NAME_START_MILLIS) BIGINT, \(COLUMN_NAME_END_MILLIS)  BIGINT, \(COLUMN_NAME_SYNC) INT DEFAULT \(STATUS_PENDING_SYNC))"
+let CREATE_CHALLENGE_DETAIL_TABLE:String = "CREATE TABLE IF NOT EXISTS \(TABLE_CHALLENGE_DETAIL) (_id INTEGER PRIMARY KEY AUTOINCREMENT, \(COLUMN_NAME_START_MILLIS) BIGINT, \(COLUMN_NAME_END_MILLIS)  BIGINT, \(COLUMN_NAME_SYNC) INT DEFAULT \(STATUS_PENDING_SYNC))"
 
 let path = NSSearchPathForDirectoriesInDomains(
     .DocumentDirectory, .UserDomainMask, true
@@ -43,22 +43,22 @@ class DBHelper{
     var db:Connection?
     
     init(){
-        let filemgr = NSFileManager.defaultManager()
-        var needCreateTable = false
+//        let filemgr = NSFileManager.defaultManager()
+//        var needCreateTable = false
         print(path)
-        if !filemgr.fileExistsAtPath(path + "/db.sqlite3"){
-            needCreateTable = true
-        }
+//        if !filemgr.fileExistsAtPath(path + "/db.sqlite3"){
+//            needCreateTable = true
+//        }
         do{
             let db = try Connection("\(path)/db.sqlite3")
-            if needCreateTable{
+            //if needCreateTable{
                 try db.transaction(block: {
                     try db.execute(CREATE_TRAIN_TABLE)
                     try db.execute(CREATE_CHALLENGE_TABLE)
                     try db.execute(CREATE_TRAIN_DETAIL_TABLE)
                     try db.execute(CREATE_CHALLENGE_DETAIL_TABLE)
                 })
-            }
+            //}
             self.db = db
         }catch{
             print("db init error")
