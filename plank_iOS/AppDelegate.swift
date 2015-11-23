@@ -55,8 +55,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appDelegate_coding!.setupIntroductionViewController()
     }
     
+    // called when user login
     func setupTabViewController() -> Void{
         
+        Sync.shareInstance.async()
         appDelegate_coding!.setupTabViewController()
         
     }
@@ -78,10 +80,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 // TODO query db and sync
             })
         
-    }
-        func test() -> Void{
-        { print("back") } ~> { print("main") }
- 
     }
     
     
