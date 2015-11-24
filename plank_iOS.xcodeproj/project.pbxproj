@@ -833,6 +833,8 @@
 		508FB27C1BFE0D63003D9D70 /* MaopaoNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FB27B1BFE0D63003D9D70 /* MaopaoNavController.swift */; };
 		508FB27E1C00C247003D9D70 /* Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FB27D1C00C247003D9D70 /* Sync.swift */; };
 		508FB2811C00C7CF003D9D70 /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FB2801C00C7CF003D9D70 /* Threading.swift */; };
+		508FB2851C041719003D9D70 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FB2841C041718003D9D70 /* ChallengeViewController.swift */; };
+		508FB2881C04179B003D9D70 /* Challenge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508FB2861C04179B003D9D70 /* Challenge.storyboard */; };
 		50D871CF1BEF3692003BE1F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871CE1BEF3692003BE1F3 /* AppDelegate.swift */; };
 		50D871D11BEF3692003BE1F3 /* TrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871D01BEF3692003BE1F3 /* TrainViewController.swift */; };
 		50D871D31BEF3692003BE1F3 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871D21BEF3692003BE1F3 /* RecordViewController.swift */; };
@@ -2012,6 +2014,8 @@
 		508FB27B1BFE0D63003D9D70 /* MaopaoNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaopaoNavController.swift; sourceTree = "<group>"; };
 		508FB27D1C00C247003D9D70 /* Sync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sync.swift; sourceTree = "<group>"; };
 		508FB2801C00C7CF003D9D70 /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
+		508FB2841C041718003D9D70 /* ChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		508FB2871C04179B003D9D70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Challenge.storyboard; sourceTree = "<group>"; };
 		50D871CB1BEF3692003BE1F3 /* plank_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plank_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D871CE1BEF3692003BE1F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50D871D01BEF3692003BE1F3 /* TrainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainViewController.swift; sourceTree = "<group>"; };
@@ -4242,9 +4246,11 @@
 				50519EFA1BF1CBCA0068FBAB /* db */,
 				50D871CE1BEF3692003BE1F3 /* AppDelegate.swift */,
 				50D871D01BEF3692003BE1F3 /* TrainViewController.swift */,
+				508FB2841C041718003D9D70 /* ChallengeViewController.swift */,
 				508FB27F1C00C259003D9D70 /* util */,
 				50D871D21BEF3692003BE1F3 /* RecordViewController.swift */,
 				50D871D41BEF3692003BE1F3 /* Main.storyboard */,
+				508FB2861C04179B003D9D70 /* Challenge.storyboard */,
 				5030B0391BF7602600FED32F /* Fitness.storyboard */,
 				5030B0361BF754DA00FED32F /* Train.storyboard */,
 				50D871D71BEF3692003BE1F3 /* Assets.xcassets */,
@@ -4495,6 +4501,7 @@
 				5030B6031BF97E7200FED32F /* icon_topic_hotTop@2x.png in Resources */,
 				5030B72A1BF97E7200FED32F /* terms.html in Resources */,
 				5030B6DB1BF97E7200FED32F /* tipIcon_UserFollow@2x.png in Resources */,
+				508FB2881C04179B003D9D70 /* Challenge.storyboard in Resources */,
 				5030B70E1BF97E7200FED32F /* bubble-android.html in Resources */,
 				5030B63C1BF97E7200FED32F /* keyboard_photo@2x.png in Resources */,
 				5030B6DD1BF97E7200FED32F /* tips_menu_icon_status@2x.png in Resources */,
@@ -5043,6 +5050,7 @@
 				5030B80F1BF97E7300FED32F /* TweetSendDetailLoctionCell.m in Sources */,
 				5030B8061BF97E7300FED32F /* TopicContentCell.m in Sources */,
 				5030B7681BF97E7300FED32F /* UISearchBar+Common.m in Sources */,
+				508FB2851C041719003D9D70 /* ChallengeViewController.swift in Sources */,
 				5030B8141BF97E7300FED32F /* UserCell.m in Sources */,
 				50D872011BEF6ADD003BE1F3 /* MyStyle.swift in Sources */,
 				5030B8091BF97E7300FED32F /* TweetCommentCell.m in Sources */,
@@ -5355,6 +5363,14 @@
 				5030B47C1BF97E7200FED32F /* zh-Hans */,
 			);
 			name = SVWebViewController.strings;
+			sourceTree = "<group>";
+		};
+		508FB2861C04179B003D9D70 /* Challenge.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				508FB2871C04179B003D9D70 /* Base */,
+			);
+			name = Challenge.storyboard;
 			sourceTree = "<group>";
 		};
 		50D871D41BEF3692003BE1F3 /* Main.storyboard */ = {

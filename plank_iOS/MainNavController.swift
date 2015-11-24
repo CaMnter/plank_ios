@@ -26,7 +26,7 @@ class MainNavController: RKSwipeBetweenViewControllers {
             let trainViewController = storyboard.instantiateViewControllerWithIdentifier("TrainViewController") as! TrainViewController
             controllers.append(trainViewController)
             
-            let challengeViewController = storyboard.instantiateViewControllerWithIdentifier("TrainViewController") as! TrainViewController
+            let challengeViewController = storyboard.instantiateViewControllerWithIdentifier("ChallengeViewController") as! ChallengeViewController
             controllers.append(challengeViewController)
             
             let recordViewController = storyboard.instantiateViewControllerWithIdentifier("RecordViewController") as! RecordViewController

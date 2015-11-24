@@ -34,6 +34,7 @@
 #import "NSObject+Common.h"
 #import "AppDelegate_coding.h"
 #import "CodingNetAPIClient.h"
+#import "UITapImageView.h"
 
 
 #import "Tweet.h"
