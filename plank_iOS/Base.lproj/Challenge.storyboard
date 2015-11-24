@@ -76,25 +76,66 @@
             </objects>
             <point key="canvasLocation" x="1097.5" y="-1561.5"/>
         </scene>
-        <!--Root View Controller-->
+        <!--排行榜-->
         <scene sceneID="Hdd-gP-pZw">
             <objects>
-                <tableViewController id="bJj-ut-0fA" sceneMemberID="viewController">
+                <tableViewController title="排行榜" id="bJj-ut-0fA" customClass="RankTableViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bj1-fe-RCB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Q0W-IX-YKv">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rankCell" rowHeight="60" id="Q0W-IX-YKv" customClass="RankTableViewCell" customModule="plank_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q0W-IX-YKv" id="3Bo-fg-Hr7">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XdS-Eo-tC9">
+                                            <rect key="frame" x="8" y="8" width="359" height="50"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t2g-9t-lWD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="SYB-dm-Hi5"/>
+                                                        <constraint firstAttribute="height" constant="50" id="zcs-uD-dSx"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2O-Pu-sya">
+                                                    <rect key="frame" x="50" y="15" width="246" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FW-Te-5cd">
+                                                    <rect key="frame" x="296" y="15" width="64" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </stackView>
+                                    </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="XdS-Eo-tC9" firstAttribute="top" secondItem="3Bo-fg-Hr7" secondAttribute="topMargin" id="Hju-hT-BQC"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="XdS-Eo-tC9" secondAttribute="trailing" id="ROQ-Q5-v6j"/>
+                                        <constraint firstItem="XdS-Eo-tC9" firstAttribute="leading" secondItem="3Bo-fg-Hr7" secondAttribute="leadingMargin" id="UBm-BQ-vaL"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="XdS-Eo-tC9" secondAttribute="bottom" id="gsl-FL-I97"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="durationLabel" destination="2FW-Te-5cd" id="0Eh-tG-fUd"/>
+                                    <outlet property="headImageView" destination="t2g-9t-lWD" id="qLM-An-b3i"/>
+                                    <outlet property="nameLabel" destination="j2O-Pu-sya" id="OQP-Xt-ccK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -102,7 +143,15 @@
                             <outlet property="delegate" destination="bJj-ut-0fA" id="4Dx-zB-mbM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="RHo-IR-sKl"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="RHo-IR-sKl">
+                        <barButtonItem key="rightBarButtonItem" title="完成" id="pik-18-2GV">
+                            <connections>
+                                <action selector="exit:" destination="bJj-ut-0fA" id="FJv-JD-xy2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wba-6M-bJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
