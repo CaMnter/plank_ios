@@ -8,9 +8,9 @@
 
 @objc(RankRecord)
 class RankRecord:NSObject {
-    var code:Int
-    var startMillis:Int
-    var endMillis:Int
+    var code:Int!
+    var startMillis:Int!
+    var endMillis:Int!
     
     var user:User
     

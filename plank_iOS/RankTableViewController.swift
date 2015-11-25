@@ -11,6 +11,13 @@ import Alamofire
 
 class RankTableViewController: UITableViewController {
     
+    enum RankType {
+        case today
+        case week
+    }
+    
+    var rankType:RankType = RankType.today
+    
     var rankRecordLists:RankRecordList?
     
     @IBAction func exit(sender: AnyObject) {
@@ -30,7 +37,7 @@ class RankTableViewController: UITableViewController {
         //self.parentViewController?.navigationItem.rightBarButtonItem = self.editButtonItem()
         //self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.parentViewController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "完成", style: UIBarButtonItemStyle.Plain, target: self, action: "exit:")
-        fetchRank()
+        fetchRank(rankType)
     }
     
     
@@ -59,6 +66,7 @@ class RankTableViewController: UITableViewController {
         let rankRecord = rankRecordLists?.recordList[indexPath.row]
         cell.nameLabel.text = rankRecord?.user.name
         cell.headImageView.sd_setImageWithURL(NSURL(string: (rankRecord?.user.avatar)!))
+        cell.durationLabel.text = TimeUtil.millisToString((rankRecord?.endMillis)! - (rankRecord?.startMillis)!)
         
         // Configure the cell...
         
@@ -110,9 +118,19 @@ class RankTableViewController: UITableViewController {
     }
     */
     
-    func fetchRank(){
-        let baseUrl = "http://plank.ngrok.diaoba.wang/"
-        Alamofire.request(.GET, baseUrl + "api/challenge/10")
+    func fetchRank(type:RankType){
+        NSObject.baseURLStr()
+        var url : String;
+        switch type{
+        case RankType.today:
+            url = NSObject.baseURLStr() + "api/challenge/10"
+        case RankType.week:
+            url = NSObject.baseURLStr() + "api/challenge/week/10"
+        default:
+            url = NSObject.baseURLStr() + "api/challenge/10"
+        }
+        
+        Alamofire.request(.GET, url)
             .responseJSON { response in
                 debugPrint(response)
                 if let json = response.result.value {

@@ -40,10 +40,12 @@ class RankNavViewController: RKSwipeBetweenViewControllers {
         if controllers.count == 0 {
             let storyboard = UIStoryboard(name: "Challenge", bundle: nil)
             let todayRankController = storyboard.instantiateViewControllerWithIdentifier("rankPage") as! RankTableViewController
+            todayRankController.rankType = RankTableViewController.RankType.today
             controllers.append(todayRankController)
             
             let weekRankController = storyboard.instantiateViewControllerWithIdentifier("rankPage") as! RankTableViewController
             
+            todayRankController.rankType = RankTableViewController.RankType.week
             controllers.append(weekRankController)
         }
         self.viewControllerArray.addObjectsFromArray(controllers)
