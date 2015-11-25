@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -80,54 +81,83 @@
         <scene sceneID="Hdd-gP-pZw">
             <objects>
                 <tableViewController storyboardIdentifier="rankPage" title="排行榜" id="bJj-ut-0fA" customClass="RankTableViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bj1-fe-RCB">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="bj1-fe-RCB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="uTx-yE-zBF">
+                            <rect key="frame" x="0.0" y="98" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rankCell" rowHeight="60" id="Q0W-IX-YKv" customClass="RankTableViewCell" customModule="plank_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rankCell" rowHeight="70" id="Q0W-IX-YKv" customClass="RankTableViewCell" customModule="plank_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q0W-IX-YKv" id="3Bo-fg-Hr7">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XdS-Eo-tC9">
-                                            <rect key="frame" x="8" y="8" width="359" height="50"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XdS-Eo-tC9">
+                                            <rect key="frame" x="16" y="8" width="343" height="50"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t2g-9t-lWD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="t2g-9t-lWD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="SYB-dm-Hi5"/>
-                                                        <constraint firstAttribute="height" constant="50" id="zcs-uD-dSx"/>
+                                                        <constraint firstAttribute="height" constant="60" id="0o2-Tb-eVN"/>
+                                                        <constraint firstAttribute="width" constant="60" id="rTN-Ny-Q1x"/>
+                                                        <constraint firstAttribute="width" secondItem="t2g-9t-lWD" secondAttribute="height" multiplier="1:1" id="t1O-1Y-9oy"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="30"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="t1O-1Y-9oy"/>
+                                                        </mask>
+                                                    </variation>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2O-Pu-sya">
-                                                    <rect key="frame" x="50" y="15" width="246" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2O-Pu-sya">
+                                                    <rect key="frame" x="70" y="15" width="193" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FW-Te-5cd">
-                                                    <rect key="frame" x="296" y="15" width="64" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FW-Te-5cd">
+                                                    <rect key="frame" x="273" y="15" width="70" height="21"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="bIC-bk-5dL"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstItem="j2O-Pu-sya" firstAttribute="leading" secondItem="t2g-9t-lWD" secondAttribute="trailing" constant="20" id="66R-PP-wQW"/>
+                                                <constraint firstItem="t2g-9t-lWD" firstAttribute="centerY" secondItem="XdS-Eo-tC9" secondAttribute="centerY" id="dtz-8o-pGi"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="66R-PP-wQW"/>
+                                                </mask>
+                                            </variation>
                                         </stackView>
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="XdS-Eo-tC9" firstAttribute="top" secondItem="3Bo-fg-Hr7" secondAttribute="topMargin" id="Hju-hT-BQC"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="XdS-Eo-tC9" secondAttribute="trailing" id="ROQ-Q5-v6j"/>
-                                        <constraint firstItem="XdS-Eo-tC9" firstAttribute="leading" secondItem="3Bo-fg-Hr7" secondAttribute="leadingMargin" id="UBm-BQ-vaL"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="XdS-Eo-tC9" secondAttribute="bottom" id="gsl-FL-I97"/>
+                                        <constraint firstItem="XdS-Eo-tC9" firstAttribute="leading" secondItem="3Bo-fg-Hr7" secondAttribute="leadingMargin" constant="8" id="0oh-wx-vtW"/>
+                                        <constraint firstItem="XdS-Eo-tC9" firstAttribute="top" secondItem="3Bo-fg-Hr7" secondAttribute="topMargin" id="D2j-Wg-HJF"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="XdS-Eo-tC9" secondAttribute="trailing" constant="8" id="om9-oH-oU7"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="XdS-Eo-tC9" secondAttribute="bottom" id="p86-Ss-yP2"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
