@@ -830,6 +830,9 @@
 		506559041BEF6ED500B3D707 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506559031BEF6ED500B3D707 /* CircularProgressView.swift */; };
 		50702E961BF4E35D00C55D1D /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50702E951BF4E35D00C55D1D /* DateUtil.swift */; };
 		507C4BC11C04BE310046F71A /* RankNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507C4BC01C04BE310046F71A /* RankNavViewController.swift */; };
+		507C4BC51C05A2C00046F71A /* RankRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507C4BC21C0594240046F71A /* RankRecord.swift */; };
+		507C4BC71C05AC6B0046F71A /* RankRecordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507C4BC61C05AC6B0046F71A /* RankRecordList.swift */; };
+		507C4BC91C05F4B10046F71A /* TimeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507C4BC81C05F4B10046F71A /* TimeUtil.swift */; };
 		508FB27A1BFDFACC003D9D70 /* MainNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FB2791BFDFACC003D9D70 /* MainNavController.swift */; };
 		508FB27C1BFE0D63003D9D70 /* MaopaoNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FB27B1BFE0D63003D9D70 /* MaopaoNavController.swift */; };
 		508FB27E1C00C247003D9D70 /* Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FB27D1C00C247003D9D70 /* Sync.swift */; };
@@ -2014,6 +2017,9 @@
 		506559031BEF6ED500B3D707 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		50702E951BF4E35D00C55D1D /* DateUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		507C4BC01C04BE310046F71A /* RankNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankNavViewController.swift; sourceTree = "<group>"; };
+		507C4BC21C0594240046F71A /* RankRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankRecord.swift; sourceTree = "<group>"; };
+		507C4BC61C05AC6B0046F71A /* RankRecordList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankRecordList.swift; sourceTree = "<group>"; };
+		507C4BC81C05F4B10046F71A /* TimeUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeUtil.swift; sourceTree = "<group>"; };
 		508FB2791BFDFACC003D9D70 /* MainNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavController.swift; sourceTree = "<group>"; };
 		508FB27B1BFE0D63003D9D70 /* MaopaoNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaopaoNavController.swift; sourceTree = "<group>"; };
 		508FB27D1C00C247003D9D70 /* Sync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sync.swift; sourceTree = "<group>"; };
@@ -4207,11 +4213,21 @@
 			path = CVCalendar;
 			sourceTree = "<group>";
 		};
+		507C4BC41C05942E0046F71A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				507C4BC21C0594240046F71A /* RankRecord.swift */,
+				507C4BC61C05AC6B0046F71A /* RankRecordList.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		508FB27F1C00C259003D9D70 /* util */ = {
 			isa = PBXGroup;
 			children = (
 				508FB2801C00C7CF003D9D70 /* Threading.swift */,
 				508FB27D1C00C247003D9D70 /* Sync.swift */,
+				507C4BC81C05F4B10046F71A /* TimeUtil.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -4274,6 +4290,7 @@
 				50702E951BF4E35D00C55D1D /* DateUtil.swift */,
 				5030B01F1BF5CA8D00FED32F /* PostWebViewController.swift */,
 				5030B0481BF7779300FED32F /* DiscoverController.swift */,
+				507C4BC41C05942E0046F71A /* model */,
 				50A3924C1C04B6AB003E74B0 /* RankTableViewController.swift */,
 				507C4BC01C04BE310046F71A /* RankNavViewController.swift */,
 				50A392481C04B669003E74B0 /* RankTableViewCell.swift */,
@@ -5099,6 +5116,7 @@
 				5030B7FC1BF97E7300FED32F /* Login2FATipCell.m in Sources */,
 				5030B7CA1BF97E7300FED32F /* UIImageView+WebCache.m in Sources */,
 				5030B5221BF97E7200FED32F /* ConversationViewController.m in Sources */,
+				507C4BC51C05A2C00046F71A /* RankRecord.swift in Sources */,
 				5030B77A1BF97E7300FED32F /* AFURLSessionManager.m in Sources */,
 				5030B7551BF97E7200FED32F /* UIDownMenuButton.m in Sources */,
 				5030B7731BF97E7300FED32F /* ActionSheetStringPicker.m in Sources */,
@@ -5116,6 +5134,7 @@
 				508FB27A1BFDFACC003D9D70 /* MainNavController.swift in Sources */,
 				5030B7451BF97E7200FED32F /* UIUnderlinedButton.m in Sources */,
 				5030B55E1BF97E7200FED32F /* TOTPGenerator.m in Sources */,
+				507C4BC91C05F4B10046F71A /* TimeUtil.swift in Sources */,
 				5030B5271BF97E7200FED32F /* LoginViewController.m in Sources */,
 				5030B5411BF97E7200FED32F /* CSHotTopicView.m in Sources */,
 				5030B77E1BF97E7300FED32F /* AFURLResponseSerialization.m in Sources */,
@@ -5133,6 +5152,7 @@
 				5030B7781BF97E7300FED32F /* AFURLConnectionOperation.m in Sources */,
 				5030B7621BF97E7300FED32F /* UIButton+Bootstrap.m in Sources */,
 				50D871FF1BEF4668003BE1F3 /* MainViewController.swift in Sources */,
+				507C4BC71C05AC6B0046F71A /* RankRecordList.swift in Sources */,
 				5030B7961BF97E7300FED32F /* KxMenu.m in Sources */,
 				5030B52C1BF97E7200FED32F /* SettingMineInfoViewController.m in Sources */,
 				5030B7951BF97E7300FED32F /* JDStatusBarView.m in Sources */,
