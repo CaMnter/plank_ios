@@ -829,6 +829,7 @@
 		50519F6E1BF4DF5E0068FBAB /* CVWeekdaySymbolType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50519F531BF4DF5E0068FBAB /* CVWeekdaySymbolType.swift */; };
 		506559041BEF6ED500B3D707 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506559031BEF6ED500B3D707 /* CircularProgressView.swift */; };
 		50702E961BF4E35D00C55D1D /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50702E951BF4E35D00C55D1D /* DateUtil.swift */; };
+		507C4BC11C04BE310046F71A /* RankNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507C4BC01C04BE310046F71A /* RankNavViewController.swift */; };
 		508FB27A1BFDFACC003D9D70 /* MainNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FB2791BFDFACC003D9D70 /* MainNavController.swift */; };
 		508FB27C1BFE0D63003D9D70 /* MaopaoNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FB27B1BFE0D63003D9D70 /* MaopaoNavController.swift */; };
 		508FB27E1C00C247003D9D70 /* Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508FB27D1C00C247003D9D70 /* Sync.swift */; };
@@ -2012,6 +2013,7 @@
 		50519F531BF4DF5E0068FBAB /* CVWeekdaySymbolType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVWeekdaySymbolType.swift; sourceTree = "<group>"; };
 		506559031BEF6ED500B3D707 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		50702E951BF4E35D00C55D1D /* DateUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
+		507C4BC01C04BE310046F71A /* RankNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankNavViewController.swift; sourceTree = "<group>"; };
 		508FB2791BFDFACC003D9D70 /* MainNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavController.swift; sourceTree = "<group>"; };
 		508FB27B1BFE0D63003D9D70 /* MaopaoNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaopaoNavController.swift; sourceTree = "<group>"; };
 		508FB27D1C00C247003D9D70 /* Sync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sync.swift; sourceTree = "<group>"; };
@@ -4273,6 +4275,7 @@
 				5030B01F1BF5CA8D00FED32F /* PostWebViewController.swift */,
 				5030B0481BF7779300FED32F /* DiscoverController.swift */,
 				50A3924C1C04B6AB003E74B0 /* RankTableViewController.swift */,
+				507C4BC01C04BE310046F71A /* RankNavViewController.swift */,
 				50A392481C04B669003E74B0 /* RankTableViewCell.swift */,
 				5030B04F1BF8D27F00FED32F /* MyApp-Bridging-Header.h */,
 			);
@@ -5146,6 +5149,7 @@
 				5030B7031BF97E7200FED32F /* TweetSendLocation.m in Sources */,
 				5030B7841BF97E7300FED32F /* UIProgressView+AFNetworking.m in Sources */,
 				5030B7E11BF97E7300FED32F /* SWLongPressGestureRecognizer.m in Sources */,
+				507C4BC11C04BE310046F71A /* RankNavViewController.swift in Sources */,
 				5030B7921BF97E7300FED32F /* iCarousel.m in Sources */,
 				5030B6FB1BF97E7200FED32F /* ListGroupItem.m in Sources */,
 				5030B7DF1BF97E7300FED32F /* NSMutableArray+SWUtilityButtons.m in Sources */,

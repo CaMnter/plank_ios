@@ -17,10 +17,6 @@ class PostWebViewController: UIViewController {
     var postID:Int = 0;
     var defaultTitle:String = ""
     
-    var didLoadFinish: Bool?
-    var timer: NSTimer?
-    
-    @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var webView: UIWebView!
     @IBAction func finish(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -39,10 +35,9 @@ class PostWebViewController: UIViewController {
             }
             catch {/* error handling here */}
         }
-        self.didLoadFinish = false
-        self.progressView.progress = 0
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1667, target: self, selector: "timerCallback", userInfo: nil, repeats: true)
- 
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,25 +62,12 @@ class PostWebViewController: UIViewController {
                         let tmp = self.htmlTemplateCotent.stringByReplacingOccurrencesOfString("content", withString: content)
                         self.webView.loadHTMLString(tmp, baseURL: nil)
                         
-                        self.didLoadFinish = true
+                        MBProgressHUD.hideHUDForView(self.view, animated: true)
+
 
                     }
                 }
         }
     }
-        func timerCallback() {
-        if self.didLoadFinish! {
-            if self.progressView.progress >= 1 {
-                self.progressView.hidden = true
-                self.timer!.invalidate()
-            } else {
-                self.progressView.progress += 0.1
-            }
-        } else {
-            self.progressView.progress += 0.05
-            if self.progressView.progress >= 0.95 {
-                self.progressView.progress = 0.95
-            }
-        }
-    }
+
 }

@@ -26,27 +26,19 @@
                                     <outlet property="delegate" destination="66m-hC-fq6" id="skv-I1-eCp"/>
                                 </connections>
                             </webView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kJG-h9-Gz4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="2"/>
-                                <animations/>
-                            </progressView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="g6A-Py-4tE" secondAttribute="trailing" id="FCf-Lx-y73"/>
-                            <constraint firstItem="kJG-h9-Gz4" firstAttribute="top" secondItem="HOg-dP-HuB" secondAttribute="bottom" id="Gjv-3j-I32"/>
                             <constraint firstItem="g6A-Py-4tE" firstAttribute="leading" secondItem="qwf-Zm-SMU" secondAttribute="leading" id="HvH-zx-6Mt"/>
-                            <constraint firstItem="kJG-h9-Gz4" firstAttribute="leading" secondItem="qwf-Zm-SMU" secondAttribute="leading" id="UO9-81-QlK"/>
                             <constraint firstItem="g6A-Py-4tE" firstAttribute="top" secondItem="HOg-dP-HuB" secondAttribute="bottom" id="eyU-2l-ubA"/>
-                            <constraint firstAttribute="trailing" secondItem="kJG-h9-Gz4" secondAttribute="trailing" id="loS-7E-9gA"/>
                             <constraint firstItem="evK-G3-mxf" firstAttribute="top" secondItem="g6A-Py-4tE" secondAttribute="bottom" id="pbi-lD-Vtb"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="progressView" destination="kJG-h9-Gz4" id="lMp-1q-vyh"/>
                         <outlet property="webView" destination="g6A-Py-4tE" id="w7U-Lh-90i"/>
                     </connections>
                 </viewController>
@@ -280,27 +272,19 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2lu-JL-sEt">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="2"/>
-                                <animations/>
-                            </progressView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pNf-eR-Pcj" firstAttribute="top" secondItem="Xj3-1Z-lly" secondAttribute="bottom" id="F7X-p0-tox"/>
-                            <constraint firstAttribute="trailing" secondItem="2lu-JL-sEt" secondAttribute="trailing" id="GYc-Ag-QqW"/>
                             <constraint firstAttribute="trailing" secondItem="Xj3-1Z-lly" secondAttribute="trailing" id="K6J-zr-5kv"/>
                             <constraint firstItem="Xj3-1Z-lly" firstAttribute="leading" secondItem="vBQ-d6-eK8" secondAttribute="leading" id="Rmm-C6-8bd"/>
-                            <constraint firstItem="2lu-JL-sEt" firstAttribute="top" secondItem="lCn-Zo-dIc" secondAttribute="bottom" id="Ub8-o2-hCQ"/>
                             <constraint firstItem="Xj3-1Z-lly" firstAttribute="top" secondItem="lCn-Zo-dIc" secondAttribute="bottom" id="Vkx-Sz-YdV"/>
-                            <constraint firstItem="2lu-JL-sEt" firstAttribute="leading" secondItem="vBQ-d6-eK8" secondAttribute="leading" id="qGP-xc-G9X"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="progressView" destination="2lu-JL-sEt" id="XcS-ZJ-CiP"/>
                         <outlet property="webView" destination="Xj3-1Z-lly" id="on0-Bb-RTL"/>
                     </connections>
                 </viewController>

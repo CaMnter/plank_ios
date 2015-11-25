@@ -93,20 +93,13 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="C6U-hT-UnF">
-                                <rect key="frame" x="0.0" y="20" width="375" height="2"/>
-                                <animations/>
-                            </progressView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mfy-Xr-Hhq" firstAttribute="leading" secondItem="CkW-a4-9jt" secondAttribute="leading" id="5Ta-D4-i9q"/>
-                            <constraint firstAttribute="trailing" secondItem="C6U-hT-UnF" secondAttribute="trailing" id="8i7-vX-Uz8"/>
                             <constraint firstItem="DUA-TF-Yua" firstAttribute="top" secondItem="mfy-Xr-Hhq" secondAttribute="bottom" id="NY8-xd-ufm"/>
                             <constraint firstItem="mfy-Xr-Hhq" firstAttribute="top" secondItem="CkW-a4-9jt" secondAttribute="top" id="eSm-lS-E4h"/>
-                            <constraint firstItem="C6U-hT-UnF" firstAttribute="leading" secondItem="CkW-a4-9jt" secondAttribute="leading" id="lI3-a6-BA0"/>
-                            <constraint firstItem="C6U-hT-UnF" firstAttribute="top" secondItem="Y94-TO-jx7" secondAttribute="bottom" id="vik-qp-QCq"/>
                             <constraint firstAttribute="trailing" secondItem="mfy-Xr-Hhq" secondAttribute="trailing" id="zDn-aL-Y9m"/>
                         </constraints>
                     </view>
@@ -120,7 +113,6 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="progressView" destination="C6U-hT-UnF" id="euA-tn-A60"/>
                         <outlet property="webView" destination="mfy-Xr-Hhq" id="s8Q-69-NAy"/>
                     </connections>
                 </viewController>

@@ -79,7 +79,7 @@
         <!--排行榜-->
         <scene sceneID="Hdd-gP-pZw">
             <objects>
-                <tableViewController title="排行榜" id="bJj-ut-0fA" customClass="RankTableViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="rankPage" title="排行榜" id="bJj-ut-0fA" customClass="RankTableViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bj1-fe-RCB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,19 +158,16 @@
             </objects>
             <point key="canvasLocation" x="2009.5" y="-1561.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Rank Nav View Controller-->
         <scene sceneID="BoH-YW-bNI">
             <objects>
-                <navigationController id="veO-rT-Yqj" sceneMemberID="viewController">
+                <navigationController id="veO-rT-Yqj" customClass="RankNavViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pJY-IK-eXh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="bJj-ut-0fA" kind="relationship" relationship="rootViewController" id="CZv-JZ-5Cn"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rf1-3d-BdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

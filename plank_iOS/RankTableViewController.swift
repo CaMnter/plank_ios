@@ -10,20 +10,26 @@ import UIKit
 
 class RankTableViewController: UITableViewController {
     
+    
     @IBAction func exit(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.parentViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "排行榜"
+        
+        MBProgressHUD.showHUDAddedTo(self.tableView, animated: true)
+        //MBProgressHUD.hideHUDForView(self.tableView, animated: true)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        //self.parentViewController?.navigationItem.rightBarButtonItem = self.editButtonItem()
+         //self.navigationItem.rightBarButtonItem = self.editButtonItem()
+         self.parentViewController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "完成", style: UIBarButtonItemStyle.Plain, target: self, action: "exit:")
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
