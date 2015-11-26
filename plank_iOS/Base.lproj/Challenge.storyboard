@@ -7,122 +7,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--挑战-->
-        <scene sceneID="VUz-C6-cuR">
-            <objects>
-                <viewController storyboardIdentifier="ChallengeViewController" title="挑战" id="JSb-DO-NgE" customClass="ChallengeViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TIe-he-2qa"/>
-                        <viewControllerLayoutGuide type="bottom" id="QhT-qg-hOX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="57S-VD-7zM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="l5f-rh-ZCm">
-                                <rect key="frame" x="16" y="40" width="343" height="627"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UgU-Bj-qTP" customClass="CircularProgressView" customModule="plank_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="300"/>
-                                        <subviews>
-                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first" translatesAutoresizingMaskIntoConstraints="NO" id="aDj-TF-M0P">
-                                                <rect key="frame" x="313" y="0.0" width="30" height="30"/>
-                                                <animations/>
-                                                <gestureRecognizers/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="Ulk-vG-GYO"/>
-                                                    <constraint firstAttribute="width" constant="30" id="hvx-6P-RQb"/>
-                                                </constraints>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="qfq-ra-74B" appends="YES" id="0PD-Jf-ewW"/>
-                                                </connections>
-                                            </imageView>
-                                        </subviews>
-                                        <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="aDj-TF-M0P" firstAttribute="top" secondItem="UgU-Bj-qTP" secondAttribute="top" id="KvV-lu-aAp"/>
-                                            <constraint firstAttribute="height" constant="300" id="Th0-dC-KVI"/>
-                                            <constraint firstAttribute="trailing" secondItem="aDj-TF-M0P" secondAttribute="trailing" id="VLD-TL-AbN"/>
-                                            <constraint firstAttribute="width" constant="300" id="hjo-qw-xih"/>
-                                        </constraints>
-                                    </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q65-3b-SlX">
-                                        <rect key="frame" x="0.0" y="320" width="343" height="307"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全网今日最高记录:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVj-1u-LTh">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="21"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="苗苗 51分14秒" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8f4-Kn-dMx">
-                                                <rect key="frame" x="0.0" y="31" width="343" height="21"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日已有1000位撑友冲击最高记录失败" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSG-az-xim">
-                                                <rect key="frame" x="0.0" y="61" width="343" height="21"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWV-FB-n4Q">
-                                                <rect key="frame" x="0.0" y="92" width="343" height="31"/>
-                                                <animations/>
-                                                <color key="backgroundColor" red="0.5" green="0.69741981909999995" blue="0.21283922699999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="开始"/>
-                                                <connections>
-                                                    <action selector="startButtonClick:" destination="JSb-DO-NgE" eventType="touchUpInside" id="vkm-mq-9gr"/>
-                                                </connections>
-                                            </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5m-le-gZy">
-                                                <rect key="frame" x="0.0" y="132" width="343" height="175"/>
-                                                <animations/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                        </subviews>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstItem="x5m-le-gZy" firstAttribute="width" secondItem="xVj-1u-LTh" secondAttribute="width" id="7rJ-Sg-4nE"/>
-                                            <constraint firstItem="cSG-az-xim" firstAttribute="width" secondItem="xVj-1u-LTh" secondAttribute="width" id="D1I-0e-77B"/>
-                                            <constraint firstItem="8f4-Kn-dMx" firstAttribute="width" secondItem="xVj-1u-LTh" secondAttribute="width" id="D26-Tn-ij5"/>
-                                            <constraint firstAttribute="width" constant="300" id="Hf9-iG-7M4"/>
-                                            <constraint firstItem="HWV-FB-n4Q" firstAttribute="width" secondItem="xVj-1u-LTh" secondAttribute="width" id="aFH-AV-1AY"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                                <animations/>
-                            </stackView>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="l5f-rh-ZCm" firstAttribute="top" secondItem="TIe-he-2qa" secondAttribute="bottom" constant="20" id="Tk9-o5-vYP"/>
-                            <constraint firstItem="l5f-rh-ZCm" firstAttribute="leading" secondItem="57S-VD-7zM" secondAttribute="leadingMargin" id="cil-9p-qhb"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="l5f-rh-ZCm" secondAttribute="bottom" id="foH-Ph-hW1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="l5f-rh-ZCm" secondAttribute="trailing" id="sDG-tO-75v"/>
-                        </constraints>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="circularProgressView" destination="UgU-Bj-qTP" id="KDk-sB-GQa"/>
-                        <outlet property="startButton" destination="HWV-FB-n4Q" id="fl4-HR-4Zg"/>
-                    </connections>
-                </viewController>
-                <tapGestureRecognizer id="qfq-ra-74B">
-                    <connections>
-                        <segue destination="veO-rT-Yqj" kind="show" identifier="showRank" id="1Ug-s5-C5t"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kou-3U-pwu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1097.5" y="-1561.5"/>
-        </scene>
         <!--排行榜-->
         <scene sceneID="Hdd-gP-pZw">
             <objects>
@@ -249,8 +133,146 @@
             </objects>
             <point key="canvasLocation" x="1538.5" y="-1561.5"/>
         </scene>
+        <!--挑战-->
+        <scene sceneID="wvh-X1-3r0">
+            <objects>
+                <viewController storyboardIdentifier="ChallengeViewController" title="挑战" id="vEd-hs-rIP" customClass="ChallengeViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zUa-dE-nDu"/>
+                        <viewControllerLayoutGuide type="bottom" id="H04-ds-ra7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EhR-sq-8Pk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="H9o-1O-fb9">
+                                <rect key="frame" x="16" y="40" width="343" height="627"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWv-Gq-Bji" customClass="CircularProgressView" customModule="plank_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="0.0" width="323" height="323"/>
+                                        <subviews>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="00w-O9-nNg">
+                                                <rect key="frame" x="270" y="0.0" width="30" height="30"/>
+                                                <animations/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="FI7-A1-ve5"/>
+                                                    <constraint firstAttribute="width" constant="30" id="J1t-0S-Dxm"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="n9s-Tr-t4i" appends="YES" id="FZr-2V-aqA"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zWv-Gq-Bji" secondAttribute="height" multiplier="1:1" id="APh-iT-QTZ"/>
+                                            <constraint firstItem="00w-O9-nNg" firstAttribute="top" secondItem="zWv-Gq-Bji" secondAttribute="top" id="Jse-q1-1cl"/>
+                                            <constraint firstAttribute="trailing" secondItem="00w-O9-nNg" secondAttribute="trailing" id="MAD-r4-P0b"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="trackThickness">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressThickness">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TDD-RJ-nf8">
+                                        <rect key="frame" x="42" y="343" width="260" height="284"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="今日最高记录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATD-FY-CTB">
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="21"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="蒋echo 58分28秒" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYL-7K-Abh">
+                                                <rect key="frame" x="0.0" y="31" width="260" height="21"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="今日1000位撑友冲击最高记录失败" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9f7-e9-rMW">
+                                                <rect key="frame" x="0.0" y="61" width="260" height="21"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfa-wG-wpG">
+                                                <rect key="frame" x="0.0" y="92" width="260" height="55"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.5" green="0.69741981909999995" blue="0.21283922699999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="开始"/>
+                                                <connections>
+                                                    <action selector="startButtonClick:" destination="vEd-hs-rIP" eventType="touchUpInside" id="MdF-2t-AfB"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SIB-Az-Avk">
+                                                <rect key="frame" x="0.0" y="156" width="260" height="128"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstItem="Bfa-wG-wpG" firstAttribute="width" secondItem="TDD-RJ-nf8" secondAttribute="width" id="Vej-Uc-NEI"/>
+                                            <constraint firstItem="SIB-Az-Avk" firstAttribute="width" secondItem="ATD-FY-CTB" secondAttribute="width" id="gTr-M6-Elz"/>
+                                            <constraint firstItem="9f7-e9-rMW" firstAttribute="width" secondItem="ATD-FY-CTB" secondAttribute="width" id="hmh-Fr-1kK"/>
+                                            <constraint firstItem="LYL-7K-Abh" firstAttribute="width" secondItem="ATD-FY-CTB" secondAttribute="width" id="mZs-sr-P2G"/>
+                                            <constraint firstItem="Bfa-wG-wpG" firstAttribute="width" secondItem="ATD-FY-CTB" secondAttribute="width" id="qK3-sI-eTE"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Vej-Uc-NEI"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zWv-Gq-Bji" secondAttribute="trailing" constant="10" id="Ndf-u6-RvU"/>
+                                    <constraint firstItem="TDD-RJ-nf8" firstAttribute="centerX" secondItem="H9o-1O-fb9" secondAttribute="centerX" id="YgU-yn-b6f"/>
+                                    <constraint firstItem="zWv-Gq-Bji" firstAttribute="leading" secondItem="H9o-1O-fb9" secondAttribute="leading" constant="10" id="r0s-7t-NYV"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="YgU-yn-b6f"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H9o-1O-fb9" firstAttribute="leading" secondItem="EhR-sq-8Pk" secondAttribute="leadingMargin" id="48m-sk-oTl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H9o-1O-fb9" secondAttribute="trailing" id="IFX-5D-unM"/>
+                            <constraint firstItem="H9o-1O-fb9" firstAttribute="top" secondItem="zUa-dE-nDu" secondAttribute="bottom" constant="20" id="PFO-LG-zwq"/>
+                            <constraint firstItem="H04-ds-ra7" firstAttribute="top" secondItem="H9o-1O-fb9" secondAttribute="bottom" id="spF-xl-OAH"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="circularProgressView" destination="zWv-Gq-Bji" id="dbS-Ry-jjf"/>
+                        <outlet property="startButton" destination="Bfa-wG-wpG" id="ImC-lX-x4F"/>
+                    </connections>
+                </viewController>
+                <tapGestureRecognizer id="n9s-Tr-t4i">
+                    <connections>
+                        <segue destination="veO-rT-Yqj" kind="show" id="qZc-ij-prs"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Sy-3X-RIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080.5" y="-1561.5"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
     </resources>
 </document>
