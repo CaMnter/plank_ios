@@ -113,8 +113,8 @@
     }else{
         //生产
         //baseURLStr = @"https://coding.net/";
-        //baseURLStr = @"http://mp.diaoba.wang/";
-        baseURLStr = @"http://plank.ngrok.diaoba.wang/";
+        baseURLStr = @"http://mp.diaoba.wang/";
+        //baseURLStr = @"http://plank.ngrok.diaoba.wang/";
     }
 //    //staging
 //    baseURLStr = kBaseUrlStr_Test;

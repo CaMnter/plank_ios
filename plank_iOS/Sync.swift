@@ -11,7 +11,7 @@ import Alamofire
 
 class Sync{
     
-    let baseUrl = "http://plank.ngrok.diaoba.wang/"
+    let baseUrl = NSObject.baseURLStr()
     static let shareInstance = Sync()
     
     func async() -> Void{
