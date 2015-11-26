@@ -180,24 +180,24 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TDD-RJ-nf8">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TDD-RJ-nf8">
                                         <rect key="frame" x="42" y="343" width="260" height="284"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="今日最高记录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATD-FY-CTB">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日最高记录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATD-FY-CTB">
                                                 <rect key="frame" x="0.0" y="0.0" width="260" height="21"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="蒋echo 58分28秒" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYL-7K-Abh">
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="蒋echo 58分28秒" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYL-7K-Abh">
                                                 <rect key="frame" x="0.0" y="31" width="260" height="21"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="今日1000位撑友冲击最高记录失败" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9f7-e9-rMW">
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日1000位撑友冲击最高记录失败" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9f7-e9-rMW">
                                                 <rect key="frame" x="0.0" y="61" width="260" height="21"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -260,11 +260,13 @@
                     <connections>
                         <outlet property="circularProgressView" destination="zWv-Gq-Bji" id="dbS-Ry-jjf"/>
                         <outlet property="startButton" destination="Bfa-wG-wpG" id="ImC-lX-x4F"/>
+                        <outlet property="topChallengeCountLabel" destination="9f7-e9-rMW" id="QXj-JX-V7Z"/>
+                        <outlet property="topRecordLabel" destination="LYL-7K-Abh" id="KHm-wz-QrT"/>
                     </connections>
                 </viewController>
                 <tapGestureRecognizer id="n9s-Tr-t4i">
                     <connections>
-                        <segue destination="veO-rT-Yqj" kind="show" id="qZc-ij-prs"/>
+                        <segue destination="veO-rT-Yqj" kind="presentation" identifier="showRankPage" id="qZc-ij-prs"/>
                     </connections>
                 </tapGestureRecognizer>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Sy-3X-RIc" userLabel="First Responder" sceneMemberID="firstResponder"/>

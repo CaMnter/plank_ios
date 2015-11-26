@@ -16,6 +16,8 @@ class TrainViewController: UIViewController {
     var timer:NSTimer = NSTimer();
     var startMillis:Int = 0;
     
+    @IBOutlet weak var finishedCountLabel: UILabel!
+    @IBOutlet weak var trainPlanLabel: UILabel!
     @IBOutlet weak var circularProgressView: CircularProgressView!
     @IBOutlet weak var startButton: UIButton!
     override func viewDidLoad() {

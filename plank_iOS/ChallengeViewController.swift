@@ -11,13 +11,18 @@ import Foundation
 class ChallengeViewController: UIViewController {
     
     var secondsPerTime:Int = 8;
+
     var escapeMillis:Int = 0;
     var isTraining = false;
     var timer:NSTimer = NSTimer();
+
     var startMillis:Int = 0;
     
+    @IBOutlet weak var topChallengeCountLabel: UILabel!
+    @IBOutlet weak var topRecordLabel: UILabel!
     @IBOutlet weak var circularProgressView: CircularProgressView!
     @IBOutlet weak var startButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -97,7 +102,7 @@ class ChallengeViewController: UIViewController {
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch (segue.identifier!){
         case "showHowPost":
             let postWebViewController = segue.destinationViewController.childViewControllers[0] as! PostWebViewController;
@@ -107,7 +112,7 @@ class ChallengeViewController: UIViewController {
            break
         }
         
-    }
+    }*/
     
     
 }

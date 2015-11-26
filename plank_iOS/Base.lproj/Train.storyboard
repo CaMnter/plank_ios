@@ -133,7 +133,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="circularProgressView" destination="86g-Du-6aE" id="kAW-Rh-aNL"/>
+                        <outlet property="finishedCountLabel" destination="lcJ-cg-7VB" id="rKT-fa-KEe"/>
                         <outlet property="startButton" destination="l9a-DO-42W" id="1PY-f0-0Vn"/>
+                        <outlet property="trainPlanLabel" destination="Ofr-eb-fUb" id="7Jk-b0-EMR"/>
                     </connections>
                 </viewController>
                 <tapGestureRecognizer id="m6p-JV-qnI">
