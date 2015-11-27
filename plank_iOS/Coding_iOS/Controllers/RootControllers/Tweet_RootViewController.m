@@ -349,7 +349,7 @@
     }
     curTweets.willLoadMore = NO;
     [self sendRequest];
-    [self refreshBanner];
+    //[self refreshBanner];
 }
 
 - (void)refreshMore{
