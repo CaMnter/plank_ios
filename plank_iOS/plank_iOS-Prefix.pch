@@ -47,7 +47,7 @@
 #define SD_WEBP
 
 //友盟统计
-#define kUmeng_AppKey @""
+#define kUmeng_AppKey @"565868e167e58ec1b70039be"
 #define kUmeng_Event_Request_Notification @"Request_Notification"
 #define kUmeng_Event_Request_RootList @"Request_RootList"
 #define kUmeng_Event_Request_Get @"Request_Get"
@@ -74,13 +74,13 @@
 #define kBaiduSK @""
 
 //测试地址
-#define kBaseUrlStr_Test @"https://coding.net/"
+#define kBaseUrlStr_Test @"http://mp.diaoba.wang/"
 
 //手机版地址
-#define kBaseUrlStr_Phone @"https://m.coding.net/"
+#define kBaseUrlStr_Phone @"http://mp.diaoba.wang/"
 
 //Coding App 的专属链接
-#define kCodingAppScheme @"coding-net:"
+#define kCodingAppScheme @"diaoba.wang:"
 
 //appStore地址
 #define kAppUrl  @"http://itunes.apple.com/app/id923676989"

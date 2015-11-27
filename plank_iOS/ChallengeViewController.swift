@@ -119,7 +119,7 @@ class ChallengeViewController: UIViewController {
         Alamofire.request(.GET, NSObject.baseURLStr() + "api/challenge_count")
             .responseJSON(completionHandler: { response in
                 if let value = response.result.value {
-                    self.topChallengeCountLabel.text = String(format: Constant.finishedCount, value as! Int)
+                    self.topChallengeCountLabel.text = String(format: Constant.challengeCount, value as! Int)
                     
                 }
             })
