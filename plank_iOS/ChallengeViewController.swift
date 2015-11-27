@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Foundation
+import Alamofire
 class ChallengeViewController: UIViewController {
     
     var secondsPerTime:Int = 8;
@@ -27,6 +27,8 @@ class ChallengeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         circularProgressView.value = 0.0
+        fetchChallengeCount()
+        fetchTopRecord()
     }
     
     override func didReceiveMemoryWarning() {
@@ -113,7 +115,36 @@ class ChallengeViewController: UIViewController {
         }
         
     }*/
+    func fetchChallengeCount()->Void{
+        Alamofire.request(.GET, NSObject.baseURLStr() + "api/challenge_count")
+            .responseJSON(completionHandler: { response in
+                if let value = response.result.value {
+                    self.topChallengeCountLabel.text = String(format: Constant.finishedCount, value as! Int)
+                    
+                }
+            })
+    }
     
-    
+    func fetchTopRecord()->Void{
+        Alamofire.request(.GET, NSObject.baseURLStr() + "api/challenge/1")
+            .responseJSON(completionHandler: { response in
+                if let json = response.result.value {
+                    let code = json["code"] as! Int
+                    if code == 0 {
+                        let rankRecordLists = RankRecordList.objectFromJson(json as! NSDictionary)
+                        
+                        if rankRecordLists.recordList.count > 0 {
+                            let record = rankRecordLists.recordList[0]
+                                let owner = record.user
+                            let topRecord:String = String(format:"%@ %@", owner.name, TimeUtil.millisToString(record.endMillis - record.startMillis))
+                            self.topRecordLabel.text = topRecord
+                            
+                        }
+                        
+                    }
+                    
+                }
+            })
+    }
 }
 

@@ -7,9 +7,11 @@
 //
 
 import UIKit
-import Foundation
+import Alamofire
+
 class TrainViewController: UIViewController {
     
+
     var secondsPerTime:Int = 8;
     var escapeMillis:Int = 0;
     var isTraining = false;
@@ -20,10 +22,12 @@ class TrainViewController: UIViewController {
     @IBOutlet weak var trainPlanLabel: UILabel!
     @IBOutlet weak var circularProgressView: CircularProgressView!
     @IBOutlet weak var startButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         circularProgressView.value = 0.0
+        fetchFinishTrainCount()
     }
     
     override func didReceiveMemoryWarning() {
@@ -111,6 +115,17 @@ class TrainViewController: UIViewController {
         
     }
     
+    func fetchFinishTrainCount()->Void{
+        Alamofire.request(.GET, NSObject.baseURLStr() + "api/train_count")
+            .responseJSON(completionHandler: { response in
+                if let value = response.result.value {
+                    self.finishedCountLabel.text = String(format: Constant.finishedCount, value as! Int)
+                    
+                }
+            })
+        
+    }
+
     
 }
 
