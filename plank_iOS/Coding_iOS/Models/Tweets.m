@@ -35,7 +35,7 @@
             requstPath = @"api/tweet/public_tweets";
             break;
         case TweetTypeUserFriends:
-            requstPath = @"api/tweet/ios_debug";
+            requstPath = @"api/activities/user_tweet";
             break;
         case TweetTypeUserSingle:
             requstPath = @"api/tweet/user_public";
