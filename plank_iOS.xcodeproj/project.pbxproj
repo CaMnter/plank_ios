@@ -851,7 +851,6 @@
 		50D871E61BEF3692003BE1F3 /* plank_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871E51BEF3692003BE1F3 /* plank_iOSTests.swift */; };
 		50D871F11BEF3692003BE1F3 /* plank_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871F01BEF3692003BE1F3 /* plank_iOSUITests.swift */; };
 		50D871FF1BEF4668003BE1F3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871FE1BEF4668003BE1F3 /* MainViewController.swift */; };
-		50D872011BEF6ADD003BE1F3 /* MyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D872001BEF6ADD003BE1F3 /* MyStyle.swift */; };
 		50E676731BFB140600E7A025 /* WebViewControllerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E676721BFB140600E7A025 /* WebViewControllerSwift.swift */; };
 		50E676761BFB236700E7A025 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E676741BFB236600E7A025 /* UIViewController+BackButtonHandler.m */; };
 /* End PBXBuildFile section */
@@ -2045,7 +2044,6 @@
 		50D871F01BEF3692003BE1F3 /* plank_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plank_iOSUITests.swift; sourceTree = "<group>"; };
 		50D871F21BEF3692003BE1F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50D871FE1BEF4668003BE1F3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		50D872001BEF6ADD003BE1F3 /* MyStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStyle.swift; sourceTree = "<group>"; };
 		50E676721BFB140600E7A025 /* WebViewControllerSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewControllerSwift.swift; sourceTree = "<group>"; };
 		50E676741BFB236600E7A025 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		50E676751BFB236600E7A025 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
@@ -4284,7 +4282,6 @@
 				50D871FE1BEF4668003BE1F3 /* MainViewController.swift */,
 				508FB2791BFDFACC003D9D70 /* MainNavController.swift */,
 				508FB27B1BFE0D63003D9D70 /* MaopaoNavController.swift */,
-				50D872001BEF6ADD003BE1F3 /* MyStyle.swift */,
 				506559031BEF6ED500B3D707 /* CircularProgressView.swift */,
 				50519EF21BF0DAE80068FBAB /* FitnessTableViewCell.swift */,
 				50519EF41BF0DFEA0068FBAB /* FitnessTableViewController.swift */,
@@ -5081,7 +5078,6 @@
 				5030B7681BF97E7300FED32F /* UISearchBar+Common.m in Sources */,
 				508FB2851C041719003D9D70 /* ChallengeViewController.swift in Sources */,
 				5030B8141BF97E7300FED32F /* UserCell.m in Sources */,
-				50D872011BEF6ADD003BE1F3 /* MyStyle.swift in Sources */,
 				5030B8091BF97E7300FED32F /* TweetCommentCell.m in Sources */,
 				5030B54F1BF97E7200FED32F /* TweetSendViewController.m in Sources */,
 				5030B5261BF97E7200FED32F /* IntroductionViewController.m in Sources */,
@@ -5515,6 +5511,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/**",
@@ -5602,6 +5599,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/**",
