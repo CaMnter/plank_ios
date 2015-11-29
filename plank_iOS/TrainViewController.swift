@@ -110,7 +110,8 @@ class TrainViewController: UIViewController {
             postWebViewController.postID = 13;
             postWebViewController.defaultTitle = "如何完成标准的平板支撑？"
         default:
-           break
+            segue.destinationViewController.title = "hello"
+            super.prepareForSegue(segue, sender: sender)
         }
         
     }
