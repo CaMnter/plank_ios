@@ -149,10 +149,10 @@
                                 <rect key="frame" x="16" y="40" width="343" height="627"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWv-Gq-Bji" customClass="CircularProgressView" customModule="plank_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="0.0" width="323" height="323"/>
+                                        <rect key="frame" x="22" y="0.0" width="300" height="300"/>
                                         <subviews>
                                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="00w-O9-nNg">
-                                                <rect key="frame" x="270" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="293" y="0.0" width="30" height="30"/>
                                                 <animations/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -170,6 +170,9 @@
                                             <constraint firstAttribute="width" secondItem="zWv-Gq-Bji" secondAttribute="height" multiplier="1:1" id="APh-iT-QTZ"/>
                                             <constraint firstItem="00w-O9-nNg" firstAttribute="top" secondItem="zWv-Gq-Bji" secondAttribute="top" id="Jse-q1-1cl"/>
                                             <constraint firstAttribute="trailing" secondItem="00w-O9-nNg" secondAttribute="trailing" id="MAD-r4-P0b"/>
+                                            <constraint firstAttribute="width" constant="300" id="tu2-ni-vBM">
+                                                <variation key="widthClass=regular" constant="500"/>
+                                            </constraint>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="trackThickness">
@@ -181,7 +184,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TDD-RJ-nf8">
-                                        <rect key="frame" x="42" y="343" width="260" height="284"/>
+                                        <rect key="frame" x="42" y="320" width="260" height="307"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日最高记录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATD-FY-CTB">
                                                 <rect key="frame" x="0.0" y="0.0" width="260" height="21"/>
@@ -205,7 +208,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfa-wG-wpG">
-                                                <rect key="frame" x="0.0" y="92" width="260" height="55"/>
+                                                <rect key="frame" x="0.0" y="92" width="260" height="78"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.5" green="0.69741981909999995" blue="0.21283922699999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="开始"/>
@@ -214,7 +217,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SIB-Az-Avk">
-                                                <rect key="frame" x="0.0" y="156" width="260" height="128"/>
+                                                <rect key="frame" x="0.0" y="179" width="260" height="128"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
@@ -236,9 +239,11 @@
                                 </subviews>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="zWv-Gq-Bji" secondAttribute="trailing" constant="10" id="Ndf-u6-RvU"/>
+                                    <constraint firstItem="zWv-Gq-Bji" firstAttribute="top" secondItem="H9o-1O-fb9" secondAttribute="top" id="TlA-6l-UTe">
+                                        <variation key="widthClass=compact" constant="0.0"/>
+                                        <variation key="widthClass=regular" constant="30"/>
+                                    </constraint>
                                     <constraint firstItem="TDD-RJ-nf8" firstAttribute="centerX" secondItem="H9o-1O-fb9" secondAttribute="centerX" id="YgU-yn-b6f"/>
-                                    <constraint firstItem="zWv-Gq-Bji" firstAttribute="leading" secondItem="H9o-1O-fb9" secondAttribute="leading" constant="10" id="r0s-7t-NYV"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
