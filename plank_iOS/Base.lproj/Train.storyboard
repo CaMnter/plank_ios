@@ -378,7 +378,7 @@
         <!--Navigation Controller-->
         <scene sceneID="KgB-gR-fVa">
             <objects>
-                <navigationController id="TFq-Kx-vFt" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="trainPlanSettingNavController" id="TFq-Kx-vFt" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HB0-hR-GdH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

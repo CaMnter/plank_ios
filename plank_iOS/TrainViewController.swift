@@ -28,11 +28,26 @@ class TrainViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         circularProgressView.value = 0.0
         fetchFinishTrainCount()
+        
+
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.parentViewController!.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "first"), style: UIBarButtonItemStyle.Plain, target: self, action: Selector("showSettingController"))
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        self.parentViewController!.navigationItem.rightBarButtonItem = nil
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func showSettingController(){
+        self.presentViewController((storyboard?.instantiateViewControllerWithIdentifier("trainPlanSettingNavController"
+        ))!,animated: true, completion: nil)
     }
     
     
@@ -110,7 +125,6 @@ class TrainViewController: UIViewController {
             postWebViewController.postID = 13;
             postWebViewController.defaultTitle = "如何完成标准的平板支撑？"
         default:
-            segue.destinationViewController.title = "hello"
             super.prepareForSegue(segue, sender: sender)
         }
         
