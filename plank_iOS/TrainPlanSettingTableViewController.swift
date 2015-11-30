@@ -28,6 +28,27 @@ class TrainPlanSettingTableViewController: UITableViewController, UITextFieldDel
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "训练设置"
+        updateSettingLabels()
+    }
+    
+    func updateSettingLabels(){
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        
+        if let trainSecondPerTime = userDefaults.objectForKey(SettingType.TrainSecondPerTime.rawValue) {
+            trainSecondPerTimeLabel.text = String(trainSecondPerTime)
+            
+        }
+        
+        if let restSecondPerTime = userDefaults.objectForKey(SettingType.RestSecondPerTime.rawValue) {
+            print(restSecondPerTime)
+            restSecondPerTimeLabel.text = String(restSecondPerTime)
+        }
+        
+        if let times = userDefaults.objectForKey(SettingType.Times.rawValue) {
+            timesLabel.text = String(times)
+            print(times)
+        }
+        
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -35,30 +56,63 @@ class TrainPlanSettingTableViewController: UITableViewController, UITextFieldDel
         
         switch section {
         case 0:
-            showSettingAlert(SettingType.TrainSecondPerTime)
+            let row = indexPath.row
+            var type:SettingType?
+            switch row {
+            case 0:
+                type = SettingType.TrainSecondPerTime
+            case 1:
+                type = SettingType.RestSecondPerTime
+            case 2:
+                type = SettingType.Times
+            default:
+                break
+            }
+            if (type != nil) {
+                showSettingAlert(type!)
+            }
         default:
             super.tableView(tableView, didSelectRowAtIndexPath: indexPath)
         }
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
     }
     
     private func showSettingAlert(type:SettingType){
-        let alert = UIAlertController(title: "恭喜", message: nil, preferredStyle: .Alert)
+        var currentLabel:UILabel
+        var title:String
+        
+        switch type{
+            case SettingType.TrainSecondPerTime:
+                currentLabel = self.trainSecondPerTimeLabel
+                title = "一次训练多长时间(秒)"
+            case .RestSecondPerTime:
+                currentLabel = self.restSecondPerTimeLabel
+                title = "每次休息多长时间(秒)"
+            case .Times:
+                currentLabel = self.timesLabel
+                title = "一次多少组"
+            }
+ 
+        
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: .Alert)
 
         alert.addTextFieldWithConfigurationHandler({(textField)->Void in
             textField.keyboardType = UIKeyboardType.NumberPad
             textField.delegate = self
         })
-        alert.addAction(UIAlertAction(title: "yes", style: .Default, handler: {(action) -> Void in
+        alert.addAction(UIAlertAction(title: "确定", style: .Default, handler: {(action) -> Void in
             // TODO store in userDefaults
             let tmp = alert.textFields![0].text
             print(tmp)
             
             let text:String? = alert.textFields![0].text
             var value:Int? = -1
-            if (text != nil) {
-                value = Int(text!)
-            }else{
+            if (text ?? "").isEmpty {
                 return
+            }else{
+                value = Int(text!)
             }
             
             if value > 0 {
@@ -66,15 +120,8 @@ class TrainPlanSettingTableViewController: UITableViewController, UITextFieldDel
                 userDefaults.setInteger(value!, forKey: type.rawValue)
             }
             
-            switch type{
-            case SettingType.TrainSecondPerTime:
-                self.trainSecondPerTimeLabel.text = text
-            case .RestSecondPerTime:
-                self.restSecondPerTimeLabel.text = text
-            case .Times:
-                self.timesLabel.text = text
-            }
-           
+            currentLabel.text = text
+          
         }))
         self.presentViewController(alert, animated: true, completion: nil)
     }
@@ -82,6 +129,11 @@ class TrainPlanSettingTableViewController: UITableViewController, UITextFieldDel
     func textField(textField: UITextField,
         shouldChangeCharactersInRange range: NSRange,
         replacementString string: String) -> Bool {
+            
+            // do not allow to start with "0"
+            if range.location == 0 && string == "0" {
+                return false
+            }
             
             // Create an `NSCharacterSet` set which includes everything *but* the digits
             let inverseSet = NSCharacterSet(charactersInString:"0123456789").invertedSet
