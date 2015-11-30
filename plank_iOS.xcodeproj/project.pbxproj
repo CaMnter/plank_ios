@@ -5593,6 +5593,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jiangecho.plank-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "plank_iOS/MyApp-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "/Users/jiangecho/github/plank_iOS/plank_iOS/plank_iOS/Coding_iOS/** /Users/jiangecho/github/plank_iOS/plank_iOS/Pods/Headers/Private/**";
 			};
 			name = Debug;
@@ -5681,6 +5682,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jiangecho.plank-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "plank_iOS/MyApp-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "/Users/jiangecho/github/plank_iOS/plank_iOS/plank_iOS/Coding_iOS/** /Users/jiangecho/github/plank_iOS/plank_iOS/Pods/Headers/Private/**";
 			};
 			name = Release;

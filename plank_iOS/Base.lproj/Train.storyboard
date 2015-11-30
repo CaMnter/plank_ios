@@ -349,6 +349,38 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="帮助" id="FKv-ih-gu3">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="V4i-sr-0DZ">
+                                        <rect key="frame" x="0.0" y="343.5" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V4i-sr-0DZ" id="26h-uA-q6w">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="如何做平板支撑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pb-t6-88I">
+                                                    <rect key="frame" x="8" y="8" width="359" height="43.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="1pb-t6-88I" firstAttribute="leading" secondItem="26h-uA-q6w" secondAttribute="leadingMargin" id="DY0-Yd-b8a"/>
+                                                <constraint firstItem="1pb-t6-88I" firstAttribute="top" secondItem="26h-uA-q6w" secondAttribute="topMargin" id="LCQ-A6-YwN"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="1pb-t6-88I" secondAttribute="bottom" id="Lmu-VH-i8N"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1pb-t6-88I" secondAttribute="trailing" id="Sfu-df-p7U"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <segue destination="C4f-B2-mwR" kind="show" identifier="showHowToPlank" id="h26-0Y-Zek"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="sDC-Mv-mRV" id="eG5-6b-d13"/>
@@ -456,6 +488,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JcW-6m-ssK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2674.5" y="56.5"/>
+        </scene>
+        <!--How to plank-->
+        <scene sceneID="3lP-Yy-qE3">
+            <objects>
+                <viewController title="How to plank" id="C4f-B2-mwR" customClass="PostWebViewController" customModule="plank_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pO5-KE-30k"/>
+                        <viewControllerLayoutGuide type="bottom" id="vzi-lh-qwJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UAI-st-H2v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lEl-eU-Tr0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lEl-eU-Tr0" secondAttribute="trailing" id="oFp-fK-VQD"/>
+                            <constraint firstItem="vzi-lh-qwJ" firstAttribute="top" secondItem="lEl-eU-Tr0" secondAttribute="bottom" id="w5h-Di-spE"/>
+                            <constraint firstItem="lEl-eU-Tr0" firstAttribute="leading" secondItem="UAI-st-H2v" secondAttribute="leading" id="y1V-Rx-Agu"/>
+                            <constraint firstItem="lEl-eU-Tr0" firstAttribute="top" secondItem="UAI-st-H2v" secondAttribute="top" id="zTt-kG-DwF"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="webView" id="LjI-Xd-r9G"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="webView" destination="lEl-eU-Tr0" id="8pC-bA-Ccr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hv5-UA-ETk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3277.5" y="859.5"/>
         </scene>
     </scenes>
     <resources>

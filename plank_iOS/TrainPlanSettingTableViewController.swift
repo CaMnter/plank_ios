@@ -72,11 +72,11 @@ class TrainPlanSettingTableViewController: UITableViewController, UITextFieldDel
                 showSettingAlert(type!)
             }
         default:
-            super.tableView(tableView, didSelectRowAtIndexPath: indexPath)
+            break
+            //super.tableView(tableView, didSelectRowAtIndexPath: indexPath)
         }
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
     }
     
     private func showSettingAlert(type:SettingType){
@@ -126,6 +126,17 @@ class TrainPlanSettingTableViewController: UITableViewController, UITextFieldDel
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch (segue.identifier!){
+        case "showHowToPlank":
+            let postWebViewController = segue.destinationViewController as! PostWebViewController;
+            postWebViewController.postID = 13;
+            postWebViewController.defaultTitle = "如何完成标准的平板支撑？"
+        default:
+            super.prepareForSegue(segue, sender: sender)
+        }
+        
+    }
     func textField(textField: UITextField,
         shouldChangeCharactersInRange range: NSRange,
         replacementString string: String) -> Bool {
