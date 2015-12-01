@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class TrainViewController: UIViewController {
+class TrainViewController: UIViewController, SFCountdownViewDelegate {
     
     let trainPlanInfo = "每组%d次 每次%d秒"
 
@@ -23,6 +23,7 @@ class TrainViewController: UIViewController {
     
     @IBOutlet weak var finishedCountLabel: UILabel!
     @IBOutlet weak var trainPlanLabel: UILabel!
+    @IBOutlet weak var sfCountdownView: SFCountdownView!
     @IBOutlet weak var circularProgressView: CircularProgressView!
     @IBOutlet weak var startButton: UIButton!
     
@@ -31,6 +32,9 @@ class TrainViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         circularProgressView.value = 0.0
         fetchFinishTrainCount()
+        
+        self.sfCountdownView.delegate = self
+        showRestCountDownView(30)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -164,7 +168,15 @@ class TrainViewController: UIViewController {
             })
         
     }
-
     
+    func showRestCountDownView(secconds:Int){
+        self.sfCountdownView.hidden = false
+        self.sfCountdownView.countdownFrom = Int32(restSecondsPerTime)
+        self.sfCountdownView.start()
+    }
+    
+    func countdownFinished(view: SFCountdownView!) {
+        self.sfCountdownView.hidden = true
+    }
 }
 
