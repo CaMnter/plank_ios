@@ -11,12 +11,15 @@ import Alamofire
 
 class TrainViewController: UIViewController {
     
+    let trainPlanInfo = "每组%d次 每次%d秒"
 
-    var secondsPerTime:Int = 8;
-    var escapeMillis:Int = 0;
-    var isTraining = false;
-    var timer:NSTimer = NSTimer();
-    var startMillis:Int = 0;
+    var secondsPerTime:Int = 30
+    var restSecondsPerTime:Int = 30
+    var times:Int = 3
+    var escapeMillis:Int = 0
+    var isTraining = false
+    var timer:NSTimer = NSTimer()
+    var startMillis:Int = 0
     
     @IBOutlet weak var finishedCountLabel: UILabel!
     @IBOutlet weak var trainPlanLabel: UILabel!
@@ -28,13 +31,13 @@ class TrainViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         circularProgressView.value = 0.0
         fetchFinishTrainCount()
-        
-
     }
     
     override func viewDidAppear(animated: Bool) {
         self.parentViewController!.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "first"), style: UIBarButtonItemStyle.Plain, target: self, action: Selector("showSettingController"))
+        updatePlanInfo()
     }
+
     
     override func viewDidDisappear(animated: Bool) {
         self.parentViewController!.navigationItem.rightBarButtonItem = nil
@@ -115,6 +118,27 @@ class TrainViewController: UIViewController {
             circularProgressView.progressTint = tmpColor
             // todo use percentTint
         }
+    }
+    
+    func updatePlanInfo(){
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        
+        var tmp =  userDefaults.objectForKey(TrainPlanSettingTableViewController.SettingType.TrainSecondPerTime.rawValue) as? Int
+        if (tmp != nil){
+            secondsPerTime = tmp!
+        }
+        tmp = userDefaults.objectForKey(TrainPlanSettingTableViewController.SettingType.RestSecondPerTime.rawValue) as? Int
+        
+        if tmp != nil{
+            restSecondsPerTime = tmp!
+        }
+        tmp = userDefaults.objectForKey(TrainPlanSettingTableViewController.SettingType.Times.rawValue) as? Int
+        if tmp != nil{
+            
+            times = tmp!
+        }
+        
+        trainPlanLabel.text = String(format: trainPlanInfo, times, secondsPerTime)
         
     }
     
