@@ -107,7 +107,7 @@
                  [self stop];
                  if (self.delegate) {
                      [self.delegate countdownFinished:self];
-                     [self removeFromSuperview];
+                     //[self removeFromSuperview];
                  }
                  
              } else {

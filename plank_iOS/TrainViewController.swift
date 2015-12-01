@@ -13,13 +13,14 @@ class TrainViewController: UIViewController, SFCountdownViewDelegate {
     
     let trainPlanInfo = "每组%d次 每次%d秒"
 
-    var secondsPerTime:Int = 30
-    var restSecondsPerTime:Int = 30
+    var secondsPerTime:Int = 10
+    var restSecondsPerTime:Int = 10
     var times:Int = 3
     var escapeMillis:Int = 0
     var isTraining = false
     var timer:NSTimer = NSTimer()
     var startMillis:Int = 0
+    var currentTime:Int = 0
     
     @IBOutlet weak var finishedCountLabel: UILabel!
     @IBOutlet weak var trainPlanLabel: UILabel!
@@ -34,7 +35,7 @@ class TrainViewController: UIViewController, SFCountdownViewDelegate {
         fetchFinishTrainCount()
         
         self.sfCountdownView.delegate = self
-        showRestCountDownView(30)
+        self.sfCountdownView.hidden = true
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -63,31 +64,32 @@ class TrainViewController: UIViewController, SFCountdownViewDelegate {
         
         if isTraining{
             isTraining = false
+            currentTime = 0
+            escapeMillis = 0
             timer.invalidate()
             startButton.setTitle("开始", forState: .Normal)
-            print(escapeMillis)
-            let db = DBHelper.sharedInstance
-            db.insertDetail("train", startMillis: startMillis, endMillis: startMillis + escapeMillis)
-            db.queryTest()
             showFailAlert()
-            db.insertOrUpdateDayTrain(escapeMillis)
-            db.queryData("train", year: 2015, month: 11)
-            escapeMillis = 0
+           
        }else{
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)
+
             let now = NSDate().timeIntervalSince1970;
             startMillis = Int(now * 1000.0);
             print("startMillis \(startMillis)")
             isTraining = true
-            circularProgressView.value = 0.0
             startButton.setTitle("结束", forState: .Normal)
+            startTrain()
         }
     }
     
+    private func startTrain(){
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)
+        circularProgressView.value = 0.0
+    
+    }
+    
     private func showFailAlert(){
-        let alert = UIAlertController(title: "tiltle fail", message: "message: fail", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "yes", style: .Default, handler:{(acttion) -> Void in
-            print("yes")
+        let alert = UIAlertController(title: "训练未完成", message: "哎，训练未完成，加油呀", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "确定", style: .Default, handler:{(acttion) -> Void in
         }))
         
         self.presentViewController(alert, animated: true, completion: nil)
@@ -107,20 +109,36 @@ class TrainViewController: UIViewController, SFCountdownViewDelegate {
             circularProgressView.value = CGFloat(CGFloat((escapeMillis % (secondsPerTime * 1000))) / CGFloat((secondsPerTime * 1000)))
         }
         
-        if(escapeMillis >= secondsPerTime * 1000){
-            // trian finish
-            isTraining = false
-            escapeMillis = 0;
-            startButton.setTitle("开始", forState: .Normal)
-            timer.invalidate()
-            showFinishAlert()
-            
-        }else if((escapeMillis % (secondsPerTime * 1000)) == 0){
+        if((escapeMillis % (secondsPerTime * 1000)) == 0){
             circularProgressView.value = 0.0
             let tmpColor = circularProgressView.tintColor;
             circularProgressView.tintColor = circularProgressView.progressTint
             circularProgressView.progressTint = tmpColor
             // todo use percentTint
+            
+            finishOneTimeTrain()
+        }
+    }
+    
+    func finishOneTimeTrain(){
+        currentTime++
+        if currentTime < times{
+            timer.invalidate()
+            showRestCountDownView(restSecondsPerTime)
+        }else{
+             // trian finish
+            isTraining = false
+
+            startButton.setTitle("开始", forState: .Normal)
+            timer.invalidate()
+            currentTime = 0
+
+            let db = DBHelper.sharedInstance
+            db.insertDetail("train", startMillis: startMillis, endMillis: startMillis + escapeMillis)
+            db.insertOrUpdateDayTrain(escapeMillis)
+            escapeMillis = 0;
+
+            showFinishAlert()
         }
     }
     
@@ -166,8 +184,8 @@ class TrainViewController: UIViewController, SFCountdownViewDelegate {
                     
                 }
             })
-        
     }
+    
     
     func showRestCountDownView(secconds:Int){
         self.sfCountdownView.hidden = false
@@ -177,6 +195,7 @@ class TrainViewController: UIViewController, SFCountdownViewDelegate {
     
     func countdownFinished(view: SFCountdownView!) {
         self.sfCountdownView.hidden = true
+        startTrain()
     }
 }
 
