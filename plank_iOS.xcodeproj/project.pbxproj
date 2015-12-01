@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0AD78130EF8A30A0D6897A63 /* Pods_plank_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EB53F00442C3C625C985F5 /* Pods_plank_iOS.framework */; };
 		500482F01C075A3C006CB772 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500482EF1C075A3C006CB772 /* Constant.swift */; };
+		501F03CB1C0DF17500B7C60E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 501F03C61C0DF17500B7C60E /* LICENSE */; };
+		501F03CC1C0DF17500B7C60E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 501F03C71C0DF17500B7C60E /* README.md */; };
+		501F03CD1C0DF17500B7C60E /* SFCountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 501F03CA1C0DF17500B7C60E /* SFCountdownView.m */; };
 		5030B0201BF5CA8D00FED32F /* PostWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030B01F1BF5CA8D00FED32F /* PostWebViewController.swift */; };
 		5030B0291BF5F00F00FED32F /* html in Resources */ = {isa = PBXBuildFile; fileRef = 5030B0281BF5F00F00FED32F /* html */; };
 		5030B02D1BF6391100FED32F /* workout in Resources */ = {isa = PBXBuildFile; fileRef = 5030B02C1BF6391100FED32F /* workout */; };
@@ -876,6 +879,10 @@
 /* Begin PBXFileReference section */
 		309665D23EEE75C41240276C /* Pods-plank_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plank_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-plank_iOS/Pods-plank_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		500482EF1C075A3C006CB772 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		501F03C61C0DF17500B7C60E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		501F03C71C0DF17500B7C60E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		501F03C91C0DF17500B7C60E /* SFCountdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFCountdownView.h; sourceTree = "<group>"; };
+		501F03CA1C0DF17500B7C60E /* SFCountdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFCountdownView.m; sourceTree = "<group>"; };
 		5030B01F1BF5CA8D00FED32F /* PostWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostWebViewController.swift; sourceTree = "<group>"; };
 		5030B0281BF5F00F00FED32F /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
 		5030B02C1BF6391100FED32F /* workout */ = {isa = PBXFileReference; lastKnownFileType = folder; path = workout; sourceTree = "<group>"; };
@@ -2098,6 +2105,25 @@
 				309665D23EEE75C41240276C /* Pods-plank_iOS.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		501F03C51C0DF17500B7C60E /* SFCountdownView */ = {
+			isa = PBXGroup;
+			children = (
+				501F03C61C0DF17500B7C60E /* LICENSE */,
+				501F03C71C0DF17500B7C60E /* README.md */,
+				501F03C81C0DF17500B7C60E /* SFCountdownView */,
+			);
+			path = SFCountdownView;
+			sourceTree = "<group>";
+		};
+		501F03C81C0DF17500B7C60E /* SFCountdownView */ = {
+			isa = PBXGroup;
+			children = (
+				501F03C91C0DF17500B7C60E /* SFCountdownView.h */,
+				501F03CA1C0DF17500B7C60E /* SFCountdownView.m */,
+			);
+			path = SFCountdownView;
 			sourceTree = "<group>";
 		};
 		5030B0541BF97E7100FED32F /* Coding_iOS */ = {
@@ -4261,6 +4287,7 @@
 		50D871CD1BEF3692003BE1F3 /* plank_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				501F03C51C0DF17500B7C60E /* SFCountdownView */,
 				50E676741BFB236600E7A025 /* UIViewController+BackButtonHandler.m */,
 				50E676751BFB236600E7A025 /* UIViewController+BackButtonHandler.h */,
 				50E676721BFB140600E7A025 /* WebViewControllerSwift.swift */,
@@ -4662,6 +4689,7 @@
 				5030B66D1BF97E7200FED32F /* nav_tweet_mine@2x.png in Resources */,
 				5030B56F1BF97E7200FED32F /* btn_delete_tweetimage@2x.png in Resources */,
 				5030B62F1BF97E7200FED32F /* keyboard_add@2x.png in Resources */,
+				501F03CB1C0DF17500B7C60E /* LICENSE in Resources */,
 				5030B5C61BF97E7200FED32F /* coding_emoji_gif_03@2x.png in Resources */,
 				5030B64C1BF97E7200FED32F /* messageComment@2x.png in Resources */,
 				5030B5C81BF97E7200FED32F /* coding_emoji_gif_05@2x.png in Resources */,
@@ -5119,6 +5147,7 @@
 				5030B7FC1BF97E7300FED32F /* Login2FATipCell.m in Sources */,
 				5030B7CA1BF97E7300FED32F /* UIImageView+WebCache.m in Sources */,
 				5030B5221BF97E7200FED32F /* ConversationViewController.m in Sources */,
+				501F03CC1C0DF17500B7C60E /* README.md in Sources */,
 				507C4BC51C05A2C00046F71A /* RankRecord.swift in Sources */,
 				5030B77A1BF97E7300FED32F /* AFURLSessionManager.m in Sources */,
 				5030B7551BF97E7200FED32F /* UIDownMenuButton.m in Sources */,
@@ -5214,6 +5243,7 @@
 				5030B52E1BF97E7200FED32F /* SettingTagsViewController.m in Sources */,
 				5030B5571BF97E7200FED32F /* ZXScanCodeViewController.m in Sources */,
 				50E676731BFB140600E7A025 /* WebViewControllerSwift.swift in Sources */,
+				501F03CD1C0DF17500B7C60E /* SFCountdownView.m in Sources */,
 				5030B7F51BF97E7300FED32F /* AddCommentCell.m in Sources */,
 				5030B80A1BF97E7300FED32F /* TweetCommentMoreCell.m in Sources */,
 				50519EF71BF0E2D20068FBAB /* Fitness.swift in Sources */,

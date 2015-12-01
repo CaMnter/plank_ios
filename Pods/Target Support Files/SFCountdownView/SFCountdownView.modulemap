@@ -1,6 +1,0 @@
-framework module SFCountdownView {
-  umbrella header "SFCountdownView-umbrella.h"
-
-  export *
-  module * { export * }
-}

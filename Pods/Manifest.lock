@@ -90,7 +90,6 @@ PODS:
     - RBBAnimation (~> 0.3)
     - SDCAutoLayout (~> 2.0)
   - SDCAutoLayout (2.0.3)
-  - SFCountdownView (0.0.1)
   - SQLite.swift (1.0.0)
   - SSKeychain (1.2.3)
   - TMCache (2.1.0)
@@ -120,7 +119,6 @@ DEPENDENCIES:
   - ReactiveCocoa (= 2.3.1)
   - RegexKitLite-NoWarning (= 1.1.0)
   - SDCAlertView (= 2.5.2)
-  - SFCountdownView
   - SQLite.swift (from `https://github.com/stephencelis/SQLite.swift.git`)
   - SSKeychain (= 1.2.3)
   - TMCache (= 2.1.0)
@@ -165,7 +163,6 @@ SPEC CHECKSUMS:
   RegexKitLite-NoWarning: 45dda57c3152fa653ccd861e8e7984d211dd449c
   SDCAlertView: fd45a867e993449ac5ae26d372423e47ac44415d
   SDCAutoLayout: 7299138eb2c36fdda59a1afdba64bc4d00a524e0
-  SFCountdownView: 5668c8240de8b2a5725df4702a2722c69023f628
   SQLite.swift: 3bb75f5a650f08673276bc6d3fb1de1b542b8f4d
   SSKeychain: e139dd28562888fa13b48aef7234c7d9c8c3e82c
   TMCache: 708d5f5ee09566acaf4de95f418b24bb40febec9
