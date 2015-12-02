@@ -37,8 +37,8 @@ class TrainViewController: UIViewController, SFCountdownViewDelegate {
         self.sfCountdownView.delegate = self
         self.sfCountdownView.hidden = true
         
-        self.circularProgressView.tintColor = UIColor(colorLiteralRed: 0.27, green: 0.75, blue: 0.61, alpha: 1.0)
-        self.circularProgressView.progressTint = UIColor(colorLiteralRed: 0.82, green: 0.82, blue: 0.82, alpha: 1.0)
+        self.circularProgressView.progressTint = UIColor(colorLiteralRed: 0.27, green: 0.75, blue: 0.61, alpha: 1.0)
+        self.circularProgressView.trackTint = UIColor(colorLiteralRed: 0.82, green: 0.82, blue: 0.82, alpha: 1.0)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -99,7 +99,7 @@ class TrainViewController: UIViewController, SFCountdownViewDelegate {
     }
     
     private func showFinishAlert(){
-        let alert = UIAlertController(title: "恭喜", message: "完成咯", preferredStyle: .Alert)
+        let alert = UIAlertController(title: "恭喜", message: "训练完成，坚持!", preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "yes", style: .Default, handler: {(action) -> Void in print("finish")}))
         self.presentViewController(alert, animated: true, completion: nil)
     }
@@ -114,8 +114,8 @@ class TrainViewController: UIViewController, SFCountdownViewDelegate {
         
         if((escapeMillis % (secondsPerTime * 1000)) == 0){
             circularProgressView.value = 0.0
-            let tmpColor = circularProgressView.tintColor;
-            circularProgressView.tintColor = circularProgressView.progressTint
+            let tmpColor = circularProgressView.trackTint;
+            circularProgressView.trackTint = circularProgressView.progressTint
             circularProgressView.progressTint = tmpColor
             // todo use percentTint
             

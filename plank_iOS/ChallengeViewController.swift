@@ -29,6 +29,9 @@ class ChallengeViewController: UIViewController {
         circularProgressView.value = 0.0
         fetchChallengeCount()
         fetchTopRecord()
+        
+        self.circularProgressView.progressTint = UIColor(colorLiteralRed: 0.27, green: 0.75, blue: 0.61, alpha: 1.0)
+        self.circularProgressView.trackTint = UIColor(colorLiteralRed: 0.82, green: 0.82, blue: 0.82, alpha: 1.0)
     }
     
     override func didReceiveMemoryWarning() {
@@ -96,8 +99,8 @@ class ChallengeViewController: UIViewController {
             
         }else if((escapeMillis % (secondsPerTime * 1000)) == 0){
             circularProgressView.value = 0.0
-            let tmpColor = circularProgressView.tintColor;
-            circularProgressView.tintColor = circularProgressView.progressTint
+            let tmpColor = circularProgressView.trackTint;
+            circularProgressView.trackTint = circularProgressView.progressTint
             circularProgressView.progressTint = tmpColor
             // todo use percentTint
         }

@@ -233,8 +233,8 @@ extension RecordViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelega
             let month = dayView.date.month
             let day = dayView.date.day
             
-            let yearMonth = String(format: "%d-%2d", year, month)
-            let yearMonthDay = String(format: "%d-%2d-%2d", year, month, day)
+            let yearMonth = String(format: "%d-%02d", year, month)
+            let yearMonthDay = String(format: "%d-%02d-%02d", year, month, day)
             
             let monthTrainData = trainData[yearMonth]
             let dayTrainData = monthTrainData?[yearMonthDay]
