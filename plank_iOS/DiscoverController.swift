@@ -10,6 +10,7 @@ import UIKit
 
 class DiscoverController: UITableViewController {
     
+    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -54,4 +55,5 @@ class DiscoverController: UITableViewController {
         nav_tweet.buttonText = ["冒泡广场", "朋友圈", "热门冒泡"];
     }
     
+
 }

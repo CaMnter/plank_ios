@@ -16,7 +16,7 @@ class ChallengeViewController: UIViewController {
     var isTraining = false;
     var timer:NSTimer = NSTimer();
 
-    var startMillis:Int = 0;
+    var startMillis:Int64 = 0;
     
     @IBOutlet weak var topChallengeCountLabel: UILabel!
     @IBOutlet weak var topRecordLabel: UILabel!
@@ -55,7 +55,7 @@ class ChallengeViewController: UIViewController {
        }else{
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)
             let now = NSDate().timeIntervalSince1970;
-            startMillis = Int(now * 1000.0);
+            startMillis = Int64(now * 1000.0);
             print("startMillis \(startMillis)")
             isTraining = true
             circularProgressView.value = 0.0

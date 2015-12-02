@@ -19,7 +19,7 @@ class TrainViewController: UIViewController, SFCountdownViewDelegate {
     var escapeMillis:Int = 0
     var isTraining = false
     var timer:NSTimer = NSTimer()
-    var startMillis:Int = 0
+    var startMillis:Int64 = 0
     var currentTime:Int = 0
     
     @IBOutlet weak var finishedCountLabel: UILabel!
@@ -36,6 +36,9 @@ class TrainViewController: UIViewController, SFCountdownViewDelegate {
         
         self.sfCountdownView.delegate = self
         self.sfCountdownView.hidden = true
+        
+        self.circularProgressView.tintColor = UIColor(colorLiteralRed: 0.27, green: 0.75, blue: 0.61, alpha: 1.0)
+        self.circularProgressView.progressTint = UIColor(colorLiteralRed: 0.82, green: 0.82, blue: 0.82, alpha: 1.0)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -73,7 +76,7 @@ class TrainViewController: UIViewController, SFCountdownViewDelegate {
        }else{
 
             let now = NSDate().timeIntervalSince1970;
-            startMillis = Int(now * 1000.0);
+            startMillis = Int64(now * 1000.0);
             print("startMillis \(startMillis)")
             isTraining = true
             startButton.setTitle("结束", forState: .Normal)

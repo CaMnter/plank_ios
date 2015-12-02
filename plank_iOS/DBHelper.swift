@@ -65,7 +65,7 @@ class DBHelper{
         }
     }
     
-    func insertDetail(table:String, startMillis: Int, endMillis: Int){
+    func insertDetail(table:String, startMillis: Int64, endMillis: Int64){
         let sql = "INSERT INTO \(TABLE_TRAIN_DETAIL) (\(COLUMN_NAME_START_MILLIS) , \(COLUMN_NAME_END_MILLIS)) VALUES ( \(startMillis) , \(endMillis))";
         do{
             try db?.execute(sql)
@@ -76,11 +76,11 @@ class DBHelper{
         }
     }
     
-    func insertTrainDetail(startMillis:Int, endMillis: Int){
+    func insertTrainDetail(startMillis:Int64, endMillis: Int64){
         insertDetail(TABLE_TRAIN_DETAIL, startMillis: startMillis, endMillis:endMillis)
     }
     
-    func insertChallengeDetail(startMillis:Int, endMillis: Int){
+    func insertChallengeDetail(startMillis:Int64, endMillis: Int64){
         insertDetail(TABLE_CHALLENGE_DETAIL, startMillis:startMillis, endMillis:endMillis)
     }
     
