@@ -149,10 +149,10 @@
                                 <rect key="frame" x="16" y="40" width="343" height="627"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWv-Gq-Bji" customClass="CircularProgressView" customModule="plank_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="47" y="0.0" width="250" height="250"/>
+                                        <rect key="frame" x="46.5" y="0.0" width="250" height="250"/>
                                         <subviews>
-                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="00w-O9-nNg">
-                                                <rect key="frame" x="293" y="0.0" width="30" height="30"/>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="00w-O9-nNg">
+                                                <rect key="frame" x="220" y="0.0" width="30" height="30"/>
                                                 <animations/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -184,40 +184,42 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TDD-RJ-nf8">
-                                        <rect key="frame" x="42" y="270" width="260" height="357"/>
+                                        <rect key="frame" x="42" y="270" width="259.5" height="357"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日最高记录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATD-FY-CTB">
-                                                <rect key="frame" x="0.0" y="0.0" width="260" height="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="259.5" height="20.5"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="蒋echo 58分28秒" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYL-7K-Abh">
-                                                <rect key="frame" x="0.0" y="31" width="260" height="21"/>
+                                                <rect key="frame" x="0.0" y="30.5" width="259.5" height="20.5"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日1000位撑友冲击最高记录失败" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9f7-e9-rMW">
-                                                <rect key="frame" x="0.0" y="61" width="260" height="21"/>
+                                                <rect key="frame" x="0.0" y="61" width="259.5" height="20.5"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfa-wG-wpG">
-                                                <rect key="frame" x="0.0" y="92" width="260" height="128"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfa-wG-wpG">
+                                                <rect key="frame" x="0.0" y="91.5" width="259.5" height="30"/>
                                                 <animations/>
-                                                <color key="backgroundColor" red="0.5" green="0.69741981909999995" blue="0.21283922699999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="开始"/>
+                                                <color key="backgroundColor" red="0.81960784313725488" green="0.81960784313725488" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="开始">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="startButtonClick:" destination="vEd-hs-rIP" eventType="touchUpInside" id="MdF-2t-AfB"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SIB-Az-Avk">
-                                                <rect key="frame" x="0.0" y="229" width="260" height="128"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIB-Az-Avk">
+                                                <rect key="frame" x="0.0" y="131.5" width="259.5" height="225.5"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>

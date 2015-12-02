@@ -77,7 +77,7 @@ extension RecordViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelega
         if monthData != nil{
             let duration = monthData![DateUtil.getYearMonthDayString(dayView.date.date)]
             if duration != nil && duration > 0{
-                dayTrainDurationLabel.text = String(duration as Int64!)
+                dayTrainDurationLabel.text = String("训练: \((duration as Int64!) / 1000) 秒")
             }else{
                 dayTrainDurationLabel.text = ""
             }
