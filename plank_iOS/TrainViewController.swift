@@ -13,14 +13,15 @@ class TrainViewController: UIViewController, SFCountdownViewDelegate {
     
     let trainPlanInfo = "每组%d次 每次%d秒"
 
-    var secondsPerTime:Int = 10
-    var restSecondsPerTime:Int = 10
+    var secondsPerTime:Int = 30
+    var restSecondsPerTime:Int = 30
     var times:Int = 3
     var escapeMillis:Int = 0
     var isTraining = false
     var timer:NSTimer = NSTimer()
     var startMillis:Int64 = 0
     var currentTime:Int = 0
+
     
     @IBOutlet weak var finishedCountLabel: UILabel!
     @IBOutlet weak var trainPlanLabel: UILabel!
@@ -31,7 +32,10 @@ class TrainViewController: UIViewController, SFCountdownViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        circularProgressView.customeLabelValue = true
         circularProgressView.value = 0.0
+        circularProgressView.updateLabel("00:00.00")
+        circularProgressView.percentLabel?.hidden = false
         fetchFinishTrainCount()
         
         self.sfCountdownView.delegate = self
@@ -64,7 +68,17 @@ class TrainViewController: UIViewController, SFCountdownViewDelegate {
     
     @IBAction func startButtonClick(sender: AnyObject) {
         //circularProgressView.value = circularProgressView.value + 0.1
+        let parentController:EasePageViewController = self.parentViewController as!EasePageViewController
         
+        if parentController.childViewControllers.count > 1 {
+            let challengeController:ChallengeViewController = parentController.childViewControllers[1] as! ChallengeViewController
+        
+            if challengeController.isChallenging{
+                Util.showAlert(self, title: "失败", msg: "请先完成挑战", completion: nil)
+                return
+            }
+        }
+       
         if isTraining{
             isTraining = false
             currentTime = 0
@@ -111,6 +125,8 @@ class TrainViewController: UIViewController, SFCountdownViewDelegate {
         }else{
             circularProgressView.value = CGFloat(CGFloat((escapeMillis % (secondsPerTime * 1000))) / CGFloat((secondsPerTime * 1000)))
         }
+        
+        circularProgressView.updateLabel(TimeUtil.millisToString(escapeMillis, format: "%02d:%02d.%02d"))
         
         if((escapeMillis % (secondsPerTime * 1000)) == 0){
             circularProgressView.value = 0.0

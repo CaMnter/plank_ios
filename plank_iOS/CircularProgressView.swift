@@ -174,6 +174,7 @@ class CircularProgressView: UIView
         }
     }
     private var iClockwise = true
+    public var customeLabelValue = false
     
     
     // Whether the progress track shows the progress made (normal mode) or the progress remaining (reversed mode).
@@ -272,7 +273,7 @@ class CircularProgressView: UIView
             }
         }
     }
-    private var iPercentBold = true
+    private var iPercentBold = false
     
     
     // The value representing the progress made. It should be in the range [0, 1]. Values outside
@@ -348,7 +349,8 @@ class CircularProgressView: UIView
                     
                     let w = CGRectGetWidth(bounds)
                     let h = CGRectGetHeight(bounds)
-                    var s = (min(w, h) - iTrackThickness) / 2
+                    //var s = (min(w, h) - iTrackThickness) / 2
+                    var s = (min(w, h) - iTrackThickness) * 2 / 3
                     s *= 0.9 // Use up to 90% of the space between opposite sides of the inner circle.
                     
                     constraint = NSLayoutConstraint(item: label, attribute: .Width,
@@ -412,11 +414,13 @@ class CircularProgressView: UIView
     {
         if iPercentBold
         {
-            iPercentLabel?.font = UIFont.boldSystemFontOfSize(iPercentSize)
+            //iPercentLabel?.font = UIFont.boldSystemFontOfSize(iPercentSize)
+            iPercentLabel?.font = UIFont(name: "Courier", size: iPercentSize)
         }
         else
         {
-            iPercentLabel?.font = UIFont.systemFontOfSize(iPercentSize)
+            //iPercentLabel?.font = UIFont.systemFontOfSize(iPercentSize)
+            iPercentLabel?.font = UIFont(name: "Courier", size: iPercentSize)
         }
     }
     
@@ -425,12 +429,26 @@ class CircularProgressView: UIView
     {
         if let label = iPercentLabel where !label.hidden
         {
-            let val = (iReversed ? (1 - iValue) : iValue)
-            label.text = "\(Int(val * 100.0) % 101) %"
+            if !customeLabelValue{
+             let val = (iReversed ? (1 - iValue) : iValue)
+            label.text = "\(Int(val * 100.0) % 101)"
+            //label.text = TimeUtil.millisToString(val, format: <#T##String#>)
+            label.sizeToFit()
+            setNeedsLayout()
+            }else{
+                label.text = "00:00.00"
+            }
+       }
+    }
+    
+    func updateLabel(text:String){
+        if let label = iPercentLabel where !label.hidden{
+            label.text = text
             label.sizeToFit()
             setNeedsLayout()
         }
     }
+
     
     
     #if TARGET_INTERFACE_BUILDER

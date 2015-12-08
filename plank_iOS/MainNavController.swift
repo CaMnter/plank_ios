@@ -10,7 +10,7 @@ import UIKit
 
 class MainNavController: RKSwipeBetweenViewControllers {
     
-    var controllers:[UIViewController] = []
+   var controllers:[UIViewController] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -41,6 +41,7 @@
 #import "NSObject+ObjectMap.h"
 #import "User.h"
 #import "SFCountdownView.h"
+#import "EasePageViewController.h"
 
 
 

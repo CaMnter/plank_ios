@@ -845,6 +845,7 @@
 		508FB2881C04179B003D9D70 /* Challenge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508FB2861C04179B003D9D70 /* Challenge.storyboard */; };
 		50A392491C04B669003E74B0 /* RankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A392481C04B669003E74B0 /* RankTableViewCell.swift */; };
 		50A3924D1C04B6AB003E74B0 /* RankTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3924C1C04B6AB003E74B0 /* RankTableViewController.swift */; };
+		50CCF1BF1C16D69A0023FC8F /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCF1BE1C16D69A0023FC8F /* Util.swift */; };
 		50D806581C0B3A640017F31D /* TrainPlanSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D806571C0B3A640017F31D /* TrainPlanSettingTableViewController.swift */; };
 		50D871CF1BEF3692003BE1F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871CE1BEF3692003BE1F3 /* AppDelegate.swift */; };
 		50D871D11BEF3692003BE1F3 /* TrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D871D01BEF3692003BE1F3 /* TrainViewController.swift */; };
@@ -2037,6 +2038,7 @@
 		508FB2871C04179B003D9D70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Challenge.storyboard; sourceTree = "<group>"; };
 		50A392481C04B669003E74B0 /* RankTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankTableViewCell.swift; sourceTree = "<group>"; };
 		50A3924C1C04B6AB003E74B0 /* RankTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankTableViewController.swift; sourceTree = "<group>"; };
+		50CCF1BE1C16D69A0023FC8F /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		50D806571C0B3A640017F31D /* TrainPlanSettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainPlanSettingTableViewController.swift; sourceTree = "<group>"; };
 		50D871CB1BEF3692003BE1F3 /* plank_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plank_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D871CE1BEF3692003BE1F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -4256,6 +4258,7 @@
 				508FB2801C00C7CF003D9D70 /* Threading.swift */,
 				508FB27D1C00C247003D9D70 /* Sync.swift */,
 				507C4BC81C05F4B10046F71A /* TimeUtil.swift */,
+				50CCF1BE1C16D69A0023FC8F /* Util.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -5326,6 +5329,7 @@
 				5030B7711BF97E7300FED32F /* ActionSheetDistancePicker.m in Sources */,
 				5030B8211BF97E7300FED32F /* TopicListButton.m in Sources */,
 				5030B7531BF97E7200FED32F /* ObjcRuntime.m in Sources */,
+				50CCF1BF1C16D69A0023FC8F /* Util.swift in Sources */,
 				5030B7A31BF97E7300FED32F /* NSDate+Helper.m in Sources */,
 				5030B7521BF97E7200FED32F /* WebContentManager.m in Sources */,
 				5030B7B71BF97E7300FED32F /* RDVTabBarController.m in Sources */,

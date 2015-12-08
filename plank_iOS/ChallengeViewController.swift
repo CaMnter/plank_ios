@@ -13,7 +13,7 @@ class ChallengeViewController: UIViewController {
     var secondsPerTime:Int = 8;
 
     var escapeMillis:Int = 0;
-    var isTraining = false;
+    var isChallenging = false;
     var timer:NSTimer = NSTimer();
 
     var startMillis:Int64 = 0;
@@ -43,8 +43,17 @@ class ChallengeViewController: UIViewController {
     @IBAction func startButtonClick(sender: AnyObject) {
         //circularProgressView.value = circularProgressView.value + 0.1
         
-        if isTraining{
-            isTraining = false
+        let parentController:EasePageViewController = self.parentViewController as!EasePageViewController 
+        let trainController:TrainViewController = parentController.childViewControllers[0] as! TrainViewController
+        
+        if trainController.isTraining {
+            Util.showAlert(self, title: "失败", msg: "请先完成训练", completion: nil)
+            return
+        }
+
+        
+        if isChallenging{
+            isChallenging = false
             timer.invalidate()
             startButton.setTitle("开始", forState: .Normal)
             print(escapeMillis)
@@ -60,15 +69,15 @@ class ChallengeViewController: UIViewController {
             let now = NSDate().timeIntervalSince1970;
             startMillis = Int64(now * 1000.0);
             print("startMillis \(startMillis)")
-            isTraining = true
+            isChallenging = true
             circularProgressView.value = 0.0
             startButton.setTitle("结束", forState: .Normal)
         }
     }
     
     private func showFailAlert(){
-        let alert = UIAlertController(title: "tiltle fail", message: "message: fail", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "yes", style: .Default, handler:{(acttion) -> Void in
+        let alert = UIAlertController(title: "失败", message: "挑战失败，加油!", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "确定", style: .Default, handler:{(acttion) -> Void in
             print("yes")
         }))
         
@@ -76,8 +85,8 @@ class ChallengeViewController: UIViewController {
     }
     
     private func showFinishAlert(){
-        let alert = UIAlertController(title: "恭喜", message: "完成咯", preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "yes", style: .Default, handler: {(action) -> Void in print("finish")}))
+        let alert = UIAlertController(title: "恭喜", message: "挑战完成咯", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "确定", style: .Default, handler: {(action) -> Void in print("finish")}))
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
@@ -91,7 +100,7 @@ class ChallengeViewController: UIViewController {
         
         if(escapeMillis >= secondsPerTime * 1000){
             // trian finish
-            isTraining = false
+            isChallenging = false
             escapeMillis = 0;
             startButton.setTitle("开始", forState: .Normal)
             timer.invalidate()
